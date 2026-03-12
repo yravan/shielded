@@ -24,7 +24,7 @@ Geopolitical risk hedging advisory platform. Shielded maps company exposure to g
 
 - [Node.js](https://nodejs.org/) 20+
 - [pnpm](https://pnpm.io/) (or enable via `corepack enable && corepack prepare pnpm@latest --activate`)
-- [Python](https://www.python.org/) 3.11+
+- [uv](https://docs.astral.sh/uv/) (or `curl -LsSf https://astral.sh/uv/install.sh | sh`)
 - [PostgreSQL](https://www.postgresql.org/) 16 (or [TimescaleDB](https://www.timescale.com/))
 - [Redis](https://redis.io/) 7+
 - *(Optional)* [Docker](https://www.docker.com/) and Docker Compose — if you prefer containerized setup
@@ -98,32 +98,31 @@ Set up the Python backend:
 
 ```bash
 cd backend
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv venv
+uv pip install -r requirements.txt
 cp .env.example .env
 
 # Run database migrations
-alembic upgrade head
+uv run alembic upgrade head
 
 # Seed the database
-python -m app.seed.run
+uv run python -m app.seed.run
 ```
 
 Start the backend services (each in a separate terminal):
 
 ```bash
 # Terminal 1 — API server
-cd backend && source .venv/bin/activate
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+cd backend
+uv run uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 # Terminal 2 — Celery worker
-cd backend && source .venv/bin/activate
-celery -A celery_app worker --loglevel=info
+cd backend
+uv run celery -A celery_app worker --loglevel=info
 
 # Terminal 3 — Celery beat scheduler
-cd backend && source .venv/bin/activate
-celery -A celery_app beat --loglevel=info
+cd backend
+uv run celery -A celery_app beat --loglevel=info
 ```
 
 Start the frontend:
