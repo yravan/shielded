@@ -98,8 +98,7 @@ Set up the Python backend:
 
 ```bash
 cd backend
-uv venv
-uv pip install -r requirements.txt
+uv sync
 cp .env.example .env
 
 # Run database migrations
@@ -193,7 +192,7 @@ shielded/
 │   │   ├── tasks/            # Celery background tasks
 │   │   └── seed/             # Database seeder
 │   ├── alembic/              # Database migrations
-│   ├── requirements.txt
+│   ├── pyproject.toml
 │   └── Dockerfile
 └── docker-compose.yml        # Full stack orchestration
 ```
