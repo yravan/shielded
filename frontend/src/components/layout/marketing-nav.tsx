@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { Shield } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 export function MarketingNav() {
   return (
@@ -24,12 +25,12 @@ export function MarketingNav() {
           </Link>
         </nav>
         <div className="flex items-center gap-3">
-          <Button variant="ghost" size="sm" render={<Link href="/dashboard" />}>
+          <Link href="/dashboard" className={cn(buttonVariants({ variant: "ghost", size: "sm" }))}>
             Log In
-          </Button>
-          <Button size="sm" render={<Link href="/dashboard" />}>
+          </Link>
+          <Link href="/dashboard" className={cn(buttonVariants({ size: "sm" }))}>
             Get Started
-          </Button>
+          </Link>
         </div>
       </div>
     </header>

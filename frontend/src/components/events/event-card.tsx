@@ -16,7 +16,7 @@ interface EventCardProps {
 export function EventCard({ event }: EventCardProps) {
   return (
     <Link href={`/events/${event.id}`}>
-      <Card className="transition-colors hover:bg-card/80 cursor-pointer h-full">
+      <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
         <CardHeader className="pb-3">
           <EventCardHeader
             title={event.title}

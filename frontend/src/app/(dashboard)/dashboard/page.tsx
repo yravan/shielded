@@ -21,22 +21,22 @@ export default function DashboardPage() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         title="Dashboard"
         description="Overview of geopolitical risk exposure and hedging opportunities"
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {stats.map((stat) => (
           <Card key={stat.label}>
             <CardContent className="flex items-center gap-4 pt-6">
               <div className="rounded-md bg-primary/10 p-2">
-                <stat.icon className="h-5 w-5 text-primary" />
+                <stat.icon className="h-4 w-4 text-primary" />
               </div>
               <div>
-                <p className="text-2xl font-semibold font-mono">{stat.value}</p>
-                <p className="text-xs text-muted-foreground">{stat.label}</p>
+                <p className="text-3xl font-semibold font-mono">{stat.value}</p>
+                <p className="text-[11px] text-muted-foreground">{stat.label}</p>
               </div>
             </CardContent>
           </Card>
@@ -45,7 +45,7 @@ export default function DashboardPage() {
 
       <div>
         <h2 className="text-lg font-semibold mb-4">Active Events</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {isLoading
             ? Array.from({ length: 6 }).map((_, i) => <EventCardSkeleton key={i} />)
             : events?.map((event) => <EventCard key={event.id} event={event} />)}

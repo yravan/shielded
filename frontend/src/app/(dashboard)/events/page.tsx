@@ -41,7 +41,7 @@ export default function EventsPage() {
   });
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         title="Events"
         description="Monitor geopolitical events with real-time probability data"
@@ -74,7 +74,7 @@ export default function EventsPage() {
         </Select>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {isLoading
           ? Array.from({ length: 6 }).map((_, i) => <EventCardSkeleton key={i} />)
           : filtered?.map((event) => <EventCard key={event.id} event={event} />)}

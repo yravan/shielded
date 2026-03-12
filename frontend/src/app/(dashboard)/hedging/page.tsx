@@ -11,7 +11,7 @@ export default function HedgingPage() {
   const { data: comparisons, isLoading } = useHedgeComparisons();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         title="Hedging"
         description="Compare prediction market hedges vs traditional financial instruments"
@@ -31,7 +31,7 @@ export default function HedgingPage() {
       </Card>
 
       <h2 className="text-lg font-semibold">Hedge Recommendations</h2>
-      <div className="grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-5 lg:grid-cols-2">
         {isLoading
           ? Array.from({ length: 4 }).map((_, i) => (
               <Skeleton key={i} className="h-64 w-full rounded-lg" />

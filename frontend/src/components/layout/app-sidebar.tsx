@@ -36,7 +36,7 @@ export function AppSidebar() {
 
   return (
     <Sidebar>
-      <SidebarHeader className="border-b border-border px-4 py-4">
+      <SidebarHeader className="border-b border-border px-4 h-14 flex justify-center">
         <Link href="/dashboard" className="flex items-center gap-2">
           <Shield className="h-6 w-6 text-primary" />
           <span className="text-lg font-semibold">Shielded</span>

@@ -47,7 +47,7 @@ export default function EventDetailPage({
 
   if (isLoading) {
     return (
-      <div className="space-y-6">
+      <div className="space-y-8">
         <Skeleton className="h-8 w-64" />
         <Skeleton className="h-[300px] w-full" />
       </div>
@@ -61,7 +61,7 @@ export default function EventDetailPage({
   const filteredHistory = filterByTimeRange(event.probabilityHistory, timeRange);
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         title={event.title}
         description={event.description}

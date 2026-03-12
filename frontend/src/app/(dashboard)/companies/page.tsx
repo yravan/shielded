@@ -9,13 +9,13 @@ export default function CompaniesPage() {
   const { data: companies, isLoading } = useCompanies();
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         title="Companies"
         description="Track company exposure to geopolitical events"
       />
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {isLoading
           ? Array.from({ length: 5 }).map((_, i) => (
               <Skeleton key={i} className="h-48 w-full rounded-lg" />

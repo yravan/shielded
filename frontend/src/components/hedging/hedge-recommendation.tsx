@@ -45,23 +45,23 @@ export function HedgeRecommendation({ comparison }: HedgeRecommendationProps) {
               Prediction Market
             </p>
             <div className="space-y-1.5">
-              <div className="flex justify-between">
-                <span className="text-xs text-muted-foreground">Platform</span>
-                <span className="text-xs">{comparison.predictionMarket.platform}</span>
+              <div className="flex justify-between gap-4">
+                <span className="text-xs text-muted-foreground shrink-0">Platform</span>
+                <span className="text-xs text-right truncate max-w-[200px]">{comparison.predictionMarket.platform}</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-xs text-muted-foreground">Instrument</span>
-                <span className="text-xs">{comparison.predictionMarket.instrument}</span>
+              <div className="flex justify-between gap-4">
+                <span className="text-xs text-muted-foreground shrink-0">Instrument</span>
+                <span className="text-xs text-right truncate max-w-[200px]">{comparison.predictionMarket.instrument}</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-xs text-muted-foreground">Cost</span>
                 <CurrencyDisplay value={comparison.predictionMarket.cost} className="text-xs" />
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-xs text-muted-foreground">Payout</span>
                 <CurrencyDisplay value={comparison.predictionMarket.payout} className="text-xs" />
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-xs text-muted-foreground">ROI</span>
                 <span className="text-xs font-mono text-emerald-400">
                   {(comparison.predictionMarket.roi * 100).toFixed(0)}%
@@ -75,23 +75,23 @@ export function HedgeRecommendation({ comparison }: HedgeRecommendationProps) {
               Traditional
             </p>
             <div className="space-y-1.5">
-              <div className="flex justify-between">
-                <span className="text-xs text-muted-foreground">Provider</span>
-                <span className="text-xs">{comparison.traditional.provider}</span>
+              <div className="flex justify-between gap-4">
+                <span className="text-xs text-muted-foreground shrink-0">Provider</span>
+                <span className="text-xs text-right truncate max-w-[200px]">{comparison.traditional.provider}</span>
               </div>
-              <div className="flex justify-between">
-                <span className="text-xs text-muted-foreground">Instrument</span>
-                <span className="text-xs">{comparison.traditional.instrument}</span>
+              <div className="flex justify-between gap-4">
+                <span className="text-xs text-muted-foreground shrink-0">Instrument</span>
+                <span className="text-xs text-right truncate max-w-[200px]">{comparison.traditional.instrument}</span>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-xs text-muted-foreground">Cost</span>
                 <CurrencyDisplay value={comparison.traditional.cost} className="text-xs" />
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-xs text-muted-foreground">Payout</span>
                 <CurrencyDisplay value={comparison.traditional.payout} className="text-xs" />
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-between gap-4">
                 <span className="text-xs text-muted-foreground">ROI</span>
                 <span className="text-xs font-mono text-muted-foreground">
                   {(comparison.traditional.roi * 100).toFixed(0)}%

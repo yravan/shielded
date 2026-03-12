@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
@@ -9,9 +12,9 @@ export default function NotFound() {
       <p className="text-sm text-muted-foreground">
         The page you&apos;re looking for doesn&apos;t exist.
       </p>
-      <Button render={<Link href="/dashboard" />}>
+      <Link href="/dashboard" className={cn(buttonVariants())}>
         Go to Dashboard
-      </Button>
+      </Link>
     </div>
   );
 }

@@ -23,7 +23,7 @@ export function TopBar() {
   const breadcrumbs = getBreadcrumbs(pathname);
 
   return (
-    <header className="flex h-14 items-center gap-4 border-b border-border bg-background px-4">
+    <header className="flex h-14 items-center gap-4 border-b border-border bg-background px-6">
       <SidebarTrigger />
       <Separator orientation="vertical" className="h-6" />
       <nav className="flex items-center gap-1 text-sm text-muted-foreground">

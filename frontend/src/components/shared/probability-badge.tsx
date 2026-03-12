@@ -17,7 +17,7 @@ export function ProbabilityBadge({ probability, className }: ProbabilityBadgePro
   return (
     <Badge
       variant="outline"
-      className={cn("font-mono text-xs", getColor(probability), className)}
+      className={cn("font-mono font-semibold text-sm", getColor(probability), className)}
     >
       {(probability * 100).toFixed(0)}%
     </Badge>

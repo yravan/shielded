@@ -33,15 +33,15 @@ export function ProbabilityChart({ data, height = 300 }: ProbabilityChartProps) 
       <AreaChart data={data} margin={{ top: 4, right: 4, bottom: 0, left: 0 }}>
         <defs>
           <linearGradient id="probGradient" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="oklch(0.65 0.19 250)" stopOpacity={0.3} />
-            <stop offset="100%" stopColor="oklch(0.65 0.19 250)" stopOpacity={0} />
+            <stop offset="0%" stopColor="var(--color-primary)" stopOpacity={0.15} />
+            <stop offset="100%" stopColor="var(--color-primary)" stopOpacity={0} />
           </linearGradient>
         </defs>
         <XAxis
           dataKey="date"
           axisLine={false}
           tickLine={false}
-          tick={{ fontSize: 11, fill: "oklch(0.60 0.02 250)" }}
+          tick={{ fontSize: 11, fill: "var(--color-muted-foreground)" }}
           tickFormatter={(v) => {
             const d = new Date(v);
             return `${d.getMonth() + 1}/${d.getDate()}`;
@@ -52,7 +52,7 @@ export function ProbabilityChart({ data, height = 300 }: ProbabilityChartProps) 
           domain={[0, 1]}
           axisLine={false}
           tickLine={false}
-          tick={{ fontSize: 11, fill: "oklch(0.60 0.02 250)" }}
+          tick={{ fontSize: 11, fill: "var(--color-muted-foreground)" }}
           tickFormatter={(v: number) => `${(v * 100).toFixed(0)}%`}
           width={45}
         />
@@ -60,11 +60,11 @@ export function ProbabilityChart({ data, height = 300 }: ProbabilityChartProps) 
         <Area
           type="monotone"
           dataKey="probability"
-          stroke="oklch(0.65 0.19 250)"
+          stroke="var(--color-primary)"
           strokeWidth={2}
           fill="url(#probGradient)"
           dot={false}
-          activeDot={{ r: 4, fill: "oklch(0.65 0.19 250)", stroke: "oklch(0.16 0.02 250)", strokeWidth: 2 }}
+          activeDot={{ r: 4, fill: "var(--color-primary)", stroke: "var(--color-card)", strokeWidth: 2 }}
         />
       </AreaChart>
     </ResponsiveContainer>

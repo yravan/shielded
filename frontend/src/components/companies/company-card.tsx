@@ -13,7 +13,7 @@ interface CompanyCardProps {
 export function CompanyCard({ company }: CompanyCardProps) {
   return (
     <Link href={`/companies/${company.id}`}>
-      <Card className="transition-colors hover:bg-card/80 cursor-pointer h-full">
+      <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
         <CardHeader className="pb-2">
           <div className="flex items-center justify-between">
             <CardTitle className="text-base">{company.name}</CardTitle>

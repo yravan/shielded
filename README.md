@@ -24,7 +24,10 @@ Geopolitical risk hedging advisory platform. Shielded maps company exposure to g
 
 - [Node.js](https://nodejs.org/) 20+
 - [pnpm](https://pnpm.io/) (or enable via `corepack enable && corepack prepare pnpm@latest --activate`)
-- [Docker](https://www.docker.com/) and Docker Compose (for backend)
+- [Python](https://www.python.org/) 3.11+
+- [PostgreSQL](https://www.postgresql.org/) 16 (or [TimescaleDB](https://www.timescale.com/))
+- [Redis](https://redis.io/) 7+
+- *(Optional)* [Docker](https://www.docker.com/) and Docker Compose — if you prefer containerized setup
 
 ### Frontend Only (with mock data)
 
@@ -49,7 +52,7 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) — you'll see the landing page. Click **Get Started** to enter the dashboard.
 
-### Full Stack (frontend + backend)
+### Full Stack with Docker
 
 ```bash
 git clone https://github.com/yravan/shielded.git
@@ -57,6 +60,9 @@ cd shielded
 
 # Start backend services (API, database, Redis, Celery)
 docker compose up -d
+
+# Run database migrations
+docker compose exec api alembic upgrade head
 
 # Seed the database
 docker compose exec api python -m app.seed.run
@@ -69,14 +75,75 @@ echo "NEXT_PUBLIC_API_URL=http://localhost:8000" >> .env.local
 pnpm dev
 ```
 
-This starts:
+### Full Stack without Docker
+
+Install PostgreSQL and Redis locally (macOS example using Homebrew):
+
+```bash
+brew install postgresql@16 redis
+brew services start postgresql@16
+brew services start redis
+```
+
+Create the database and user:
+
+```bash
+createdb shielded
+psql shielded -c "CREATE USER shielded WITH PASSWORD 'shielded';"
+psql shielded -c "GRANT ALL PRIVILEGES ON DATABASE shielded TO shielded;"
+psql shielded -c "ALTER DATABASE shielded OWNER TO shielded;"
+```
+
+Set up the Python backend:
+
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+
+# Run database migrations
+alembic upgrade head
+
+# Seed the database
+python -m app.seed.run
+```
+
+Start the backend services (each in a separate terminal):
+
+```bash
+# Terminal 1 — API server
+cd backend && source .venv/bin/activate
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+
+# Terminal 2 — Celery worker
+cd backend && source .venv/bin/activate
+celery -A celery_app worker --loglevel=info
+
+# Terminal 3 — Celery beat scheduler
+cd backend && source .venv/bin/activate
+celery -A celery_app beat --loglevel=info
+```
+
+Start the frontend:
+
+```bash
+cd frontend
+pnpm install
+echo "NEXT_PUBLIC_USE_MOCKS=false" > .env.local
+echo "NEXT_PUBLIC_API_URL=http://localhost:8000" >> .env.local
+pnpm dev
+```
+
+### Verify
+
+Both setups start:
 - **API** at [http://localhost:8000](http://localhost:8000)
-- **TimescaleDB** on port 5432
+- **PostgreSQL** on port 5432
 - **Redis** on port 6379
 - **Celery worker + beat** for background polling
 - **Frontend** at [http://localhost:3000](http://localhost:3000)
-
-Verify the backend is running:
 
 ```bash
 curl http://localhost:8000/api/health

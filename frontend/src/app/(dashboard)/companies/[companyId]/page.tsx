@@ -20,7 +20,7 @@ export default function CompanyDetailPage({
 
   if (loadingCompany) {
     return (
-      <div className="space-y-6">
+      <div className="space-y-8">
         <Skeleton className="h-8 w-48" />
         <Skeleton className="h-48 w-full" />
       </div>
@@ -32,7 +32,7 @@ export default function CompanyDetailPage({
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <PageHeader
         title={company.name}
         description={`${company.sector} sector`}
@@ -43,7 +43,7 @@ export default function CompanyDetailPage({
         }
       />
 
-      <div className="grid gap-4 sm:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-3">
         <Card>
           <CardContent className="pt-6">
             <p className="text-xs text-muted-foreground">Market Cap</p>

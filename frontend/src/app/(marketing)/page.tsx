@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Shield, BarChart3, Globe, Scale } from "lucide-react";
 
@@ -35,7 +38,7 @@ export default function LandingPage() {
     <>
       <section className="relative pt-32 pb-20 px-6">
         <div className="mx-auto max-w-4xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
+          <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
             Hedge Geopolitical Risk{" "}
             <span className="text-primary">Smarter</span>
           </h1>
@@ -45,26 +48,26 @@ export default function LandingPage() {
             you 15-40% on hedging costs.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
-            <Button size="lg" render={<Link href="/dashboard" />}>
+            <Link href="/dashboard" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started
-            </Button>
-            <Button size="lg" variant="outline" render={<Link href="#features" />}>
+            </Link>
+            <Link href="#features" className={cn(buttonVariants({ size: "lg", variant: "outline" }))}>
               Learn More
-            </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       <section id="features" className="py-20 px-6">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-center text-2xl font-semibold mb-12">
+          <h2 className="text-center text-2xl font-semibold tracking-tight mb-12">
             Everything you need to manage geopolitical risk
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {features.map((feature) => (
-              <Card key={feature.title} className="bg-card/50">
+              <Card key={feature.title} className="bg-card/50 h-full">
                 <CardContent className="pt-6">
-                  <feature.icon className="h-8 w-8 text-primary mb-3" />
+                  <feature.icon className="h-7 w-7 text-primary mb-3" />
                   <h3 className="font-semibold mb-1">{feature.title}</h3>
                   <p className="text-sm text-muted-foreground">
                     {feature.description}
@@ -78,7 +81,7 @@ export default function LandingPage() {
 
       <section id="how-it-works" className="py-20 px-6 border-t border-border">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-2xl font-semibold mb-4">How It Works</h2>
+          <h2 className="text-2xl font-semibold tracking-tight mb-4">How It Works</h2>
           <p className="text-muted-foreground mb-12">
             Three steps to smarter geopolitical risk management
           </p>
@@ -97,9 +100,9 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
-          <Button size="lg" className="mt-12" render={<Link href="/dashboard" />}>
+          <Link href="/dashboard" className={cn(buttonVariants({ size: "lg" }), "mt-12")}>
             Start Hedging
-          </Button>
+          </Link>
         </div>
       </section>
     </>
