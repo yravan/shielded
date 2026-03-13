@@ -1,26 +1,8 @@
-import os
-import sys
-
 from celery import Celery
 from celery.schedules import crontab
 from celery.signals import worker_ready
 
-# --- diagnostic: remove after Redis is confirmed working ---
-_redis_env = os.environ.get("REDIS_URL", "<unset>")
-_railway_env = os.environ.get("RAILWAY_ENVIRONMENT", "<unset>")
-_redis_display = _redis_env.split("@")[-1] if "@" in _redis_env else _redis_env
-print(
-    f"[DIAG] REDIS_URL env={_redis_display}  RAILWAY_ENV={_railway_env}",
-    file=sys.stderr, flush=True,
-)
-# --- end diagnostic ---
-
 from app.config import settings
-
-print(
-    f"[DIAG] resolved broker={settings.CELERY_BROKER_URL}",
-    file=sys.stderr, flush=True,
-)
 
 celery = Celery(
     "shielded",
