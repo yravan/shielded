@@ -1,3 +1,4 @@
+import asyncio
 from contextlib import asynccontextmanager
 
 import structlog
@@ -21,7 +22,7 @@ async def lifespan(app: FastAPI):
         from alembic.config import Config
 
         alembic_cfg = Config("alembic.ini")
-        command.upgrade(alembic_cfg, "head")
+        await asyncio.to_thread(command.upgrade, alembic_cfg, "head")
         await logger.ainfo("Database migrations completed")
     except Exception as e:
         await logger.aerror("Failed to run database migrations", error=str(e))
