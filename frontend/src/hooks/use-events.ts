@@ -89,6 +89,8 @@ async function fetchSuggestedEvents(): Promise<SuggestedEvent[]> {
     matchedCompanyName: raw.matched_company_name,
     matchedCompanyId: raw.matched_company_id,
     matchedThemes: raw.matched_themes ?? [],
+    parentEventId: raw.parent_event_id ?? null,
+    parentTitle: raw.parent_title ?? null,
     imageUrl: raw.image_url ?? null,
     tags: raw.tags ?? [],
   }));
@@ -159,6 +161,10 @@ export function useTrackEvent() {
       queryClient.invalidateQueries({ queryKey: ["explore-events"] });
       queryClient.invalidateQueries({ queryKey: ["suggested-events"] });
       queryClient.invalidateQueries({ queryKey: ["me"] });
+      queryClient.invalidateQueries({ queryKey: ["risk"] });
+      queryClient.invalidateQueries({ queryKey: ["company-event-impacts"] });
+      queryClient.invalidateQueries({ queryKey: ["event-impacts"] });
+      queryClient.invalidateQueries({ queryKey: ["companies"] });
     },
   });
 }

@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 
 import { useSaveCompany, useCompanyLookup } from "@/hooks/use-company";
+import { useMe } from "@/hooks/use-me";
 import { Building2, Loader2 } from "lucide-react";
 
 const sectors = [
@@ -34,7 +35,15 @@ const sectors = [
 
 export default function OnboardingPage() {
   const router = useRouter();
+  const { data: me } = useMe();
   const saveCompany = useSaveCompany();
+
+  // Redirect if already onboarded
+  useEffect(() => {
+    if (me && me.companyCount > 0) {
+      router.replace("/events");
+    }
+  }, [me, router]);
 
   const [name, setName] = useState("");
   const [ticker, setTicker] = useState("");
@@ -86,13 +95,17 @@ export default function OnboardingPage() {
       operating_expense: parseFloat(operatingExpense) || 0,
       capital_expense: parseFloat(capitalExpense) || 0,
     });
-    router.push("/dashboard");
+    router.push("/events");
   };
 
   const isValid = name.trim() && sector;
 
   return (
     <div className="space-y-8 max-w-2xl mx-auto">
+      <div className="text-center space-y-2">
+        <h1 className="text-2xl font-bold tracking-tight">Welcome to Shielded</h1>
+        <p className="text-muted-foreground">Add at least one company to get started.</p>
+      </div>
       <Card>
         <CardHeader>
           <CardTitle className="text-base flex items-center gap-2">

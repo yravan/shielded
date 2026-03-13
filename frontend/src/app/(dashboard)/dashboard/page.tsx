@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -13,9 +15,17 @@ import { usePortfolioRisk } from "@/hooks/use-risk";
 import { Activity, AlertTriangle, Building2, Compass, Shield } from "lucide-react";
 
 export default function DashboardPage() {
+  const router = useRouter();
   const { data: events, isLoading } = useEvents();
   const { data: me } = useMe();
   const { data: portfolioRisk } = usePortfolioRisk();
+
+  // Redirect to onboarding if user has no companies
+  useEffect(() => {
+    if (me && me.companyCount === 0) {
+      router.replace("/onboarding");
+    }
+  }, [me, router]);
 
   const totalEvents = events?.length ?? 0;
   const highProbEvents = events?.filter((e) => e.currentProbability > 0.5).length ?? 0;

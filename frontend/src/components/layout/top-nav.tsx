@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { useUser, useClerk } from "@clerk/nextjs";
+import { useQueryClient } from "@tanstack/react-query";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -43,6 +44,7 @@ export function TopNav() {
   const pathname = usePathname();
   const { user } = useUser();
   const { signOut } = useClerk();
+  const queryClient = useQueryClient();
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
@@ -87,7 +89,10 @@ export function TopNav() {
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
-                onClick={() => signOut({ redirectUrl: "/" })}
+                onClick={() => {
+                  queryClient.clear();
+                  signOut({ redirectUrl: "/" });
+                }}
                 className="cursor-pointer"
               >
                 <LogOut className="h-4 w-4" />

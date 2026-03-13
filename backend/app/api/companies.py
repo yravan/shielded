@@ -37,6 +37,7 @@ async def list_my_companies(db: DbSession, user: dict = Depends(get_current_user
 async def create_my_company(
     body: CompanyInput,
     db: DbSession,
+    redis_conn: RedisConn,
     user: dict = Depends(get_current_user),
 ):
     """Create a new company for the current user."""
@@ -57,6 +58,11 @@ async def create_my_company(
     db.add(company)
     await db.flush()
 
+    # Clear suggestions cache so new company profile takes effect
+    keys = await redis_conn.keys(f"suggestions:{db_user.id}:*")
+    if keys:
+        await redis_conn.delete(*keys)
+
     return CompanyOut.model_validate(company)
 
 
@@ -65,6 +71,7 @@ async def update_my_company(
     company_id: UUID,
     body: CompanyInput,
     db: DbSession,
+    redis_conn: RedisConn,
     user: dict = Depends(get_current_user),
 ):
     """Update a specific company (verify ownership)."""
@@ -87,6 +94,11 @@ async def update_my_company(
         company.risk_profile = body.risk_profile
     await db.flush()
 
+    # Clear suggestions cache so updated company profile takes effect
+    keys = await redis_conn.keys(f"suggestions:{db_user.id}:*")
+    if keys:
+        await redis_conn.delete(*keys)
+
     return CompanyOut.model_validate(company)
 
 
@@ -94,6 +106,7 @@ async def update_my_company(
 async def delete_my_company(
     company_id: UUID,
     db: DbSession,
+    redis_conn: RedisConn,
     user: dict = Depends(get_current_user),
 ):
     """Delete a specific company (verify ownership)."""
@@ -108,6 +121,12 @@ async def delete_my_company(
 
     await db.delete(company)
     await db.flush()
+
+    # Clear suggestions cache so deleted company profile takes effect
+    keys = await redis_conn.keys(f"suggestions:{db_user.id}:*")
+    if keys:
+        await redis_conn.delete(*keys)
+
     return {"status": "ok"}
 
 

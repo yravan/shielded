@@ -112,4 +112,15 @@ def get_default_risk_profile(sector: str) -> dict[str, int]:
         if key.lower() in sector_lower or sector_lower in key.lower():
             return dict(profile)
 
-    return {}
+    return dict(_GENERAL_FALLBACK)
+
+
+_GENERAL_FALLBACK: dict[str, int] = {
+    "Geopolitical risk": 5,
+    "Recession sensitivity": 5,
+    "Tariffs": 5,
+    "FX": 4,
+    "Regulation": 5,
+    "Shipping": 3,
+    "China demand": 4,
+}

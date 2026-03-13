@@ -82,7 +82,7 @@ export default function LandingPage() {
             you 15-40% on hedging costs.
           </p>
           <div className="mt-10 flex items-center justify-center gap-4">
-            <Link href="/dashboard" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link href="/onboarding" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started
             </Link>
             <Link href="#features" className={cn(buttonVariants({ size: "lg", variant: "outline" }))}>
@@ -184,7 +184,7 @@ export default function LandingPage() {
               </div>
             ))}
           </div>
-          <Link href="/dashboard" className={cn(buttonVariants({ size: "lg" }), "mt-12")}>
+          <Link href="/onboarding" className={cn(buttonVariants({ size: "lg" }), "mt-12")}>
             Start Hedging
           </Link>
         </div>
@@ -200,7 +200,7 @@ export default function LandingPage() {
             Join the companies using prediction markets for smarter, cheaper geopolitical risk management.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Link href="/dashboard" className={cn(buttonVariants({ size: "lg" }))}>
+            <Link href="/onboarding" className={cn(buttonVariants({ size: "lg" }))}>
               Get Started Free
             </Link>
           </div>

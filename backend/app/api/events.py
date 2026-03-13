@@ -370,24 +370,43 @@ async def get_suggested_events(
     events = event_result.scalars().all()
     untracked_events = [e for e in events if e.id not in tracked_ids]
 
-    # Run risk engine matching on-the-fly
+    # Pre-load parent titles for child events
+    parent_ids = {e.parent_event_id for e in untracked_events if e.parent_event_id}
+    parent_title_map: dict[UUID, str] = {}
+    if parent_ids:
+        parent_result = await db.execute(
+            select(Event.id, Event.title).where(Event.id.in_(parent_ids))
+        )
+        parent_title_map = {row[0]: row[1] for row in parent_result.all()}
+
+    # Run risk engine matching on-the-fly, grouping by parent event
     seen_events: dict[UUID, SuggestedEventOut] = {}
     for event in untracked_events:
         event_input = event_to_input(event)
         matches = match_event_to_companies(event_input, company_inputs, min_score=20)
 
         for company_id, match in matches:
-            if event.id in seen_events:
-                if match.relevance_score <= seen_events[event.id].relevance_score:
+            group_key = event.parent_event_id or event.id
+
+            if group_key in seen_events:
+                if match.relevance_score <= seen_events[group_key].relevance_score:
                     continue
 
             company = company_map.get(company_id)
             if not company:
                 continue
 
-            seen_events[event.id] = SuggestedEventOut(
-                id=event.id,
-                title=event.title,
+            # For child events with a parent, use parent title/id so one card per parent
+            if event.parent_event_id:
+                display_id = event.parent_event_id
+                display_title = parent_title_map.get(event.parent_event_id, event.title)
+            else:
+                display_id = event.id
+                display_title = event.title
+
+            seen_events[group_key] = SuggestedEventOut(
+                id=display_id,
+                title=display_title,
                 description=event.description or "",
                 category=event.category or "",
                 region=event.region or "",
@@ -400,6 +419,8 @@ async def get_suggested_events(
                 matched_company_name=company.name,
                 matched_company_id=company.id,
                 matched_themes=match.matched_themes,
+                parent_event_id=event.parent_event_id,
+                parent_title=parent_title_map.get(event.parent_event_id) if event.parent_event_id else None,
                 image_url=event.image_url,
                 tags=event.tags,
             )
@@ -530,6 +551,7 @@ async def _list_all_events(db, redis_conn, category, status, page, page_size):
 async def track_event(
     event_id: UUID,
     db: DbSession,
+    redis_conn: RedisConn,
     user: dict = Depends(get_current_user),
 ):
     """Add an event to the user's tracked list and create exposures for matching companies."""
@@ -597,6 +619,15 @@ async def track_event(
             exposures_created += 1
 
     await db.flush()
+
+    # Clear Redis caches for affected companies so fresh data is fetched
+    for company in companies_with_profiles:
+        await redis_conn.delete(f"company-event-impacts:{company.id}")
+        await redis_conn.delete(f"company:exposure:{company.id}")
+        await redis_conn.delete(f"impact:{company.id}:{event_id}")
+    # Clear suggestions cache for this user
+    await redis_conn.delete(f"suggestions:{db_user.id}:{20}")
+
     return {"status": "tracked", "exposures_created": exposures_created}
 
 
@@ -604,6 +635,7 @@ async def track_event(
 async def untrack_event(
     event_id: UUID,
     db: DbSession,
+    redis_conn: RedisConn,
     user: dict = Depends(get_current_user),
 ):
     """Remove an event from the user's tracked list and delete associated exposures."""
@@ -636,6 +668,14 @@ async def untrack_event(
         )
 
     await db.flush()
+
+    # Clear Redis caches for affected companies
+    for cid in company_ids:
+        await redis_conn.delete(f"company-event-impacts:{cid}")
+        await redis_conn.delete(f"company:exposure:{cid}")
+        await redis_conn.delete(f"impact:{cid}:{event_id}")
+    await redis_conn.delete(f"suggestions:{db_user.id}:{20}")
+
     return {"status": "untracked"}
 
 

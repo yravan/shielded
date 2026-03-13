@@ -176,6 +176,8 @@ export interface SuggestedEvent {
   matchedCompanyName: string;
   matchedCompanyId: string;
   matchedThemes: string[];
+  parentEventId: string | null;
+  parentTitle: string | null;
   imageUrl: string | null;
   tags: string[];
 }

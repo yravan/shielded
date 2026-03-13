@@ -85,6 +85,12 @@ export default function EventsPage() {
         </Select>
       </div>
 
+      {filtered && filtered.length > 0 && !isLoading && (
+        <p className="text-sm text-muted-foreground">
+          Click on an event to see its financial implications for your companies.
+        </p>
+      )}
+
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {isLoading
           ? Array.from({ length: 6 }).map((_, i) => <EventCardSkeleton key={i} />)

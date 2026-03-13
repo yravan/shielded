@@ -24,12 +24,23 @@ function SuggestionCard({ suggestion }: { suggestion: SuggestedEvent }) {
         </div>
 
         <Link
-          href={`/events/${suggestion.id}`}
+          href={`/events/${suggestion.parentEventId ?? suggestion.id}`}
           className="block hover:underline"
         >
-          <h4 className="text-sm font-medium line-clamp-2 leading-snug">
-            {suggestion.title}
-          </h4>
+          {suggestion.parentTitle && suggestion.id !== suggestion.parentEventId ? (
+            <>
+              <h4 className="text-sm font-medium line-clamp-2 leading-snug">
+                {suggestion.parentTitle}
+              </h4>
+              <p className="text-xs text-muted-foreground mt-0.5 line-clamp-1">
+                {suggestion.title}
+              </p>
+            </>
+          ) : (
+            <h4 className="text-sm font-medium line-clamp-2 leading-snug">
+              {suggestion.title}
+            </h4>
+          )}
         </Link>
 
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
@@ -71,9 +82,9 @@ function SuggestionCard({ suggestion }: { suggestion: SuggestedEvent }) {
 }
 
 export function EventSuggestions() {
-  const { data: suggestions, isLoading } = useSuggestedEvents();
+  const { data: suggestions, isLoading, isFetching } = useSuggestedEvents();
 
-  if (isLoading) {
+  if (isLoading || (isFetching && (!suggestions || suggestions.length === 0))) {
     return (
       <div className="space-y-3">
         <div className="flex items-center gap-2">

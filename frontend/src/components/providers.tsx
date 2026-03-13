@@ -1,9 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ThemeProvider } from "next-themes";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider, useQueryClient } from "@tanstack/react-query";
+import { useAuth } from "@clerk/nextjs";
 import { TooltipProvider } from "@/components/ui/tooltip";
+
+function AuthCacheCleaner() {
+  const { userId } = useAuth();
+  const queryClient = useQueryClient();
+  const prevUserId = useRef(userId);
+
+  useEffect(() => {
+    if (prevUserId.current && prevUserId.current !== userId) {
+      queryClient.removeQueries();
+    }
+    prevUserId.current = userId;
+  }, [userId, queryClient]);
+
+  return null;
+}
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(
@@ -26,6 +42,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
     >
       <QueryClientProvider client={queryClient}>
+        <AuthCacheCleaner />
         <TooltipProvider>{children}</TooltipProvider>
       </QueryClientProvider>
     </ThemeProvider>

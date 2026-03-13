@@ -59,6 +59,7 @@ export function useSaveCompany() {
       queryClient.invalidateQueries({ queryKey: ["my-company"] });
       queryClient.invalidateQueries({ queryKey: ["companies"] });
       queryClient.invalidateQueries({ queryKey: ["me"] });
+      queryClient.invalidateQueries({ queryKey: ["suggested-events"] });
     },
   });
 }
@@ -79,6 +80,7 @@ export function useUpdateCompany() {
       queryClient.invalidateQueries({ queryKey: ["my-company"] });
       queryClient.invalidateQueries({ queryKey: ["companies"] });
       queryClient.invalidateQueries({ queryKey: ["me"] });
+      queryClient.invalidateQueries({ queryKey: ["suggested-events"] });
     },
   });
 }
@@ -97,6 +99,7 @@ export function useDeleteCompany() {
       queryClient.invalidateQueries({ queryKey: ["my-company"] });
       queryClient.invalidateQueries({ queryKey: ["companies"] });
       queryClient.invalidateQueries({ queryKey: ["me"] });
+      queryClient.invalidateQueries({ queryKey: ["suggested-events"] });
     },
   });
 }

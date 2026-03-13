@@ -30,11 +30,7 @@ async def _get_jwks() -> dict:
             detail="Clerk is not configured",
         )
 
-    # Clerk JWKS endpoint is derived from the publishable key
-    # Format: https://<clerk-frontend-api>/.well-known/jwks.json
-    pub_key = settings.CLERK_PUBLISHABLE_KEY
-    frontend_api = pub_key.split("_")[-1] if pub_key else ""
-    jwks_url = f"https://{frontend_api}/.well-known/jwks.json"
+    jwks_url = f"{settings.CLERK_JWT_ISSUER}/.well-known/jwks.json"
 
     async with httpx.AsyncClient() as client:
         resp = await client.get(jwks_url)
@@ -84,11 +80,14 @@ async def get_current_user(
                 detail="Invalid token signing key",
             )
 
+        decode_options = {"verify_aud": False}
+        issuer = settings.CLERK_JWT_ISSUER or None
         payload = jwt.decode(
             token,
             key,
             algorithms=["RS256"],
-            options={"verify_aud": False},
+            issuer=issuer,
+            options=decode_options,
         )
         return payload
 

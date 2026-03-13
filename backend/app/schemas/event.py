@@ -64,6 +64,8 @@ class SuggestedEventOut(BaseModel):
     matched_company_name: str
     matched_company_id: UUID
     matched_themes: list[str]
+    parent_event_id: UUID | None = None
+    parent_title: str | None = None
     image_url: str | None = None
     tags: list[str] | None = None
 
