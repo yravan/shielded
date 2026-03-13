@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { PageHeader } from "@/components/shared/page-header";
+import Link from "next/link";
+
 import { EventCard } from "@/components/events/event-card";
 import { EventCardSkeleton } from "@/components/events/event-card-skeleton";
+import { Button } from "@/components/ui/button";
 import { useEvents } from "@/hooks/use-events";
 import {
   Select,
@@ -12,6 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { Compass, Globe } from "lucide-react";
 import type { EventCategory } from "@/types";
 
 const categories: Array<{ value: EventCategory | "all"; label: string }> = [
@@ -42,10 +45,15 @@ export default function EventsPage() {
 
   return (
     <div className="space-y-8">
-      <PageHeader
-        title="Events"
-        description="Monitor geopolitical events with real-time probability data"
-      />
+      <div className="flex items-center justify-between mb-2">
+        <div />
+        <Link href="/explore">
+          <Button variant="outline" size="sm">
+            <Compass className="h-4 w-4 mr-1.5" />
+            Explore More Events
+          </Button>
+        </Link>
+      </div>
 
       <div className="flex gap-3">
         <Select value={category} onValueChange={handleCategoryChange}>
@@ -81,9 +89,18 @@ export default function EventsPage() {
       </div>
 
       {filtered?.length === 0 && !isLoading && (
-        <p className="text-center text-muted-foreground py-12">
-          No events match your filters.
-        </p>
+        <div className="text-center py-16 space-y-4">
+          <Globe className="h-12 w-12 mx-auto text-muted-foreground/50" />
+          <div>
+            <p className="text-muted-foreground">You haven&apos;t tracked any events yet.</p>
+            <Link
+              href="/explore"
+              className="text-primary hover:underline text-sm font-medium"
+            >
+              Browse events &rarr;
+            </Link>
+          </div>
+        </div>
       )}
     </div>
   );

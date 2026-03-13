@@ -1,33 +1,31 @@
 "use client";
 
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import { PageHeader } from "@/components/shared/page-header";
+import { Button } from "@/components/ui/button";
+
 import { EventCard } from "@/components/events/event-card";
 import { EventCardSkeleton } from "@/components/events/event-card-skeleton";
 import { useEvents } from "@/hooks/use-events";
-import { Activity, AlertTriangle, Building2, TrendingDown } from "lucide-react";
+import { useMe } from "@/hooks/use-me";
+import { Activity, AlertTriangle, Building2, Compass } from "lucide-react";
 
 export default function DashboardPage() {
   const { data: events, isLoading } = useEvents();
+  const { data: me } = useMe();
 
   const totalEvents = events?.length ?? 0;
   const highProbEvents = events?.filter((e) => e.currentProbability > 0.5).length ?? 0;
 
   const stats = [
-    { label: "Active Events", value: totalEvents, icon: Activity },
+    { label: "Tracked Events", value: totalEvents, icon: Activity },
     { label: ">50% Probability", value: highProbEvents, icon: AlertTriangle },
-    { label: "Companies Tracked", value: 5, icon: Building2 },
-    { label: "Avg PM Savings", value: "28%", icon: TrendingDown },
+    { label: "Companies", value: me?.companyCount ?? 0, icon: Building2 },
   ];
 
   return (
     <div className="space-y-8">
-      <PageHeader
-        title="Dashboard"
-        description="Overview of geopolitical risk exposure and hedging opportunities"
-      />
-
-      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {stats.map((stat) => (
           <Card key={stat.label}>
             <CardContent className="flex items-center gap-4 pt-6">
@@ -44,11 +42,28 @@ export default function DashboardPage() {
       </div>
 
       <div>
-        <h2 className="text-lg font-semibold mb-4">Active Events</h2>
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">Tracked Events</h2>
+          <Link href="/explore">
+            <Button variant="outline" size="sm">
+              <Compass className="h-4 w-4 mr-1.5" />
+              Explore Events
+            </Button>
+          </Link>
+        </div>
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {isLoading
             ? Array.from({ length: 6 }).map((_, i) => <EventCardSkeleton key={i} />)
-            : events?.map((event) => <EventCard key={event.id} event={event} />)}
+            : events?.length === 0
+              ? (
+                <div className="col-span-full text-center py-12">
+                  <p className="text-muted-foreground">No tracked events yet.</p>
+                  <Link href="/explore" className="text-primary hover:underline text-sm">
+                    Browse events to start tracking &rarr;
+                  </Link>
+                </div>
+              )
+              : events?.map((event) => <EventCard key={event.id} event={event} />)}
         </div>
       </div>
     </div>

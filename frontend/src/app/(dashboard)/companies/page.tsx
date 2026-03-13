@@ -1,6 +1,6 @@
 "use client";
 
-import { PageHeader } from "@/components/shared/page-header";
+
 import { CompanyCard } from "@/components/companies/company-card";
 import { useCompanies } from "@/hooks/use-companies";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -10,11 +10,6 @@ export default function CompaniesPage() {
 
   return (
     <div className="space-y-8">
-      <PageHeader
-        title="Companies"
-        description="Track company exposure to geopolitical events"
-      />
-
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {isLoading
           ? Array.from({ length: 5 }).map((_, i) => (

@@ -7,6 +7,7 @@ import { EventCardHeader } from "./event-card-header";
 import { EventImpacts } from "./event-impacts";
 import { ImpliedFinancials } from "./implied-financials";
 import { MiniSparkline } from "@/components/charts/mini-sparkline";
+import { useEventHistory } from "@/hooks/use-events";
 import type { GeopoliticalEvent } from "@/types";
 
 interface EventCardProps {
@@ -14,6 +15,8 @@ interface EventCardProps {
 }
 
 export function EventCard({ event }: EventCardProps) {
+  const { data: history, isLoading: historyLoading } = useEventHistory(event.id);
+
   return (
     <Link href={`/events/${event.id}`}>
       <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
@@ -26,7 +29,7 @@ export function EventCard({ event }: EventCardProps) {
           />
         </CardHeader>
         <CardContent className="space-y-3">
-          <MiniSparkline data={event.probabilityHistory} />
+          <MiniSparkline data={history ?? []} loading={historyLoading} />
           <Separator />
           <EventImpacts impacts={event.impacts} compact />
           <Separator />

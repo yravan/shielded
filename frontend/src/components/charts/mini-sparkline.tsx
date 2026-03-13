@@ -7,9 +7,30 @@ interface MiniSparklineProps {
   data: ProbabilityPoint[];
   width?: number;
   height?: number;
+  loading?: boolean;
 }
 
-export function MiniSparkline({ data, width = 80, height = 30 }: MiniSparklineProps) {
+export function MiniSparkline({ data, width = 80, height = 30, loading }: MiniSparklineProps) {
+  if (loading) {
+    return (
+      <div
+        style={{ width, height }}
+        className="rounded bg-muted animate-pulse"
+      />
+    );
+  }
+
+  if (!data || data.length === 0) {
+    return (
+      <div
+        style={{ width, height }}
+        className="rounded bg-muted/50 flex items-center justify-center"
+      >
+        <span className="text-[9px] text-muted-foreground">No data</span>
+      </div>
+    );
+  }
+
   const last20 = data.slice(-20);
 
   return (

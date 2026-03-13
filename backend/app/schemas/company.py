@@ -7,7 +7,7 @@ from pydantic import BaseModel, ConfigDict
 class CompanyOut(BaseModel):
     id: UUID
     name: str
-    ticker: str
+    ticker: str | None = None
     sector: str
     annual_revenue: float
     operating_expense: float

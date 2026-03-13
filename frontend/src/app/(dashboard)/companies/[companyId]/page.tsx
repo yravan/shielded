@@ -3,7 +3,7 @@
 import { use } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { PageHeader } from "@/components/shared/page-header";
+
 import { CurrencyDisplay } from "@/components/shared/currency-display";
 import { CompanyExposureTable } from "@/components/companies/company-exposure-table";
 import { useCompany, useCompanyExposures } from "@/hooks/use-companies";
@@ -33,15 +33,13 @@ export default function CompanyDetailPage({
 
   return (
     <div className="space-y-8">
-      <PageHeader
-        title={company.name}
-        description={`${company.sector} sector`}
-        action={
-          <Badge variant="outline" className="font-mono text-sm">
-            {company.ticker}
-          </Badge>
-        }
-      />
+      <div className="flex items-center gap-3">
+        <h1 className="text-xl font-semibold">{company.name}</h1>
+        <Badge variant="outline" className="font-mono text-sm">
+          {company.ticker}
+        </Badge>
+        <span className="text-sm text-muted-foreground">{company.sector} sector</span>
+      </div>
 
       <div className="grid gap-5 sm:grid-cols-3">
         <Card>

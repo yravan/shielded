@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { PageHeader } from "@/components/shared/page-header";
+
 import { HedgeRecommendation } from "@/components/hedging/hedge-recommendation";
 import { MarketComparison } from "@/components/hedging/market-comparison";
 import { useHedgeComparisons } from "@/hooks/use-hedging";
@@ -12,11 +12,6 @@ export default function HedgingPage() {
 
   return (
     <div className="space-y-8">
-      <PageHeader
-        title="Hedging"
-        description="Compare prediction market hedges vs traditional financial instruments"
-      />
-
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Cost Comparison</CardTitle>

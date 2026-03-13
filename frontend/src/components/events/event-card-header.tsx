@@ -11,12 +11,12 @@ interface EventCardHeaderProps {
 }
 
 const categoryColors: Record<EventCategory, string> = {
-  geopolitical: "bg-blue-500/15 text-blue-400 border-blue-500/30",
-  trade: "bg-purple-500/15 text-purple-400 border-purple-500/30",
-  regulatory: "bg-amber-500/15 text-amber-400 border-amber-500/30",
-  climate: "bg-emerald-500/15 text-emerald-400 border-emerald-500/30",
-  conflict: "bg-red-500/15 text-red-400 border-red-500/30",
-  economic: "bg-cyan-500/15 text-cyan-400 border-cyan-500/30",
+  geopolitical: "bg-blue-500/20 text-blue-600 border-blue-500/40",
+  trade: "bg-purple-500/20 text-purple-600 border-purple-500/40",
+  regulatory: "bg-amber-500/20 text-amber-600 border-amber-500/40",
+  climate: "bg-emerald-500/20 text-emerald-600 border-emerald-500/40",
+  conflict: "bg-red-500/20 text-red-600 border-red-500/40",
+  economic: "bg-cyan-500/20 text-cyan-600 border-cyan-500/40",
 };
 
 export function EventCardHeader({

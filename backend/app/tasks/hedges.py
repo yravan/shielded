@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 import structlog
 from sqlalchemy import select
 
+from celery_app import celery
 from app.database import async_session
 from app.models.company import Company
 from app.models.event import Event
@@ -123,13 +124,7 @@ async def _recompute_hedges_async() -> dict:
     return {"computed": total_computed}
 
 
-try:
-    from celery_app import celery
-
-    @celery.task(name="app.tasks.hedges.recompute_hedges")
-    def recompute_hedges() -> dict:
-        """Celery task to recompute hedge analyses for all exposure pairs."""
-        return asyncio.run(_recompute_hedges_async())
-
-except ImportError:
-    pass
+@celery.task(name="app.tasks.hedges.recompute_hedges")
+def recompute_hedges() -> dict:
+    """Celery task to recompute hedge analyses for all exposure pairs."""
+    return asyncio.run(_recompute_hedges_async())

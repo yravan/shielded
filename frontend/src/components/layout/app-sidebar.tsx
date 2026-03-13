@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import {
   LayoutDashboard,
   Globe,
+  Compass,
   Building2,
   Scale,
   Settings,
@@ -25,7 +26,8 @@ import {
 
 const navItems = [
   { title: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
-  { title: "Events", href: "/events", icon: Globe },
+  { title: "My Events", href: "/events", icon: Globe },
+  { title: "Explore", href: "/explore", icon: Compass },
   { title: "Companies", href: "/companies", icon: Building2 },
   { title: "Hedging", href: "/hedging", icon: Scale },
   { title: "Settings", href: "/settings", icon: Settings },

@@ -1,40 +1,10 @@
 import structlog
 
 from app.config import settings
-from app.ingestion.base import BaseMarketClient
+from app.ingestion.base import BaseMarketClient, NormalizedEvent, NormalizedMarket, PricePoint
+from app.ingestion.ev import extract_numeric_value
 
 logger = structlog.get_logger()
-
-# Geopolitical keywords for filtering relevant markets
-GEO_KEYWORDS = [
-    "tariff",
-    "sanction",
-    "war",
-    "conflict",
-    "nato",
-    "china",
-    "russia",
-    "iran",
-    "taiwan",
-    "trade",
-    "embargo",
-    "regulation",
-    "climate",
-    "treaty",
-    "election",
-    "coup",
-    "invasion",
-    "nuclear",
-    "oil",
-    "opec",
-    "brexit",
-    "eu",
-    "fed",
-    "interest rate",
-    "recession",
-    "gdp",
-    "inflation",
-]
 
 
 def _categorize_event(title: str, description: str) -> str:
@@ -89,87 +59,167 @@ class PolymarketClient(BaseMarketClient):
     def __init__(self):
         super().__init__()
         self.base_url = settings.POLYMARKET_API_URL
+        self.gamma_url = settings.POLYMARKET_GAMMA_API_URL
 
-    async def fetch_events(self) -> list[dict]:
-        """Fetch geopolitically-relevant markets from Polymarket."""
-        url = f"{self.base_url}/markets"
-        params = {"limit": 100, "active": True}
+    @property
+    def source_name(self) -> str:
+        return "polymarket"
+
+    async def fetch_events_page(
+        self, cursor: str | None = None
+    ) -> tuple[list[NormalizedEvent], str | None]:
+        """Fetch one page of events from Polymarket's Gamma API (offset pagination)."""
+        url = f"{self.gamma_url}/events"
+        offset = int(cursor) if cursor else 0
+        limit = 100
+        params: dict = {"limit": limit, "active": True, "closed": False, "offset": offset}
 
         try:
             data = await self._request(url, params=params)
         except Exception:
-            await logger.aerror("Failed to fetch Polymarket events")
-            return []
+            await logger.awarning("Gamma API failed", offset=offset)
+            return [], None
 
-        markets = data if isinstance(data, list) else data.get("data", data.get("markets", []))
-        events = []
-        for market in markets:
-            title = market.get("question", market.get("title", ""))
-            description = market.get("description", "")
-            text_lower = (title + " " + description).lower()
+        raw_events = data if isinstance(data, list) else data.get("data", data.get("events", []))
 
-            if not any(kw in text_lower for kw in GEO_KEYWORDS):
-                continue
+        if not raw_events:
+            return [], None
 
-            price = market.get("lastTradePrice", market.get("outcomePrices", 0.5))
-            if isinstance(price, str):
-                try:
-                    price = float(price)
-                except (ValueError, TypeError):
-                    price = 0.5
-            if isinstance(price, list) and len(price) > 0:
-                try:
-                    price = float(price[0])
-                except (ValueError, TypeError):
-                    price = 0.5
+        events: list[NormalizedEvent] = []
 
-            events.append(
-                {
-                    "title": title,
-                    "description": description[:2000] if description else title,
-                    "category": _categorize_event(title, description),
-                    "region": _extract_region(title, description),
-                    "source": "polymarket",
-                    "source_id": str(
-                        market.get("condition_id", market.get("id", market.get("slug", "")))
-                    ),
-                    "source_url": f"https://polymarket.com/event/{market.get('slug', '')}",
-                    "current_probability": float(price) if price else 0.5,
-                    "resolution_date": market.get("end_date_iso", market.get("endDate")),
-                    "status": "active",
-                }
+        for raw in raw_events:
+            title = raw.get("title", "")
+            description = raw.get("description", "")
+            slug = raw.get("slug", "")
+            category = _categorize_event(title, description)
+            region = _extract_region(title, description)
+            api_markets = raw.get("markets", [])
+
+            base = {
+                "source": "polymarket",
+                "source_url": f"https://polymarket.com/event/{slug}",
+                "title": title[:500],
+                "description": (description or title)[:2000],
+                "category": category,
+                "region": region,
+                "status": "active",
+                "resolution_date": raw.get("endDate", raw.get("end_date_iso")),
+            }
+
+            if len(api_markets) <= 1:
+                # Flat event
+                market = api_markets[0] if api_markets else raw
+                condition_id = str(
+                    market.get("conditionId", market.get("condition_id", raw.get("id", slug)))
+                )
+                price = market.get("lastTradePrice", market.get("outcomePrices", 0.5))
+                price = self._parse_price(price)
+
+                events.append(NormalizedEvent(
+                    **base,
+                    source_id=condition_id,
+                    probability=price,
+                    is_parent=False,
+                ))
+            else:
+                # Parent event with multiple markets
+                event_id = str(raw.get("id", slug))
+                markets: list[NormalizedMarket] = []
+                for mkt in api_markets:
+                    condition_id = str(
+                        mkt.get("conditionId", mkt.get("condition_id", ""))
+                    )
+                    child_title = mkt.get("question", mkt.get("title", title))
+                    price = mkt.get("lastTradePrice", mkt.get("outcomePrices", 0.5))
+                    price = self._parse_price(price)
+                    outcome_label = child_title
+                    outcome_value = extract_numeric_value(outcome_label)
+
+                    markets.append(NormalizedMarket(
+                        source_id=condition_id,
+                        title=child_title,
+                        probability=price,
+                        volume=None,
+                        outcome_label=outcome_label,
+                        outcome_value=outcome_value,
+                    ))
+
+                # Infer mutually_exclusive: if markets have distinct outcome labels
+                mutually_exclusive = len(markets) > 1
+
+                events.append(NormalizedEvent(
+                    **base,
+                    source_id=event_id,
+                    probability=0.0,
+                    is_parent=True,
+                    mutually_exclusive=mutually_exclusive,
+                    markets=markets,
+                ))
+
+        # Next page cursor
+        next_cursor = str(offset + limit) if len(raw_events) >= limit else None
+        return events, next_cursor
+
+    @staticmethod
+    def _parse_price(price) -> float:
+        """Normalize various price formats to a 0-1 float."""
+        if isinstance(price, str):
+            try:
+                price = float(price)
+            except (ValueError, TypeError):
+                return 0.5
+        if isinstance(price, list) and len(price) > 0:
+            try:
+                price = float(price[0])
+            except (ValueError, TypeError):
+                return 0.5
+        return float(price) if price else 0.5
+
+    async def fetch_prices(self, source_id: str) -> list[PricePoint]:
+        """Fetch price history for a Polymarket market.
+
+        source_id is a condition_id — we resolve it to a token_id first.
+        """
+        token_id = source_id
+        try:
+            market_url = f"{self.base_url}/markets"
+            market_data = await self._request(market_url, params={"condition_id": source_id})
+            markets = market_data if isinstance(market_data, list) else [market_data]
+            if markets and isinstance(markets[0], dict):
+                tokens = markets[0].get("tokens", [])
+                if tokens:
+                    token_id = tokens[0].get("token_id", source_id)
+        except Exception:
+            await logger.awarning(
+                "Failed to resolve PM condition_id to token_id",
+                source_id=source_id,
             )
 
-        await logger.ainfo("Fetched Polymarket events", count=len(events))
-        return events
-
-    async def fetch_prices(self, source_id: str) -> list[dict]:
-        """Fetch price history for a Polymarket market."""
         url = f"{self.base_url}/prices-history"
-        params = {"market": source_id, "interval": "max", "fidelity": 60}
+        params = {"market": token_id, "interval": "max", "fidelity": 60}
 
         try:
             data = await self._request(url, params=params)
         except Exception:
-            await logger.aerror("Failed to fetch Polymarket prices", source_id=source_id)
+            await logger.aerror(
+                "Failed to fetch PM prices", source_id=source_id, token_id=token_id
+            )
             return []
 
         history = data.get("history", data) if isinstance(data, dict) else data
         if not isinstance(history, list):
             return []
 
-        points = []
+        points: list[PricePoint] = []
         for point in history:
             timestamp = point.get("t", point.get("timestamp"))
+            if timestamp is None:
+                continue
             price = point.get("p", point.get("price", 0.5))
-            points.append(
-                {
-                    "probability": float(price),
-                    "source_bid": None,
-                    "source_ask": None,
-                    "volume_24h": point.get("volume", None),
-                    "recorded_at": timestamp,
-                }
-            )
+            points.append(PricePoint(
+                timestamp=int(timestamp),
+                probability=float(price),
+                volume=point.get("volume"),
+            ))
 
         return points

@@ -24,6 +24,18 @@ export interface ImpliedFinancial {
   impliedMovePercent: number;
 }
 
+export interface FinancialImpact {
+  companyName: string;
+  ticker: string;
+  revenueImpactPercent: number;
+  opexImpactPercent: number;
+  capexImpactPercent: number;
+  revenueAtRisk: number;
+  opexAtRisk: number;
+  capexAtRisk: number;
+  netIncomeImpactPercent: number;
+}
+
 export interface GeopoliticalEvent {
   id: string;
   title: string;
@@ -34,23 +46,59 @@ export interface GeopoliticalEvent {
   probabilityHistory: ProbabilityPoint[];
   impacts: EventImpact[];
   impliedFinancials: ImpliedFinancial[];
-  resolutionDate: string;
+  financialImpacts: FinancialImpact[];
+  resolutionDate: string | null;
   source: string;
   sourceUrl: string;
   status: EventStatus;
   region: string;
   createdAt: string;
   updatedAt: string;
+  isTracked?: boolean;
+  parentEventId?: string | null;
+  parentTitle?: string | null;
+  isParent?: boolean;
+  children?: GeopoliticalEvent[];
 }
 
 export interface Company {
   id: string;
   name: string;
-  ticker: string;
+  ticker: string | null;
   sector: string;
   marketCap: number;
   annualRevenue: number;
   exposureCount: number;
+}
+
+export interface UserCompany {
+  id: string;
+  name: string;
+  ticker: string | null;
+  sector: string;
+  annualRevenue: number;
+  operatingExpense: number;
+  capitalExpense: number;
+  createdAt: string;
+}
+
+export interface UserProfile {
+  id: string;
+  clerkId: string;
+  email: string;
+  name: string | null;
+  createdAt: string;
+  companyCount: number;
+  trackedEventCount: number;
+}
+
+export interface CompanyLookup {
+  name: string;
+  ticker: string;
+  sector: string | null;
+  annualRevenue: number | null;
+  operatingExpense: number | null;
+  capitalExpense: number | null;
 }
 
 export interface CompanyExposure {

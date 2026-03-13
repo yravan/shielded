@@ -1,7 +1,7 @@
 import uuid
 from datetime import datetime
 
-from sqlalchemy import DateTime, Float, String, Text, UniqueConstraint
+from sqlalchemy import Boolean, DateTime, Float, ForeignKey, String, Text, UniqueConstraint
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -24,6 +24,7 @@ class Event(Base):
     source_id: Mapped[str] = mapped_column(String(200))
     source_url: Mapped[str] = mapped_column(String(500), default="")
     current_probability: Mapped[float] = mapped_column(Float, default=0.5)
+    previous_probability: Mapped[float | None] = mapped_column(Float, nullable=True)
     resolution_date: Mapped[datetime | None] = mapped_column(
         DateTime(timezone=True), nullable=True
     )
@@ -36,10 +37,19 @@ class Event(Base):
     updated_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=datetime.utcnow, onupdate=datetime.utcnow
     )
-
-    probability_history = relationship(
-        "ProbabilityHistory", back_populates="event", lazy="selectin"
+    parent_event_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True),
+        ForeignKey("events.id", ondelete="CASCADE"),
+        nullable=True,
+        index=True,
     )
+    is_parent: Mapped[bool] = mapped_column(Boolean, default=False)
+    market_ticker: Mapped[str | None] = mapped_column(String(200), nullable=True)
+
+    parent = relationship(
+        "Event", remote_side="Event.id", back_populates="children"
+    )
+    children = relationship("Event", back_populates="parent", lazy="selectin")
     exposures = relationship("Exposure", back_populates="event", lazy="selectin")
     hedge_analyses = relationship("HedgeAnalysis", back_populates="event", lazy="selectin")
 

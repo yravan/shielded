@@ -33,6 +33,7 @@ const recommendationLabels: Record<string, string> = {
 
 export function CompanyExposureTable({ exposures }: CompanyExposureTableProps) {
   return (
+    <div className="overflow-x-auto">
     <Table>
       <TableHeader>
         <TableRow>
@@ -77,5 +78,6 @@ export function CompanyExposureTable({ exposures }: CompanyExposureTableProps) {
         ))}
       </TableBody>
     </Table>
+    </div>
   );
 }

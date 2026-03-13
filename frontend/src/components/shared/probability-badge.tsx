@@ -7,10 +7,10 @@ interface ProbabilityBadgeProps {
 }
 
 function getColor(p: number) {
-  if (p < 0.25) return "bg-emerald-500/15 text-emerald-400 border-emerald-500/30";
-  if (p < 0.5) return "bg-yellow-500/15 text-yellow-400 border-yellow-500/30";
-  if (p < 0.75) return "bg-orange-500/15 text-orange-400 border-orange-500/30";
-  return "bg-red-500/15 text-red-400 border-red-500/30";
+  if (p < 0.25) return "bg-emerald-500/20 text-emerald-600 border-emerald-500/40";
+  if (p < 0.5) return "bg-yellow-500/20 text-yellow-600 border-yellow-500/40";
+  if (p < 0.75) return "bg-orange-500/20 text-orange-600 border-orange-500/40";
+  return "bg-red-500/20 text-red-600 border-red-500/40";
 }
 
 export function ProbabilityBadge({ probability, className }: ProbabilityBadgeProps) {

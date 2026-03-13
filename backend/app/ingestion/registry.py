@@ -12,10 +12,18 @@ def get_enabled_clients() -> list[BaseMarketClient]:
     # Polymarket is always enabled (public API, no auth required)
     clients.append(PolymarketClient())
 
-    if settings.KALSHI_API_KEY:
+    if settings.KALSHI_API_KEY and settings.KALSHI_KEY_ID:
         clients.append(KalshiClient())
 
     if settings.METACULUS_API_KEY:
         clients.append(MetaculusClient())
 
     return clients
+
+
+def get_client_for_source(source: str) -> BaseMarketClient | None:
+    """Return the matching market client for a given source name."""
+    for client in get_enabled_clients():
+        if client.source_name == source:
+            return client
+    return None
