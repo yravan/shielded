@@ -85,7 +85,7 @@ class MetaculusClient(BaseMarketClient):
         next_cursor = str(offset + limit) if len(results) >= limit else None
         return events, next_cursor
 
-    async def fetch_prices(self, source_id: str, hours: int = 720) -> list[PricePoint]:
+    async def fetch_prices(self, source_id: str, hours: int = 720, series_ticker: str | None = None) -> list[PricePoint]:
         """Fetch prediction history for a Metaculus question."""
         url = f"{self.base_url}/questions/{source_id}/"
 

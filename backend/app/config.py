@@ -1,10 +1,18 @@
+from pydantic import model_validator
 from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
     DATABASE_URL: str = "postgresql+asyncpg://shielded:shielded@localhost:5432/shielded"
     REDIS_URL: str = "redis://localhost:6379/0"
-    CELERY_BROKER_URL: str = "redis://localhost:6379/1"
+    CELERY_BROKER_URL: str = ""
+
+    @model_validator(mode="after")
+    def set_celery_broker(self) -> "Settings":
+        if not self.CELERY_BROKER_URL:
+            base = self.REDIS_URL.rsplit("/", 1)[0] if self.REDIS_URL.count("/") > 2 else self.REDIS_URL
+            self.CELERY_BROKER_URL = f"{base}/1"
+        return self
     FRONTEND_URL: str = "http://localhost:3000"
     POLYMARKET_API_URL: str = "https://clob.polymarket.com"
     POLYMARKET_GAMMA_API_URL: str = "https://gamma-api.polymarket.com"

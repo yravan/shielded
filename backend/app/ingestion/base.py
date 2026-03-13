@@ -235,6 +235,6 @@ class BaseMarketClient(ABC):
         ...
 
     @abstractmethod
-    async def fetch_prices(self, source_id: str, hours: int = 720) -> list[PricePoint]:
+    async def fetch_prices(self, source_id: str, hours: int = 720, series_ticker: str | None = None) -> list[PricePoint]:
         """Fetch price/probability history for a specific event."""
         ...

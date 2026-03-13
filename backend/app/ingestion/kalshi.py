@@ -254,55 +254,60 @@ class KalshiClient(BaseMarketClient):
 
         return events, next_cursor
 
-    async def fetch_prices(self, source_id: str, hours: int = 720) -> list[PricePoint]:
+    async def fetch_prices(self, source_id: str, hours: int = 720, series_ticker: str | None = None) -> list[PricePoint]:
         """Fetch price history for a Kalshi market.
 
         Requires series_ticker to build the candlesticks URL.
-        Tries: GET /events/{event_ticker} to resolve series_ticker,
+        If series_ticker is provided (from DB), skips the expensive API resolution.
+        Otherwise tries: GET /events/{event_ticker} to resolve series_ticker,
         then falls back to using source_id as both.
         """
         market_ticker = source_id
-        series_ticker = source_id
 
-        # Try to resolve series_ticker from the event (NOT market detail —
-        # series_ticker is not available on market detail responses)
-        try:
-            event_data = await self._request(f"{self.base_url}/events/{source_id}")
-            event_info = (
-                event_data.get("event", {}) if isinstance(event_data, dict) else {}
-            )
-            series_ticker = event_info.get("series_ticker", source_id)
-            api_markets = (
-                event_data.get("markets", []) if isinstance(event_data, dict) else []
-            )
-            if api_markets:
-                market_ticker = api_markets[0].get("ticker", source_id)
-        except Exception:
-            # For child markets, the source_id is a market ticker like
-            # KXNEWPOPE-70-PPAR or KXTVSEASON...-30-JAN.
-            # Progressively strip trailing segments to find the event ticker.
-            resolved = False
-            remaining = source_id
-            while "-" in remaining and not resolved:
-                remaining = remaining.rsplit("-", 1)[0]
-                try:
-                    event_data = await self._request(
-                        f"{self.base_url}/events/{remaining}"
-                    )
-                    event_info = (
-                        event_data.get("event", {})
-                        if isinstance(event_data, dict)
-                        else {}
-                    )
-                    series_ticker = event_info.get("series_ticker", remaining)
-                    market_ticker = source_id
-                    resolved = True
-                except Exception:
-                    continue
-            if not resolved:
-                await logger.awarning(
-                    "Failed to resolve Kalshi series_ticker", source_id=source_id
+        if series_ticker:
+            # series_ticker provided from DB — skip resolution entirely
+            pass
+        else:
+            series_ticker = source_id
+            # Try to resolve series_ticker from the event (NOT market detail —
+            # series_ticker is not available on market detail responses)
+            try:
+                event_data = await self._request(f"{self.base_url}/events/{source_id}")
+                event_info = (
+                    event_data.get("event", {}) if isinstance(event_data, dict) else {}
                 )
+                series_ticker = event_info.get("series_ticker", source_id)
+                api_markets = (
+                    event_data.get("markets", []) if isinstance(event_data, dict) else []
+                )
+                if api_markets:
+                    market_ticker = api_markets[0].get("ticker", source_id)
+            except Exception:
+                # For child markets, the source_id is a market ticker like
+                # KXNEWPOPE-70-PPAR or KXTVSEASON...-30-JAN.
+                # Progressively strip trailing segments to find the event ticker.
+                resolved = False
+                remaining = source_id
+                while "-" in remaining and not resolved:
+                    remaining = remaining.rsplit("-", 1)[0]
+                    try:
+                        event_data = await self._request(
+                            f"{self.base_url}/events/{remaining}"
+                        )
+                        event_info = (
+                            event_data.get("event", {})
+                            if isinstance(event_data, dict)
+                            else {}
+                        )
+                        series_ticker = event_info.get("series_ticker", remaining)
+                        market_ticker = source_id
+                        resolved = True
+                    except Exception:
+                        continue
+                if not resolved:
+                    await logger.awarning(
+                        "Failed to resolve Kalshi series_ticker", source_id=source_id
+                    )
 
         end_ts = int(time.time())
         start_ts = end_ts - (hours * 3600)

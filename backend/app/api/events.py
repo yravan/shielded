@@ -742,7 +742,7 @@ async def get_event_history(
         return []
 
     try:
-        points = await client.fetch_prices(event.source_id, hours=hours)
+        points = await client.fetch_prices(event.source_id, hours=hours, series_ticker=event.series_ticker)
     except Exception:
         await logger.aerror(
             "Failed to fetch prices", source=event.source, source_id=event.source_id
@@ -807,7 +807,7 @@ async def get_children_history(
             points = cached_pts
         else:
             try:
-                points = await client.fetch_prices(child.source_id, hours=hours)
+                points = await client.fetch_prices(child.source_id, hours=hours, series_ticker=child.series_ticker)
                 if points:
                     await cache.set_history(child.source, child.source_id, points, hours)
             except Exception:

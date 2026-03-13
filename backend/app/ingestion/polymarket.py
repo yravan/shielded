@@ -347,7 +347,7 @@ class PolymarketClient(BaseMarketClient):
         next_cursor = str(offset + limit) if len(raw_events) >= limit else None
         return events, next_cursor
 
-    async def fetch_prices(self, source_id: str, hours: int = 720) -> list[PricePoint]:
+    async def fetch_prices(self, source_id: str, hours: int = 720, series_ticker: str | None = None) -> list[PricePoint]:
         """Fetch price history for a Polymarket market.
 
         Uses clob_token_id directly from the cached event data when available,
