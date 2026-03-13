@@ -14,11 +14,17 @@ logger = structlog.get_logger()
 
 
 def _load_private_key():
-    """Load the RSA private key from the file path in KALSHI_API_KEY."""
-    key_path = Path(settings.KALSHI_API_KEY)
-    if not key_path.is_absolute():
-        key_path = Path(__file__).resolve().parents[2] / key_path
-    pem_data = key_path.read_bytes()
+    """Load the RSA private key from KALSHI_API_KEY (PEM content or file path)."""
+    value = settings.KALSHI_API_KEY
+    if value.startswith("-----"):
+        # PEM content passed directly via env var
+        pem_data = value.encode()
+    else:
+        # File path
+        key_path = Path(value)
+        if not key_path.is_absolute():
+            key_path = Path(__file__).resolve().parents[2] / key_path
+        pem_data = key_path.read_bytes()
     return serialization.load_pem_private_key(pem_data, password=None)
 
 
