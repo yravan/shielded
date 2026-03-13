@@ -1,3 +1,5 @@
+import os
+
 from pydantic import model_validator
 from pydantic_settings import BaseSettings
 
@@ -33,7 +35,10 @@ class Settings(BaseSettings):
     CLERK_PUBLISHABLE_KEY: str = ""
     CLERK_JWT_ISSUER: str = ""
 
-    model_config = {"env_file": ".env", "extra": "ignore"}
+    model_config = {
+        "env_file": ".env" if not os.getenv("RAILWAY_ENVIRONMENT") else None,
+        "extra": "ignore",
+    }
 
 
 settings = Settings()
