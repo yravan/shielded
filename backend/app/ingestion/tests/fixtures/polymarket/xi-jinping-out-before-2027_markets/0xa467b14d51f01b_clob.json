@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-03T20:36:33Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xa467b14d51f01b957109d9cbb1d6c124fab2a089d52ed8f471d23c2812e743b7",
+  "question_id": "0x1d925c6933062c2e38031293612d8680ffa097c5d3ba2f87a8ecc565bd47183e",
+  "question": "Xi Jinping out before 2027?",
+  "description": "This market will resolve to \"Yes\" if China's General Secretary of the Communist Party, Xi Jinping, is removed from power for any length of time between July 3, 2025, and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nCCP General Secretary Xi Jinping will be considered removed from power if he announces his resignation from his role as General Secretary, or is otherwise dismissed, detained, disqualified, or otherwise loses his position or is prevented from fulfilling his duties as General Secretary within this market's timeframe.\n\nThe primary resolution source for this market will be a consensus of credible reporting.",
+  "market_slug": "xi-jinping-out-before-2027",
+  "end_date_iso": "2026-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/xi-jinping-out-in-2025-EjF4SM20eaa3.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/xi-jinping-out-in-2025-EjF4SM20eaa3.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 5
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "32338220190071351435772801779725302244575775216413325951443816017994629993401",
+      "outcome": "Yes",
+      "price": 0.0855,
+      "winner": false
+    },
+    {
+      "token_id": "25659310674993675562345759665114759892400026242514633218387667107987341231962",
+      "outcome": "No",
+      "price": 0.9145,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "world affairs",
+    "Geopolitics",
+    "Macro Geopolitics",
+    "World",
+    "Earn 4%",
+    "HFC"
+  ]
+}

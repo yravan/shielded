@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:05:30Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x2c03c41e5032364cb7166e842bdd22913f28aa2c837d8432704aa89c338875c8",
+  "question_id": "0xb9aa4595bbe8ca1ecceeb16d24fb5df6d27d4e2116787ad874ff31f682bdb403",
+  "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
+  "description": "The 2028 US Presidential Election is scheduled to take place on November 7, 2028.\n\nThis market will resolve to the person who wins the 2028 US Presidential Election.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race for the same candidate by the inauguration date (January 20, 2029) this market will resolve based on who is inaugurated.",
+  "market_slug": "will-pete-buttigieg-win-the-2028-us-presidential-election",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xb9aa4595bbe8ca1ecceeb16d24fb5df6d27d4e2116787ad874ff31f682bdb400",
+  "neg_risk_request_id": "0xfe6a8e4d411130b34f16bb0900b3ba441d047506999929a39aa0e9dc7e95dc7b",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-pete-buttigieg-win-the-2028-us-presidential-election-jPrwim0rDJDu.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-pete-buttigieg-win-the-2028-us-presidential-election-jPrwim0rDJDu.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "35629456194498013232473191985311930903993567273832459837879398120893197410860",
+      "outcome": "Yes",
+      "price": 0.0185,
+      "winner": false
+    },
+    {
+      "token_id": "26087406687932108531005204502244492184534000122992461059156880611150953145122",
+      "outcome": "No",
+      "price": 0.9815,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%",
+    "President"
+  ]
+}

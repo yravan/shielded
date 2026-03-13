@@ -1,0 +1,25 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1770958800,
+      "open_interest_fp": "13.00",
+      "price": {
+        "previous_dollars": "0.0300"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.0500",
+        "high_dollars": "0.0500",
+        "low_dollars": "0.0500",
+        "open_dollars": "0.0500"
+      },
+      "yes_bid": {
+        "close_dollars": "0.0000",
+        "high_dollars": "0.0000",
+        "low_dollars": "0.0000",
+        "open_dollars": "0.0000"
+      }
+    }
+  ],
+  "ticker": "KXPERFORMBONDSONG-35-COL"
+}

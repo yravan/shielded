@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-12-23T23:01:45Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x6176cc868c8893cf431ae1e8103d4d4c1fcfcf239c3b3415b672151337125884",
+  "question_id": "0x181c6dfc8d24cd07cff8b804a37b96de8ff0d5ec2c8f7fee81f882e78450d329",
+  "question": "Will Russia capture Sumy by March 31, 2027?",
+  "description": "This market will resolve to \u201cYes\u201d if, according to the ISW map, Russia captures the Sumy railroad station located on Pryvokzalna ploscha by March 31, 2027, at 11:59 PM ET.\n\nThe railroad station will be considered captured if any part of the train station icon is shaded red on the ISW map (https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375) by the resolution date. If the area is not shaded red by March 31, 2027, 11:59 PM ET, the market will resolve to \u201cNo\u201d.\n\nFor any change on the ISW map to qualify for this market\u2019s resolution, the relevant shading indicating Russian control must persist through the next full ISW daily update cycle. If ISW skips a day, shading must persist until the next finalized ISW update is published, regardless of the date. Any continuous shading which reflects either \u201cAssessed Russian Control\u201d, \u201cAssessed Russian Advance In Ukraine\u201d, or \u201cAssessed Russian Gains in the Past 24 Hours\u201d will qualify. \u201cAssessed Russian Infiltration Areas in Ukraine\u201d will not qualify.\n\nIf Russia comes into control of this territory as a result of a negotiated settlement, this will qualify for a 'Yes' resolution, regardless of if it is shaded red in the ISW map. An announcement of a negotiated settlement which gives Russia de jure control will not qualify. Actual control must be established.\n\nOnce Russia captures the railroad station, any subsequent loss of control will not be considered towards the resolution of this market.\n\nTrain Station Location: https://polymarket-upload.s3.us-east-2.amazonaws.com/sumy+train+station.jpg\n\nSumy Location: https://polymarket-upload.s3.us-east-2.amazonaws.com/sumy+location.jpg\n\nLocation on Google maps: https://maps.app.goo.gl/vd3fmfpUTB6BooEb9\n\nThe primary resolution source for this market will be the ISW Ukraine map. If the ISW map is rendered unavailable, information from DeepStateMap (https://deepstatemap.live/) may be used. If information from both the ISW and DeepStateMap are rendered permanently unavailable, a consensus of credible reporting may be used.\n\nNote: Any temporary glitches or errors in the map which will not be considered.",
+  "market_slug": "will-russia-capture-sumy-by-march-31-2027",
+  "end_date_iso": "2027-03-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/r-2f779d21fe.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/r-2f779d21fe.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 5
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "53233529358602879115478722993262404502732073224174276202211965211706009589067",
+      "outcome": "Yes",
+      "price": 0.18,
+      "winner": false
+    },
+    {
+      "token_id": "76350537296247188972152277947349396667408693228883257954471424426267688952517",
+      "outcome": "No",
+      "price": 0.82,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Ukraine",
+    "putin",
+    "Geopolitics",
+    "World",
+    "Russia Capture",
+    "Ukraine Map"
+  ]
+}

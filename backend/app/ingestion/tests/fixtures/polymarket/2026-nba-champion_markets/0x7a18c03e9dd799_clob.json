@@ -1,0 +1,54 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-06-23T16:02:09Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x7a18c03e9dd79943a25c65a5b696378e54b5b7d236140edb5d157685ce96476a",
+  "question_id": "0x11e9a09023ace3097de216497c6fc01a57a57d63df7370543f288b40251dda10",
+  "question": "Will the Milwaukee Bucks win the 2026 NBA Finals?",
+  "description": "This market will resolve to \u201cYes\u201d if the Milwaukee Bucks win the 2026 NBA Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NBA Finals based off the rules of the NBA.\n\nThe resolution source for this market will be information from the NBA.",
+  "market_slug": "will-the-milwaukee-bucks-win-the-2026-nba-finals",
+  "end_date_iso": "2026-07-01T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x11e9a09023ace3097de216497c6fc01a57a57d63df7370543f288b40251dda00",
+  "neg_risk_request_id": "0xbcbc3239f5506bf7a22d8a70060bef92430a63900a17070300f5effd6eddb3d6",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nba-finals-points-leader-7g2ZEZvMXxLb.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nba-finals-points-leader-7g2ZEZvMXxLb.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "45990013143445742554418902941609344301435090837151736095983841403365776942169",
+      "outcome": "Yes",
+      "price": 0.0005,
+      "winner": false
+    },
+    {
+      "token_id": "64634346694605544041215581235986248584974024218745113885051865881058253914827",
+      "outcome": "No",
+      "price": 0.9995,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Basketball",
+    "NBA",
+    "NBA Finals",
+    "NBA Champion"
+  ]
+}

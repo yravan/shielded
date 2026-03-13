@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-06-09T12:21:34Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xc30407cd2195b94a0340fb8b70618a47a2863c19a4473fea10a268b2f8dbd302",
+  "question_id": "0x8b56fce82dd19160af6020410547ed3125826b31dd1bf4177f203a5ed47be5d0",
+  "question": "Will Saudi Arabia qualify for the 2026 FIFA World Cup?",
+  "description": "This is a market on which teams will qualify for the 2026 FIFA World Cup.\n\nIf at any point it becomes impossible for this team to qualify for the FIFA World Cup based on the rules of FIFA (e.g. they cannot reach the required number of points to advance from its group or qualify for playoffs), this market will resolve immediately to \u201cNo\u201d.\n\nIf the 2026 FIFA World Cup is permanently canceled or the qualifying stage has not been completed by September 30, 2026, 11:59 PM this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be FIFA.  (https://www.fifa.com/en/tournaments/mens/worldcup).",
+  "market_slug": "will-saudi-arabia-qualify-for-the-2026-fifa-world-cup",
+  "end_date_iso": "2026-04-12T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/2026-fifa-world-cup-which-countries-qualify-_JWD7xspmdXY.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/2026-fifa-world-cup-which-countries-qualify-_JWD7xspmdXY.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "32278380626064569919890704724885971781663484519100813711542074563045450491626",
+      "outcome": "Yes",
+      "price": 1,
+      "winner": true
+    },
+    {
+      "token_id": "107348686072928689547937918134399430142289580762655323355470748305105323897082",
+      "outcome": "No",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "world cup",
+    "Soccer",
+    "FIFA World Cup"
+  ]
+}

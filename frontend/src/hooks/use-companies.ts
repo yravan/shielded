@@ -32,6 +32,9 @@ function mapApiExposure(raw: any): CompanyExposure {
     revenueAtRisk: raw.revenue_impact_pct ?? 0,
     revenueAtRiskPercent: raw.revenue_impact_pct ?? 0,
     hedgeRecommendation: "no_hedge",
+    status: raw.status ?? "suggested",
+    relevanceScore: raw.relevance_score ?? null,
+    matchedThemes: raw.matched_themes ?? null,
   };
 }
 /* eslint-enable @typescript-eslint/no-explicit-any */

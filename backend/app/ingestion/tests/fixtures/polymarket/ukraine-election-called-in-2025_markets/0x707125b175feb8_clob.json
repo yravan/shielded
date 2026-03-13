@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-09-23T23:18:19Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x707125b175feb87a7d28c1e3b0e8e834f11c0dff65edac8c4fe5d1e12bf8fc33",
+  "question_id": "0xcd56a2aab3432e062ad2520816476d101047d74039cb6b06eb80997243459e58",
+  "question": "Ukraine election called by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if the next Ukrainian presidential election is scheduled by June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThis market is about whether a date for the next Ukrainian election is announced between February 14, 2025, and June 30, 2026, 11:59 PM ET. Whether the election is supposed to take place during this timeframe or later will have no effect on the resolution of this market.\n\nThe primary resolution source for this market is official information from the Government of Ukraine; however, a consensus of credible reporting may also be used.\n",
+  "market_slug": "ukraine-election-called-by-june-30-2026-392",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-election-scheduled-in-2025-a5A5LV93aoXr.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-election-scheduled-in-2025-a5A5LV93aoXr.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 5
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "46392352440640691691403913163796829338832584619874037984805155658143745393622",
+      "outcome": "Yes",
+      "price": 0.105,
+      "winner": false
+    },
+    {
+      "token_id": "38746974225100760605049476871091018825176822620072388068043468416649080453478",
+      "outcome": "No",
+      "price": 0.895,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Ukraine",
+    "Global Elections",
+    "Geopolitics",
+    "Foreign Policy",
+    "World",
+    "Trump-Zelenskyy"
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773363600,
+      "open_interest_fp": "4233.00",
+      "price": {
+        "close_dollars": "0.3200",
+        "high_dollars": "0.3200",
+        "low_dollars": "0.2600",
+        "mean_dollars": "0.3192",
+        "open_dollars": "0.2600",
+        "previous_dollars": "0.2400"
+      },
+      "volume_fp": "299.00",
+      "yes_ask": {
+        "close_dollars": "0.3400",
+        "high_dollars": "0.3400",
+        "low_dollars": "0.2600",
+        "open_dollars": "0.2600"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2700",
+        "high_dollars": "0.2700",
+        "low_dollars": "0.0800",
+        "open_dollars": "0.2400"
+      }
+    },
+    {
+      "end_period_ts": 1773367200,
+      "open_interest_fp": "4233.00",
+      "price": {
+        "previous_dollars": "0.3200"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.3400",
+        "high_dollars": "0.3400",
+        "low_dollars": "0.3400",
+        "open_dollars": "0.3400"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2800",
+        "high_dollars": "0.2800",
+        "low_dollars": "0.2700",
+        "open_dollars": "0.2700"
+      }
+    },
+    {
+      "end_period_ts": 1773370800,
+      "open_interest_fp": "4233.00",
+      "price": {
+        "previous_dollars": "0.3200"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.3400",
+        "high_dollars": "0.3400",
+        "low_dollars": "0.3300",
+        "open_dollars": "0.3400"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2800",
+        "high_dollars": "0.2900",
+        "low_dollars": "0.2800",
+        "open_dollars": "0.2800"
+      }
+    }
+  ],
+  "ticker": "KXPERFORMBONDSONG-35-DUA"
+}

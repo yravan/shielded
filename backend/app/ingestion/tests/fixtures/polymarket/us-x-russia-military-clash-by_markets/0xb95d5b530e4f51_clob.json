@@ -1,0 +1,56 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2026-01-07T05:47:17Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xb95d5b530e4f51e2b9f8b65ed18259e2cf385d7e320ec5627c8d0eb61df815dc",
+  "question_id": "0xc1273608c27f3dee930904045a9e61b906cc7efb576ad04f03ee1dec544eafc6",
+  "question": "US x Russia military clash by January 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if there is a military encounter between the military forces of the United States and Russia by January 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military encounter\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between U.S. and Russian military forces. Non-violent actions, such as airspace violations, firing of warning shots (such as the June, 2021 Black Sea Confrontations between Russian forces and HMS Defender), or cyberattacks will not qualify. \n\nIntentional physical collisions, including aerial interceptions and naval ramming without the direct use of weaponry, such as the 2023 Black Sea incident\u2014where a Russian Su-27 damaged a U.S. MQ-9 Reaper drone's propeller, leading to its crash\u2014 will not qualify regardless of damage. \n\nMilitary contractors will qualify only if confirmed to be operating under the direct command or coordination of the respective state\u2019s armed forces (e.g. the Battle of Khasham would not qualify).\n\nThe resolution source for this market will be a consensus of credible reporting.\n",
+  "market_slug": "us-x-russia-military-clash-by-january-31-2026-416",
+  "end_date_iso": "2026-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-x-russia-military-clash-in-2025-otSB7i0OGwYM.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-x-russia-military-clash-in-2025-otSB7i0OGwYM.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 4.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "32439658626108300652372328806838350715850208072865588198812909765816440362394",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "72596226888468860072947736803305608840998059909337538782899398935621495931307",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Trump",
+    "Military Actions",
+    "Geopolitics",
+    "Trump Presidency",
+    "World",
+    "US-Iran"
+  ]
+}

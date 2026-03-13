@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T18:35:52Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x3dc47a72ac6bb265e9cefebd2a2eeed00966394cb2d07245b5c94138b60e82a3",
+  "question_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814711",
+  "question": "Will Rahm Emanuel win the 2028 Democratic presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-rahm-emanuel-win-the-2028-democratic-presidential-nomination-299",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814700",
+  "neg_risk_request_id": "0x8970162bd6d64b752cb09b40a993615b106800605251ecbe80a4e97c545884c1",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/rahm.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/rahm.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "10521981432803570450946212503203364998108630328528216082760514453664705157397",
+      "outcome": "Yes",
+      "price": 0.0135,
+      "winner": false
+    },
+    {
+      "token_id": "91949042216127305292438280992722171735754548787382833799906976841509942727662",
+      "outcome": "No",
+      "price": 0.9865,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

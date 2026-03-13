@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T21:04:58Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x16c63b7cc37f012b9f59ee164ec03877914c701d06d48291ae8d6fc08a088b0d",
+  "question_id": "0x7b95a46fc059d27ac3404325fd6280974d96949102201de57b8595f802d7fc00",
+  "question": "2026 Balance of Power: D Senate, D House",
+  "description": "This market will resolve according to the result of the 2026 United States midterm elections.\n\nA party will be considered to have 'control' of the House of Representatives, if they win a majority of voting seats.\n\nA party will be considered to have 'control' of the Senate if they have more than half of the voting Senate members, or half of the voting Senate members and the Vice President.\n\nA candidate's party is determined by their ballot-listed or otherwise identifiable affiliation with that party at the time the 2026 United States midterm elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican Parties will be considered a member of one of these parties based on the party that they most recently expressed their intent to caucus with at the time the 2026 United States midterm elections are conclusively called by this market's resolution sources.\n\nIf control of the House is ambiguous given the above rules, this market will resolve according to the party affiliation of the first Speaker of the US House who is selected following the 2026 United States midterm elections. \n\nIf control of the Senate is ambiguous given the above rules, this market will resolve according to the party affiliation of the first Majority Leader of the US Senate who is selected following the 2026 United States midterm elections.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources have conclusively called winners of the House and Senate in the 2026 United States midterm elections. If all three sources do not achieve consensus in calling the relevant races for this market, it will resolve based on the official certification.",
+  "market_slug": "2026-balance-of-power-d-senate-d-house-949",
+  "end_date_iso": "2026-11-03T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x7b95a46fc059d27ac3404325fd6280974d96949102201de57b8595f802d7fc00",
+  "neg_risk_request_id": "0x435fd9d65df590758095827539be0e3ac56ce89df594501f24e539fb2f4acc5b",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/balance-of-power-2024-election-r-Fp-y4ONJBS.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 50
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "34722410608062854697106861099776685947172185964394483545370684749662285977831",
+      "outcome": "Yes",
+      "price": 0.465,
+      "winner": false
+    },
+    {
+      "token_id": "24483563228660028121020430722896740519524131851526579619586176931221901842798",
+      "outcome": "No",
+      "price": 0.535,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "US Election",
+    "Global Elections",
+    "Midterms",
+    "Earn 4%"
+  ]
+}

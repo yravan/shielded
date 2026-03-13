@@ -1,0 +1,90 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773352800,
+      "open_interest_fp": "13044.00",
+      "price": {
+        "previous_dollars": "0.2400"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.3000",
+        "high_dollars": "0.3000",
+        "low_dollars": "0.3000",
+        "open_dollars": "0.3000"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2400",
+        "high_dollars": "0.2400",
+        "low_dollars": "0.2200",
+        "open_dollars": "0.2200"
+      }
+    },
+    {
+      "end_period_ts": 1773370800,
+      "open_interest_fp": "13044.00",
+      "price": {
+        "close_dollars": "0.3000",
+        "high_dollars": "0.3000",
+        "low_dollars": "0.3000",
+        "mean_dollars": "0.3000",
+        "open_dollars": "0.3000",
+        "previous_dollars": "0.2400"
+      },
+      "volume_fp": "1.00",
+      "yes_ask": {
+        "close_dollars": "0.3000",
+        "high_dollars": "0.3000",
+        "low_dollars": "0.3000",
+        "open_dollars": "0.3000"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2400",
+        "high_dollars": "0.2400",
+        "low_dollars": "0.2200",
+        "open_dollars": "0.2400"
+      }
+    },
+    {
+      "end_period_ts": 1773374400,
+      "open_interest_fp": "13044.00",
+      "price": {
+        "previous_dollars": "0.3000"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.3000",
+        "high_dollars": "0.3000",
+        "low_dollars": "0.3000",
+        "open_dollars": "0.3000"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2400",
+        "high_dollars": "0.2400",
+        "low_dollars": "0.2400",
+        "open_dollars": "0.2400"
+      }
+    },
+    {
+      "end_period_ts": 1773378000,
+      "open_interest_fp": "13044.00",
+      "price": {
+        "previous_dollars": "0.3000"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.3000",
+        "high_dollars": "0.3000",
+        "low_dollars": "0.3000",
+        "open_dollars": "0.3000"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2400",
+        "high_dollars": "0.2400",
+        "low_dollars": "0.2400",
+        "open_dollars": "0.2400"
+      }
+    }
+  ],
+  "ticker": "KXEARTHQUAKECALIFORNIA-35"
+}

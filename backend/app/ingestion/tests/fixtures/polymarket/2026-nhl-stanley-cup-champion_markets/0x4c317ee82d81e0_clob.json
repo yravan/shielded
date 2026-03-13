@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-06-23T16:00:23Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x4c317ee82d81e0a49aa9862a8c2d876fee322064acf02cd8e1346fbed36083e8",
+  "question_id": "0x7faa974ff857682d64433d5c4dfba46ff51415a68cbd5bd1994248df2d561214",
+  "question": "Will the Columbus Blue Jackets win the 2026 NHL Stanley Cup?",
+  "description": "This market will resolve to \u201cYes\u201d if the Columbus Blue Jackets win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+  "market_slug": "will-the-columbus-blue-jackets-win-the-2026-nhl-stanley-cup",
+  "end_date_iso": "2026-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x7faa974ff857682d64433d5c4dfba46ff51415a68cbd5bd1994248df2d561200",
+  "neg_risk_request_id": "0x725ec5a0559a99e97ab81c3dcdfd635362e8c8caeb1b96c7fb74c969bdc9a1ff",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/stanley-cup-champion-2026-05M0VRODAaEb.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/stanley-cup-champion-2026-05M0VRODAaEb.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "6772099324721707224715070437205709623671146843087680984461675764599992554029",
+      "outcome": "Yes",
+      "price": 0.0135,
+      "winner": false
+    },
+    {
+      "token_id": "89449176936226644848783012576486654336480746280426703687616042913707102840919",
+      "outcome": "No",
+      "price": 0.9865,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "NHL",
+    "Hockey",
+    "Stanley Cup"
+  ]
+}

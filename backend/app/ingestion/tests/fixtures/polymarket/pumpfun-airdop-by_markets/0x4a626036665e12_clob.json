@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-07-24T15:44:32Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x4a626036665e1210bf12b659b82c4a18354d01c05381bf4f3ffe0302268d48e8",
+  "question_id": "0x338bcb4311d37b9411ce7e638cab714fa535a99a80a322b5983094ab4cd8d138",
+  "question": "Will Pump.fun perform an airdrop by December 31?",
+  "description": "This market will resolve to \"Yes\" if Pump.fun performs an airdrop by December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from Pump.fun, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-pumpfun-perform-an-airdrop-by-december-31",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "0xe4D3Daeee9Ef38393f5B8664d2fD4Dd525905042",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/pumpfun-launch-a-token-by-RzTi7_aC42Qa.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/pumpfun-launch-a-token-by-RzTi7_aC42Qa.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "10949869537629224923845209879060413629164087570929040473675267495112926199501",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "14660121480863917965711983751255100387928115451421289712478207249791962743148",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "Crypto Prices",
+    "Pre-Market"
+  ]
+}

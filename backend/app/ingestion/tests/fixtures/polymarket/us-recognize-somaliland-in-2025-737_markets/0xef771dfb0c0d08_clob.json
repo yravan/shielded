@@ -1,0 +1,52 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-12-31T21:24:51Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xef771dfb0c0d08fe8814cf38109285e0defdd15590b8fdba8e4bb4fcf7053bc9",
+  "question_id": "0xf95b820b5c34286b86d4aa64053ce95b37cdc0b55a2e297b4e82a0c5fba82a2f",
+  "question": "US recognize Somaliland by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if the U.S. government formally recognizes Somaliland as an independent state by June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No.\"\n\nAn announcement of intentions will not suffice to resolve this market to \"Yes.\" Only the U.S. government's formal recognition of Somaliland as an independent state will count toward a \"Yes\" resolution for this market.\n\nThe primary resolution source for this market will be official information from the U.S. government. However, a consensus of credible reporting will also be used.",
+  "market_slug": "us-recognize-somaliland-by-june-30-2026",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-recognize-somaliland-in-2025-737-DuhSKvX-Zcud.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/us-recognize-somaliland-in-2025-737-DuhSKvX-Zcud.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "341368897042243807960322918100244225053422833178442902614873204289972114377",
+      "outcome": "Yes",
+      "price": 0.161,
+      "winner": false
+    },
+    {
+      "token_id": "42963132592124933938063964259956957599220775220246711499277090802905213399885",
+      "outcome": "No",
+      "price": 0.839,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Geopolitics",
+    "World"
+  ]
+}

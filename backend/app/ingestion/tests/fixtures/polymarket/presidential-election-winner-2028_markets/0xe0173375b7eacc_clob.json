@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:05:42Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xe0173375b7eaccb836f7b92d28a9a2d1cc69e54e5a65fae89a5d7e49aadd332e",
+  "question_id": "0xb9aa4595bbe8ca1ecceeb16d24fb5df6d27d4e2116787ad874ff31f682bdb410",
+  "question": "Will Nikki Haley win the 2028 US Presidential Election?",
+  "description": "The 2028 US Presidential Election is scheduled to take place on November 7, 2028.\n\nThis market will resolve to the person who wins the 2028 US Presidential Election.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven\u2019t called the race for the same candidate by the inauguration date (January 20, 2029) this market will resolve based on who is inaugurated.",
+  "market_slug": "will-nikki-haley-win-the-2028-us-presidential-election",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xb9aa4595bbe8ca1ecceeb16d24fb5df6d27d4e2116787ad874ff31f682bdb400",
+  "neg_risk_request_id": "0x310db1e195bc2f79d45cb5e868cdf3d38265fae65635f67827e40008581d8c51",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-nikki-haley-win-the-2028-us-presidential-election-pUzXkWs8--Wo.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-nikki-haley-win-the-2028-us-presidential-election-pUzXkWs8--Wo.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "14253956839582698877884742930225331487593177635330318923853046874994118249367",
+      "outcome": "Yes",
+      "price": 0.0105,
+      "winner": false
+    },
+    {
+      "token_id": "84386913213192310444216977895083273572419886997719576824320630372812149173320",
+      "outcome": "No",
+      "price": 0.9895,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%",
+    "President"
+  ]
+}

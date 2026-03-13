@@ -1,0 +1,50 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773345600,
+      "open_interest_fp": "310.00",
+      "price": {
+        "close_dollars": "0.2900",
+        "high_dollars": "0.2900",
+        "low_dollars": "0.2900",
+        "mean_dollars": "0.2900",
+        "open_dollars": "0.2900",
+        "previous_dollars": "0.2000"
+      },
+      "volume_fp": "16.00",
+      "yes_ask": {
+        "close_dollars": "0.2900",
+        "high_dollars": "0.2900",
+        "low_dollars": "0.2900",
+        "open_dollars": "0.2900"
+      },
+      "yes_bid": {
+        "close_dollars": "0.1900",
+        "high_dollars": "0.1900",
+        "low_dollars": "0.1900",
+        "open_dollars": "0.1900"
+      }
+    },
+    {
+      "end_period_ts": 1773363600,
+      "open_interest_fp": "310.00",
+      "price": {
+        "previous_dollars": "0.2900"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.2900",
+        "high_dollars": "0.2900",
+        "low_dollars": "0.2900",
+        "open_dollars": "0.2900"
+      },
+      "yes_bid": {
+        "close_dollars": "0.2000",
+        "high_dollars": "0.2000",
+        "low_dollars": "0.1900",
+        "open_dollars": "0.1900"
+      }
+    }
+  ],
+  "ticker": "KXPERFORMROLEBRITNEY-OLI"
+}

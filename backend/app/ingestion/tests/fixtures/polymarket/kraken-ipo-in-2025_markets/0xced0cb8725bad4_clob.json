@@ -1,0 +1,57 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-11-19T15:49:13Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0xced0cb8725bad43d78fda0cd0e5fa9e31804625cb3502b2c7897f8e8f7fa9e1f",
+  "question_id": "0xb6cc06fbb46f67a90062d501b29778c2bf41b0fac19a8647039ba21e884d7f1e",
+  "question": "Kraken IPO by December 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if Kraken completes an Initial Public Offering (IPO) by the listed date ET, as confirmed by official company announcements and credible news sources. Otherwise, this market will resolve to \"No.\"\n\nThe IPO refers to the first sale of stock by the listed company to the public on any recognized stock exchange.\n\nIf Kraken is acquired by another company that is already public, this market will immediately resolve to \"No.\"\n\nThe resolution source for this market is a consensus of credible reporting.",
+  "market_slug": "kraken-ipo-by-december-31-2026",
+  "end_date_iso": "2027-01-01T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-kraken-ipo-in-2024--_GT-GzKWtUW.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-kraken-ipo-in-2024--_GT-GzKWtUW.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "34626184950254225208692030156208941308358060420950772251072421141618169142241",
+      "outcome": "Yes",
+      "price": 0.83,
+      "winner": false
+    },
+    {
+      "token_id": "28557614648090529004584076028720900603196666949274543515794672175624115225556",
+      "outcome": "No",
+      "price": 0.17,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Business",
+    "Finance",
+    "IPOs",
+    "Tech",
+    "exchange",
+    "2025 Predictions",
+    "Featured"
+  ]
+}

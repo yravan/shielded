@@ -13,6 +13,8 @@ from app.schemas.hedge import (
     PredictionMarketHedge,
     TraditionalHedge,
 )
+from app.risk_engine import get_hedge_instruments
+from app.schemas.risk import HedgeInstrumentOut
 from app.services.hedge_calculator import (
     calculate_pm_hedge,
     calculate_traditional_hedge,
@@ -49,6 +51,25 @@ async def get_hedge_analysis(
     if not company:
         raise HTTPException(status_code=404, detail="Company not found")
 
+    # Look up exposure to get matched themes for instrument suggestions
+    exp_for_themes = await db.execute(
+        select(Exposure).where(
+            Exposure.company_id == company_id,
+            Exposure.event_id == event_id,
+        )
+    )
+    exposure_record = exp_for_themes.scalars().first()
+    themes = exposure_record.matched_themes if exposure_record and exposure_record.matched_themes else []
+    instruments = [
+        HedgeInstrumentOut(
+            ticker=h.ticker,
+            instrument_type=h.instrument_type,
+            direction=h.direction,
+            rationale=h.rationale,
+        )
+        for h in get_hedge_instruments(themes)
+    ]
+
     if analysis:
         return HedgeComparisonResponse(
             company_id=company_id,
@@ -70,23 +91,17 @@ async def get_hedge_analysis(
             recommendation=analysis.recommendation,
             savings_percent=analysis.savings_percent,
             notes=analysis.notes,
+            suggested_instruments=instruments,
         )
 
     # Compute on the fly if no pre-computed analysis exists
-    # Get exposure to determine notional
-    exp_result = await db.execute(
-        select(Exposure).where(
-            Exposure.company_id == company_id,
-            Exposure.event_id == event_id,
-        )
-    )
-    exposure = exp_result.scalars().first()
-    if not exposure:
+    if not exposure_record:
         raise HTTPException(
             status_code=404,
             detail="No exposure found for this company-event pair",
         )
 
+    exposure = exposure_record
     notional = float(company.annual_revenue) * exposure.revenue_impact_pct * exposure.sensitivity
     probability = event.current_probability
 
@@ -108,4 +123,5 @@ async def get_hedge_analysis(
         traditional=TraditionalHedge(**trad),
         recommendation=rec,
         savings_percent=savings,
+        suggested_instruments=instruments,
     )

@@ -1,0 +1,59 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-02T22:26:37Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xcdb1f0400949238a63d3e88243d2ada08cd9c2a71985ced9f0cfd5e66354cf90",
+  "question_id": "0xb5c32a9acd39848acad4913ac4cd49c5de2afcc9d23a8a7ba2419375fab87409",
+  "question": "Will USA win the 2026 FIFA World Cup?",
+  "description": "This market will resolve according to the national team that wins the 2026 FIFA World Cup.\n\nIf at any point it becomes impossible for this team to win the FIFA World Cup based on the rules of FIFA (e.g., they are eliminated in the knockout stage), this market will resolve immediately to \u201cNo\u201d.\n\nIf the 2026 FIFA World Cup is permanently canceled or has not been completed by October 13, 2026, 11:59 PM this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source will be official information from FIFA, however, a consensus of credible reporting may also be used.",
+  "market_slug": "will-usa-win-the-2026-fifa-world-cup-467",
+  "end_date_iso": "2026-07-20T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xb5c32a9acd39848acad4913ac4cd49c5de2afcc9d23a8a7ba2419375fab87400",
+  "neg_risk_request_id": "0xe590257c2b7e12d1e29aa8ffa02fc91d745863fd45fa9ccc77030c2a0376132e",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-usa-win-the-2026-fifa-world-cup-467-HSwwccrla5fz.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-usa-win-the-2026-fifa-world-cup-467-HSwwccrla5fz.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "94603648636330087039501304492699481091005420017442244191603206509188088089447",
+      "outcome": "Yes",
+      "price": 0.0165,
+      "winner": false
+    },
+    {
+      "token_id": "45270201343463663182019040935560267543606888663369415494551943549463253748361",
+      "outcome": "No",
+      "price": 0.9835,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Soccer",
+    "Hide From New",
+    "FIFA World Cup",
+    "2026 FIFA World Cup"
+  ]
+}

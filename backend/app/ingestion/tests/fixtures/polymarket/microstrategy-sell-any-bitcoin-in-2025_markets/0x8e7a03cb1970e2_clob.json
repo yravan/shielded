@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-11-19T22:51:09Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x8e7a03cb1970e2ad6533b01892403516b6b3f5b5fa90ed7d104c28b27e40ba00",
+  "question_id": "0x83f73856c2c2982dd3f3aba8a7d1e3f494d1b76919b725dc51aceefa82218162",
+  "question": "MicroStrategy sells any Bitcoin by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if MicroStrategy sells any of its Bitcoin by 11:59 PM ET on the date specified in the title. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be information from MSTR and on-chain data, however a consensus of credible reporting will also be used.",
+  "market_slug": "microstrategy-sells-any-bitcoin-by-june-30-2026",
+  "end_date_iso": "2026-07-01T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-microstrategy-purchase-bitcoin-july-1-7-mzoE5TYk_cCI.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-microstrategy-purchase-bitcoin-july-1-7-mzoE5TYk_cCI.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 3
+      }
+    ],
+    "min_size": 200,
+    "max_spread": 4.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "110251828161543119357013227499774714771527179764174739487025581227481937033858",
+      "outcome": "Yes",
+      "price": 0.028,
+      "winner": false
+    },
+    {
+      "token_id": "65176388692130651396848427090788038285140833850265294793449655516920659740141",
+      "outcome": "No",
+      "price": 0.972,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Business",
+    "Finance",
+    "Stocks",
+    "Economy",
+    "MicroStrategy",
+    "2025 Predictions"
+  ]
+}

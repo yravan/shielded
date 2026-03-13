@@ -1,0 +1,52 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-05-12T22:50:14Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xe2b48e3b44de9658ee9c8b37354301763e33c0b502fd966839d644b4c0a9dea8",
+  "question_id": "0xaa0edfa656a0e70bf8c63f09438cd70979fef8e31fcc62d80840b5a375a55401",
+  "question": "Will Harvey Weinstein be sentenced to less than 5 years in prison?",
+  "description": "This market will resolve according to the prison sentence, if any, imposed on Harvey Weinstein as part of his ongoing New York retrial (People of the State of New York v. Harvey Weinstein) by July 31, 2026, 11:59 PM ET.\n\nThis market will resolve immediately based on the first sentence rendered in this case, regardless of any appeals. If Weinstein is found not guilty, there is a mistrial, or if the first sentencing does not include any jail or prison time, this market will resolve to \"No Prison Time.\"\n\nIf no sentencing takes place by July 31, 2026, 11:59 PM ET, this market will also resolve to \"No Prison Time.\"\n\nIf the sentence falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nFor the purposes of this market, it does not matter whether the sentence is concurrent or consecutive to any existing sentence Weinstein is already serving. The market will resolve based on the total prison sentence imposed in this case.\n\nThe primary resolution source for this market will be official information from the New York court system or other involved U.S. government sources; however, a consensus of credible reporting may also be used.",
+  "market_slug": "will-harvey-weinstein-be-sentenced-to-less-than-5-years-in-prison",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xaa0edfa656a0e70bf8c63f09438cd70979fef8e31fcc62d80840b5a375a55400",
+  "neg_risk_request_id": "0x82878fe1e632dcb51098903df8845b13ac81e98ea89377b21eecd15dbf19d3ae",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/harvey-weinstein-prison-time-C0vjbSkDw4Cy.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/harvey-weinstein-prison-time-C0vjbSkDw4Cy.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "77166477669007661974218999697956080000161736671391584414287437514245884953047",
+      "outcome": "Yes",
+      "price": 0.0715,
+      "winner": false
+    },
+    {
+      "token_id": "47055352475798285920984907840917431698812931301054546103955312973973172985230",
+      "outcome": "No",
+      "price": 0.9285,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Movies",
+    "Culture",
+    "Courts"
+  ]
+}

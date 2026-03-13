@@ -1,0 +1,57 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-12-29T14:05:21Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xba168b801379324a7734b67fd217205ceff4de82d07697d6d869849503270ce5",
+  "question_id": "0xdd36395966f7a5c6e4c7a71581794f2bc039e93a666eb916f0c018f5be32698b",
+  "question": "Jeffrey Epstein foul play confirmed by March 31, 2026?",
+  "description": "This market will resolve to \u201cYes\u201d if definitive evidence confirming the the incident on August 10, 2019, involving Jeffrey Epstein involved foul play is released by March 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nStatements from the U.S. government indicating that there was foul play will qualify for a \"Yes\" resolution.\n\nThe primary resolution source for this market will be official information from any US government agency, law enforcement agencies, and courts, however a consensus of credible reporting may also be used.",
+  "market_slug": "jeffrey-epstein-foul-play-confirmed-by-march-31",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/jeffrey-epstein-foul-play-confirmed-in-2025-UrxmkWMmuZ8V.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/jeffrey-epstein-foul-play-confirmed-in-2025-UrxmkWMmuZ8V.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 10
+      }
+    ],
+    "min_size": 200,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "20157840846943494741206900009488641270304235968585889165966414729313140085537",
+      "outcome": "Yes",
+      "price": 0.0175,
+      "winner": false
+    },
+    {
+      "token_id": "8368496167459506032788121268936548975712314217938384974048100203216960712422",
+      "outcome": "No",
+      "price": 0.9825,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Trump",
+    "Epstein",
+    "Trump Presidency"
+  ]
+}

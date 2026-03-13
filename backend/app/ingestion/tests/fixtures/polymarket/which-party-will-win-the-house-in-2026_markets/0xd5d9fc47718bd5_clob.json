@@ -1,0 +1,62 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:50:22Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0xd5d9fc47718bd553592d126b1fa5e87183d27f3936975b0c04cc0f2dec1f1bb4",
+  "question_id": "0xd4ec843b5228dfe0779147cf13ca9954bc22edc63876954dc2fb95fcee42ef00",
+  "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+  "description": "This market will resolve according to the party that controls the House of Representatives following the 2026 U.S. House elections scheduled for November 3, 2026.\n\nHouse control is defined as having more than half of the voting members of the U.S. House of Representatives.\n\nIf the outcome of this election is ambiguous given the above rules, this market will remain open until the Speaker of the House is selected following the 2026 U.S. general election, at which point it will resolve to the party the Speaker is affiliated with at the time of their election to that position. If the elected Speaker does not caucus with any listed party this market will resolve \u201cOther\u201d.\n\nDetermination of which party controls the House after the 2026 U.S. House elections will be based on a consensus of credible reporting, or if there is ambiguity, final federal and/or state election authority certification or other final official determination of the 2026 election results.",
+  "market_slug": "will-the-democratic-party-control-the-house-after-the-2026-midterm-elections",
+  "end_date_iso": "2026-11-03T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xd4ec843b5228dfe0779147cf13ca9954bc22edc63876954dc2fb95fcee42ef00",
+  "neg_risk_request_id": "0x5410be0dba03c48613a43de966637a38a4645a2c085d3e04ec1adbebbd01e7b3",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections-JJ9h02JGR09z.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-democratic-party-control-the-senate-after-the-2026-midterm-elections-JJ9h02JGR09z.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 10
+      }
+    ],
+    "min_size": 200,
+    "max_spread": 4.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "83247781037352156539108067944461291821683755894607244160607042790356561625563",
+      "outcome": "Yes",
+      "price": 0.845,
+      "winner": false
+    },
+    {
+      "token_id": "33156410999665902694791064431724433042010245771106314074312009703157423879038",
+      "outcome": "No",
+      "price": 0.155,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Midterms",
+    "Earn 4%",
+    "Parent For Derivative"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-06-23T16:00:15Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xa0c492acb221e77adbe84953fec4fc917e45e8b67121c1852d20e2fb9a29064f",
+  "question_id": "0x7faa974ff857682d64433d5c4dfba46ff51415a68cbd5bd1994248df2d56120c",
+  "question": "Will the New York Rangers win the 2026 NHL Stanley Cup?",
+  "description": "This market will resolve to \u201cYes\u201d if the New York Rangers win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+  "market_slug": "will-the-new-york-rangers-win-the-2026-nhl-stanley-cup",
+  "end_date_iso": "2026-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x7faa974ff857682d64433d5c4dfba46ff51415a68cbd5bd1994248df2d561200",
+  "neg_risk_request_id": "0xe7a313c93c51c3bcd845e0f148b46d3d1cd549091b18d3e8d52a9f17323a18af",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/stanley-cup-champion-2026-05M0VRODAaEb.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/stanley-cup-champion-2026-05M0VRODAaEb.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "8632114599242481428657290920457928145465118150352562816049752984278653204354",
+      "outcome": "Yes",
+      "price": 0.0015,
+      "winner": false
+    },
+    {
+      "token_id": "38164917785960547058897753715153399631236008787392479420647504474970728279061",
+      "outcome": "No",
+      "price": 0.9985,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "NHL",
+    "Hockey",
+    "Stanley Cup"
+  ]
+}

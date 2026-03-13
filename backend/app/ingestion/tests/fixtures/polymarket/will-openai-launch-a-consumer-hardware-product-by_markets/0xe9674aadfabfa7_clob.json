@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-05-22T14:49:27Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xe9674aadfabfa7171bcee4e38b66f1a7d7e0af538d3718301e7b3cf111e9b5dd",
+  "question_id": "0x491743575711346801e741d5b391855fff1c305dce82c3af5a5ab130eca39f69",
+  "question": "Will OpenAI launch a new consumer hardware product by March 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if OpenAI publicly announces and launches a new consumer hardware product by March 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\". \n\nA \"consumer hardware product\" is defined as a physical device intended for direct use by individual consumers, rather than enterprise or developer tools. The product must be newly introduced and not a rebrand, update, or iteration of any previously released device.\n\nExamples that would qualify include an AI-powered wearable, smart home assistant, or augmented reality device. Developer tools, AI chips, or servers marketed exclusively for enterprise use would not qualify.\n\nThe resolution source will be official information from OpenAI.",
+  "market_slug": "will-openai-launch-a-new-consumer-hardware-product-by-march-31-2026",
+  "end_date_iso": null,
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-openai-launch-a-consumer-hardware-product-by-qKhPl0zZsOEJ.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-openai-launch-a-consumer-hardware-product-by-qKhPl0zZsOEJ.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 2
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "69497259499564904327437411778598106057943098225196700538590387556685558432215",
+      "outcome": "Yes",
+      "price": 0.0205,
+      "winner": false
+    },
+    {
+      "token_id": "15235916682414645873512796594946768179124144849305245659656321561016071235505",
+      "outcome": "No",
+      "price": 0.9795,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "sam altman",
+    "AI",
+    "OpenAI",
+    "Tech",
+    "Big Tech",
+    "GPT-5"
+  ]
+}

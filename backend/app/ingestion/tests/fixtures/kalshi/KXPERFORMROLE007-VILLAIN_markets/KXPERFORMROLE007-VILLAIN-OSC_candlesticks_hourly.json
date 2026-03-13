@@ -1,0 +1,25 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773374400,
+      "open_interest_fp": "10.00",
+      "price": {
+        "previous_dollars": "0.0700"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.1700",
+        "high_dollars": "0.1700",
+        "low_dollars": "0.1700",
+        "open_dollars": "0.1700"
+      },
+      "yes_bid": {
+        "close_dollars": "0.0800",
+        "high_dollars": "0.0800",
+        "low_dollars": "0.0800",
+        "open_dollars": "0.0800"
+      }
+    }
+  ],
+  "ticker": "KXPERFORMROLE007-VILLAIN-OSC"
+}

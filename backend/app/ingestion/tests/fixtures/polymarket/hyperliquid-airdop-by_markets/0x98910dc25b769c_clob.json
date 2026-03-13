@@ -1,0 +1,58 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-06-19T19:17:18Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x98910dc25b769ce6ca5859ed096d592a20a286cc1cfe653a808a0f00ce304d17",
+  "question_id": "0x52fc4457353023082d7e1e4b366879c91acb6698116b7f8c1468fd3a1e89fb68",
+  "question": "Will Hyperliquid perform an airdrop by June 30?",
+  "description": "This market will resolve to \"Yes\" if Hyperliquid performs a second airdrop by June 30, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from Hyperliquid, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-hyperliquid-perform-an-airdrop-by-june-30",
+  "end_date_iso": "2025-07-01T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/hyperliquid-up-or-down-on-may-22-Fyo58T8HF0AC.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/hyperliquid-up-or-down-on-may-22-Fyo58T8HF0AC.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 5
+      }
+    ],
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "55285828285992778615567598128567531458532015696093728745225243039351455311289",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "85919150400405702925313137677042710601560324382309630617838316075388747649399",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "Featured",
+    "Pre-Market"
+  ]
+}

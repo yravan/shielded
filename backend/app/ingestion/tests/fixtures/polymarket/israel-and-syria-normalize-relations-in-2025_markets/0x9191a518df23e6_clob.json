@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-11-11T22:18:27Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x9191a518df23e67546ee548029803c645f80c5e5cc8a9f247841dcd910f11975",
+  "question_id": "0xabbcc201f8b2f82fb39df758225616a3db3cd9c6086bbaacabefce8813f820ff",
+  "question": "Israel and Syria normalize relations by December 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if both Israel and Syria officially announce the establishment of diplomatic relations by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from Israel and the Syria, however a consensus of credible reporting may also be used.",
+  "market_slug": "israel-and-syria-normalize-relations-by-december-31-2026-166",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/israel-and-syria-normalize-relations-in-2025-cTktGZLyjnB_.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/israel-and-syria-normalize-relations-in-2025-cTktGZLyjnB_.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 1
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "106383854378569763040038727158261681740086130201198677161578651498744312589763",
+      "outcome": "Yes",
+      "price": 0.175,
+      "winner": false
+    },
+    {
+      "token_id": "10553917527871259014867933253903838134228152744058156727275127563897745134791",
+      "outcome": "No",
+      "price": 0.825,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Syria",
+    "Middle East",
+    "Israel",
+    "Geopolitics",
+    "World",
+    "Trump x al-Sharaa"
+  ]
+}

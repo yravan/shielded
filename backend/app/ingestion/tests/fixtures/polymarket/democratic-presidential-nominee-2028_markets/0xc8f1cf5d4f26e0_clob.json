@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T18:35:40Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xc8f1cf5d4f26e0fd9c8fe89f2a7b3263b902cf14fde7bfccef525753bb492e47",
+  "question_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814705",
+  "question": "Will Stephen A. Smith win the 2028 Democratic presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-stephen-a-smith-win-the-2028-democratic-presidential-nomination-914",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814700",
+  "neg_risk_request_id": "0x18656c0795d9f0282bd03185fb2dd1e88786bf1608c7c057db2508267c00bb29",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-stephen-smith-win-the-2028-us-presidential-election-TLNFUsNkT8yf.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-stephen-smith-win-the-2028-us-presidential-election-TLNFUsNkT8yf.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "60590045489347122735554346200880179420435533609307820342798544098823516727807",
+      "outcome": "Yes",
+      "price": 0.0115,
+      "winner": false
+    },
+    {
+      "token_id": "76005700027045000587004110133818166617024719626220722682005164003117993034812",
+      "outcome": "No",
+      "price": 0.9885,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

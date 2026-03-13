@@ -38,23 +38,28 @@ interface MultiProbabilityChartProps {
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
-function MultiTooltip({ active, payload, label }: any) {
+function MultiTooltip({ active, payload, label, markets }: any) {
   if (!active || !payload?.length) return null;
   return (
     <div className="rounded-md border border-border bg-card px-3 py-2 shadow-lg max-w-xs">
-      <p className="text-xs text-muted-foreground mb-1">{label}</p>
-      {payload.map((entry: any) => (
-        <div key={entry.dataKey} className="flex items-center gap-2 text-xs">
-          <span
-            className="w-2 h-2 rounded-full shrink-0"
-            style={{ backgroundColor: entry.color }}
-          />
-          <span className="truncate">{entry.name}</span>
-          <span className="font-mono font-semibold ml-auto">
-            {(entry.value * 100).toFixed(1)}%
-          </span>
-        </div>
-      ))}
+      <p className="text-xs text-muted-foreground mb-1">
+        {(() => { const d = new Date(label); return `${d.getMonth() + 1}/${d.getDate()}`; })()}
+      </p>
+      {payload.map((entry: any) => {
+        const market = (markets ?? []).find((m: MarketLine) => m.id === entry.dataKey);
+        return (
+          <div key={entry.dataKey} className="flex items-center gap-2 text-xs">
+            <span
+              className="w-2 h-2 rounded-full shrink-0"
+              style={{ backgroundColor: entry.color }}
+            />
+            <span className="truncate">{market?.title ?? entry.dataKey}</span>
+            <span className="font-mono font-semibold ml-auto">
+              {(entry.value * 100).toFixed(1)}%
+            </span>
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -115,14 +120,14 @@ export function MultiProbabilityChart({
           minTickGap={40}
         />
         <YAxis
-          domain={[0, 1]}
+          domain={["auto", "auto"]}
           axisLine={false}
           tickLine={false}
           tick={{ fontSize: 11, fill: "var(--color-muted-foreground)" }}
           tickFormatter={(v: number) => `${(v * 100).toFixed(0)}%`}
           width={45}
         />
-        <Tooltip content={<MultiTooltip />} />
+        <Tooltip content={<MultiTooltip markets={visibleMarkets} />} />
         <Legend
           formatter={(value: string) => {
             const market = visibleMarkets.find((m) => m.id === value);

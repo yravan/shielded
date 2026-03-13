@@ -1,0 +1,70 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773374400,
+      "open_interest_fp": "339.00",
+      "price": {
+        "previous_dollars": "0.8100"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.8200",
+        "high_dollars": "0.8200",
+        "low_dollars": "0.8200",
+        "open_dollars": "0.8200"
+      },
+      "yes_bid": {
+        "close_dollars": "0.7200",
+        "high_dollars": "0.7200",
+        "low_dollars": "0.7200",
+        "open_dollars": "0.7200"
+      }
+    },
+    {
+      "end_period_ts": 1773406800,
+      "open_interest_fp": "339.00",
+      "price": {
+        "close_dollars": "0.7200",
+        "high_dollars": "0.7200",
+        "low_dollars": "0.7200",
+        "mean_dollars": "0.7200",
+        "open_dollars": "0.7200",
+        "previous_dollars": "0.8100"
+      },
+      "volume_fp": "3.00",
+      "yes_ask": {
+        "close_dollars": "0.8200",
+        "high_dollars": "0.8200",
+        "low_dollars": "0.8200",
+        "open_dollars": "0.8200"
+      },
+      "yes_bid": {
+        "close_dollars": "0.7200",
+        "high_dollars": "0.7200",
+        "low_dollars": "0.7200",
+        "open_dollars": "0.7200"
+      }
+    },
+    {
+      "end_period_ts": 1773414000,
+      "open_interest_fp": "339.00",
+      "price": {
+        "previous_dollars": "0.7200"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.8200",
+        "high_dollars": "0.8200",
+        "low_dollars": "0.8200",
+        "open_dollars": "0.8200"
+      },
+      "yes_bid": {
+        "close_dollars": "0.7200",
+        "high_dollars": "0.7200",
+        "low_dollars": "0.7200",
+        "open_dollars": "0.7200"
+      }
+    }
+  ],
+  "ticker": "KXYTUBESUBSISHOWSPEED-30"
+}

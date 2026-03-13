@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-08-07T14:21:13Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x0ea8005efbc460378340a2f28a6d97b0d1d9d9d7fba4d16f529b8a415dca77a2",
+  "question_id": "0x9c4c41b0d3e1a61764250a0f6f53a26e073df17fe4d892699283fae2fa94eabb",
+  "question": "Will GPT-6 be released before GTA VI?",
+  "description": "This market will resolve to \"Yes\" if OpenAI's GPT-6 model is made available to the general public before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an official release. If the release is only for certain consoles (e.g. Xbox Series X/S) it will count.\n\nThe resolution source for the release of GTA VI is official information from Rockstar Games or its parent company, Take-Two Interactive.\n\nTo qualify, GPT-6 must be launched and publicly accessible, including via open beta or open rolling waitlist signups. A closed beta or any form of private access will not suffice. The release must be clearly defined and publicly announced by OpenAI as being accessible to the general public.\n\nGPT-6 refers to a product explicitly named GPT-6 (e.g. ChatGPT-6o would count), or one that is recognized as a successor to GPT-5, similar to the progression from GPT-4 to GPT-5. Products labeled as GPT-5.5 or similar will not count for this market's resolution.\n\nThe primary resolution source for the release of GPT-6 will be official information from OpenAI, with additional verification from a consensus of credible reporting.",
+  "market_slug": "will-gpt-6-be-released",
+  "end_date_iso": "2026-07-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "0xF572b3B4BE2c67837A206F660cA7b51F0D7e585F",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-gpt-6-be-released-60JNME7AcX8z.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-gpt-6-be-released-60JNME7AcX8z.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 1
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "71552623345730992280501476931299615437386807576519105089437764117985071980606",
+      "outcome": "Yes",
+      "price": 0.63,
+      "winner": false
+    },
+    {
+      "token_id": "48266425622404486484896353767723266081505997963592758694068789352158715350186",
+      "outcome": "No",
+      "price": 0.37,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Culture",
+    "All",
+    "GTA VI"
+  ]
+}

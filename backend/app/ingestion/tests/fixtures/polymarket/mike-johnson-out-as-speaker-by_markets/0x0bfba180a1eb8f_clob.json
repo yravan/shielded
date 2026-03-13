@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-04-09T18:55:33Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x0bfba180a1eb8fe425e3db8cb72d2d6ea20af92baaf59f6f549d6d86eee01562",
+  "question_id": "0x5f9d6421c00648d5fa0a3fbf908d1071d1a029de6b1b841680b08b3b96b18389",
+  "question": "Mike Johnson out as Speaker by December 31?",
+  "description": "This market will resolve to \"Yes\" if Mike Johnson announces that he will resign from his position as Speaker of the US House of Representatives, or otherwise ceases to be Speaker for any length of time, between April 9, and December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nNote that an announcement of his resignation before the resolution date will suffice to resolve this market to \"Yes\" regardless of if/when he actually steps down.\n\nThe primary resolution source for this market will be official information from the Government of the United States of America or official statements by Mike Johnson or his representative, however a consensus of credible reporting will suffice.",
+  "market_slug": "mike-johnson-out-as-speaker-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/mike-johnson-out-as-speaker-in-2025-1-7k5VgFR3NF.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/mike-johnson-out-as-speaker-in-2025-1-7k5VgFR3NF.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "22044237409105221636413433388486939192566265748724879342425449645290826575226",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "31447096058423995793999681020101652299482077992431382315957978631568557785867",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "us government",
+    "Congress",
+    "house"
+  ]
+}

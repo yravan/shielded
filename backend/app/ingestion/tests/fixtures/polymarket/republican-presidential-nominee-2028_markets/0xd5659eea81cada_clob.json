@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:42:10Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xd5659eea81cada0bac656f5a9099861786cbae6755e2e1ac2c9e9441908b551f",
+  "question_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea61c",
+  "question": "Will Steve Bannon win the 2028 Republican presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Republican Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Republican Party sources.\n\nAny replacement of the Republican nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-steve-bannon-win-the-2028-republican-presidential-nomination",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea600",
+  "neg_risk_request_id": "0xb2225e55643924c178da266bf3001ef0ac841a15d1baa22880aaf6c5c5066c72",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bannon.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bannon.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "76572162491038773682779378100661251853152133818805423848523216103658476280587",
+      "outcome": "Yes",
+      "price": 0.0075,
+      "winner": false
+    },
+    {
+      "token_id": "25583872291729778177187717614560645987351882646783629615247519807465184364234",
+      "outcome": "No",
+      "price": 0.9925,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

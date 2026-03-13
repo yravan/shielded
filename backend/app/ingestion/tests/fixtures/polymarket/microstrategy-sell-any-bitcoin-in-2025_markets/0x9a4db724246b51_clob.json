@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-11-19T23:54:15Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x9a4db724246b51cbfbc8000dbbd6b54d72b057767c3690e63d940b26d78c6cb0",
+  "question_id": "0x314dbcacc98d0315f54d7bb6682e24f157aef33f9898582c0b4cbb12df7a5ad6",
+  "question": "MicroStrategy sells any Bitcoin by March 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if MicroStrategy sells any of its Bitcoin by 11:59 PM ET on the date specified in the title. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be information from MSTR and on-chain data, however a consensus of credible reporting will also be used.",
+  "market_slug": "microstrategy-sells-any-bitcoin-by-march-31-2026",
+  "end_date_iso": null,
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-microstrategy-purchase-bitcoin-july-1-7-mzoE5TYk_cCI.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-microstrategy-purchase-bitcoin-july-1-7-mzoE5TYk_cCI.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "108547978327958467449318042977006580876058560639743186491243488736783119648127",
+      "outcome": "Yes",
+      "price": 0.0075,
+      "winner": false
+    },
+    {
+      "token_id": "61476326573463890939120700176570456436619008823217970387484180237661307640203",
+      "outcome": "No",
+      "price": 0.9925,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Business",
+    "Finance",
+    "Stocks",
+    "Economy",
+    "MicroStrategy",
+    "2025 Predictions"
+  ]
+}

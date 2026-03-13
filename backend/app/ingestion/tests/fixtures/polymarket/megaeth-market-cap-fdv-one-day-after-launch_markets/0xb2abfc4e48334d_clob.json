@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-10-14T20:43:07Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xb2abfc4e48334d87681240cd6a7e63c728e13973fbd68951b45bc86d6c4491e4",
+  "question_id": "0x6d762583ee2bcf55dbaad9bc360213c0387e2ca6c24901f8095afae41e8a9b00",
+  "question": "MegaETH market cap (FDV) >$4B one day after launch?",
+  "description": "This market will resolve to \"Yes\" if the Fully Diluted Valuation of MegaETH's token is greater than $4,000,000,000 1 day after launch. Otherwise, the market will resolve to \"No.\"\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not be considered a launch.\n\n\"1 day after launch\" is defined as 24 hours after launch. The resolution source for this market is the most liquid price source available. If MegaETH doesn't launch a token by June 30, 2026, 11:59 PM ET, this market will resolve to \"No.\"",
+  "market_slug": "megaeth-market-cap-fdv-4b-one-day-after-launch-484-688-448-486-873-133-182",
+  "end_date_iso": null,
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "18210569213780052033306952138558054016080325272524745338190244466404715123630",
+      "outcome": "Yes",
+      "price": 0.036,
+      "winner": false
+    },
+    {
+      "token_id": "82149110067979470707461735036792617981060265491561473691799265056474452809853",
+      "outcome": "No",
+      "price": 0.964,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "fdv",
+    "Featured",
+    "MegaETH",
+    "Pre-Market"
+  ]
+}

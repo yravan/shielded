@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-11-05T17:09:15Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x2bde6486e7067f48ee21344d8b5c1af458732536eb4d080932c88c3a7c2d2126",
+  "question_id": "0xd51121ce06c0cfd8eeec158846910e6826c66955db1876547cfb266afdcf1505",
+  "question": "Starmer out by December 31, 2026?",
+  "description": "This market will resolve to \u201cYes\u201d if Keir Starmer ceases to be the Prime Minister of the United Kingdom for any period of time between November 5, 2025, and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nAn announcement of Keir Starmer's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the announced resignation/removal goes into effect.\n\nThe resolution source for this market will be the government of the UK, however a consensus of credible reporting will also suffice.",
+  "market_slug": "starmer-out-by-december-31-2026-936-416-977",
+  "end_date_iso": "2026-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/starmer-out-in-2025-teE3zEaEEyuO.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/starmer-out-in-2025-teE3zEaEEyuO.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 20
+      }
+    ],
+    "min_size": 200,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "42498579290170525937803365597001189493798686141769429176410526295573824619073",
+      "outcome": "Yes",
+      "price": 0.705,
+      "winner": false
+    },
+    {
+      "token_id": "88902058027062214140177978007942040532071439710160833384602336149457247354303",
+      "outcome": "No",
+      "price": 0.295,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "uk",
+    "Starmer",
+    "Grooming Gangs",
+    "keir",
+    "World"
+  ]
+}

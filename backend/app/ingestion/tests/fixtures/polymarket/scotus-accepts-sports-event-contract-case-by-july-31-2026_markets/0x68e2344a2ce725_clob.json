@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2026-01-21T01:29:02Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x68e2344a2ce725ca99f3b93df06f27a71f3a893a38e8a6a78f8d85bd2698eb20",
+  "question_id": "0xb7bff01db7250565ef977498e6a120f61595f04da699aa8570d7ee3128371595",
+  "question": "SCOTUS accepts sports event contract case by December 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if the Supreme Court of the United States grants certiorari in a case explicitly concerning the legality, regulation, or jurisdictional authority over sports event contracts by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No.\"\n\nA case qualifies if it addresses at least one of the following: (1) whether contracts based on sporting event outcomes constitute regulated derivatives under the Commodity Exchange Act; (2) whether federal regulation via the Commodity Futures Trading Commission preempts state-level gambling laws as applied to such contracts; or (3) whether sports event contracts offered by federally licensed markets may legally be offered, restricted, or prohibited by federal or state authorities.\n\nThe certiorari grant must be publicly confirmed via the official SCOTUS docket or orders list, and verifiable through credible legal reporting or the Supreme Court\u2019s official website. The case does not need to be heard, scheduled, or decided to qualify. \n\nThe resolution source will be a consensus census of credible reporting.",
+  "market_slug": "scotus-accepts-sports-event-contract-case-by-december-31-2026",
+  "end_date_iso": "2026-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/scotus-accepts-sports-event-contract-case-by-july-31-2026-fYCnFfdr4Hha.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/scotus-accepts-sports-event-contract-case-by-july-31-2026-fYCnFfdr4Hha.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 3
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "44488146241641686838477630423381146915926290111161217223359635890474557300976",
+      "outcome": "Yes",
+      "price": 0.56,
+      "winner": false
+    },
+    {
+      "token_id": "55066760863682681011750966950739411296364830422172387835703592639644113734177",
+      "outcome": "No",
+      "price": 0.44,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Prediction Markets",
+    "Finance",
+    "legal",
+    "Tech",
+    "Courts",
+    "Supreme Court "
+  ]
+}

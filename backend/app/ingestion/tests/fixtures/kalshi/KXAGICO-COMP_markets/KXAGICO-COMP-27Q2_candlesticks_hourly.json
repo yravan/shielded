@@ -1,0 +1,25 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773392400,
+      "open_interest_fp": "11.00",
+      "price": {
+        "previous_dollars": "0.1900"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.2600",
+        "high_dollars": "0.2600",
+        "low_dollars": "0.2600",
+        "open_dollars": "0.2600"
+      },
+      "yes_bid": {
+        "close_dollars": "0.1800",
+        "high_dollars": "0.1800",
+        "low_dollars": "0.0800",
+        "open_dollars": "0.1800"
+      }
+    }
+  ],
+  "ticker": "KXAGICO-COMP-27Q2"
+}

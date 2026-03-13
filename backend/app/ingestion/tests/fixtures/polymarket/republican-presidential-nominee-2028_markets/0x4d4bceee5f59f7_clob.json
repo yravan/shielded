@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:41:56Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x4d4bceee5f59f75230c6438f69fc913a6da7afa4098ce0734655045c02a730fc",
+  "question_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea60f",
+  "question": "Will Josh Hawley win the 2028 Republican presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Republican Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Republican Party sources.\n\nAny replacement of the Republican nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-josh-hawley-win-the-2028-republican-presidential-nomination",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea600",
+  "neg_risk_request_id": "0x04289ff70cce2b527ecc57bbd99e8f02d41ca57cd907a13197367d8c444987f8",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/Josh_Hawley.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/Josh_Hawley.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "16959950591508656523048029588253513417107455151269158025695062757254216051157",
+      "outcome": "Yes",
+      "price": 0.0085,
+      "winner": false
+    },
+    {
+      "token_id": "67257241906349232705880054817671247803154024437556078414309396160231441958063",
+      "outcome": "No",
+      "price": 0.9915,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

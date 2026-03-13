@@ -1,6 +1,6 @@
 import asyncio
 import uuid
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 
 import redis.asyncio as aioredis
 import structlog
@@ -10,7 +10,6 @@ from app.cache import EventCache
 from app.config import settings
 from app.database import async_session
 from app.ingestion.base import NormalizedEvent
-from app.ingestion.ev import compute_expected_value, is_quantitative_event
 from app.ingestion.registry import get_enabled_clients
 from app.models.event import Event
 from celery_app import celery
@@ -45,6 +44,7 @@ async def _upsert_event_to_pg(
             if abs(new_prob - existing.current_probability) > 0.001:
                 existing.previous_probability = existing.current_probability
                 existing.current_probability = new_prob
+        existing.title = event.title[:500]
         existing.is_parent = event.is_parent
         existing.status = event.status
         existing.category = event.category
@@ -52,6 +52,14 @@ async def _upsert_event_to_pg(
         existing.is_quantitative = event.is_quantitative
         existing.expected_value = event.expected_value
         existing.updated_at = now
+        if event.image_url:
+            existing.image_url = event.image_url
+        if event.tags:
+            existing.tags = event.tags
+        if event.series_ticker:
+            existing.series_ticker = event.series_ticker
+        if event.volume is not None:
+            existing.volume = event.volume
         if parent_db_id is not None:
             existing.parent_event_id = parent_db_id
         return existing.id
@@ -73,6 +81,10 @@ async def _upsert_event_to_pg(
         parent_event_id=parent_db_id,
         is_quantitative=event.is_quantitative,
         expected_value=event.expected_value,
+        image_url=event.image_url,
+        tags=event.tags or [],
+        series_ticker=event.series_ticker,
+        volume=event.volume,
         created_at=now,
         updated_at=now,
     )
@@ -81,14 +93,14 @@ async def _upsert_event_to_pg(
     return db_event.id
 
 
-async def _run_ev_computation(event: NormalizedEvent) -> None:
-    """Compute EV fields in-place for multi-market events."""
+async def _run_ev_computation(event: NormalizedEvent, client=None) -> None:
+    """Set EV fields in-place. Currently a no-op for Kalshi.
+
+    Forecast percentile fetching removed — returns 400 for all numeric-strike
+    events with mutually_exclusive=False. Polymarket EV is set during ingestion.
+    """
     if not event.markets or len(event.markets) < 2:
         return
-    quant = is_quantitative_event(event.markets)
-    event.is_quantitative = quant
-    if quant:
-        event.expected_value = compute_expected_value(event.markets)
 
 
 async def _discover_new_events_async() -> dict:
@@ -99,22 +111,27 @@ async def _discover_new_events_async() -> dict:
     total_new = 0
     seen_keys: dict[str, set[str]] = {}  # source -> set of source_ids still active
 
-    async with async_session() as session:
-        for client in clients:
-            source = client.source_name
-            seen_keys[source] = set()
-            try:
-                all_events = await client.fetch_all_events()
-                await logger.ainfo("Discovered events", source=source, count=len(all_events))
+    for client in clients:
+        source = client.source_name
+        seen_keys[source] = set()
+        try:
+            all_events = await client.fetch_all_events()
+            await logger.ainfo("Discovered events", source=source, count=len(all_events))
 
-                # Run EV computation on multi-market events
-                for event in all_events:
-                    await _run_ev_computation(event)
+            # Run EV computation on multi-market events
+            for event in all_events:
+                await _run_ev_computation(event, client=client)
 
-                # Store full normalized list in Redis
-                await cache.set_all_events(source, all_events)
+            # Filter expired/resolved child markets from parent events
+            for event in all_events:
+                if event.is_parent and event.markets:
+                    event.markets = [
+                        m for m in event.markets
+                        if not m.is_closed and m.probability < 0.99
+                    ]
 
-                # Thin upsert into Postgres
+            # Thin upsert into Postgres (fresh session per source)
+            async with async_session() as session:
                 for event in all_events:
                     seen_keys[source].add(event.source_id)
 
@@ -129,10 +146,14 @@ async def _discover_new_events_async() -> dict:
                                 description=event.description,
                                 category=event.category,
                                 region=event.region,
-                                status=event.status,
+                                status="closed" if market.is_closed else event.status,
                                 resolution_date=event.resolution_date,
                                 probability=market.probability,
                                 is_parent=False,
+                                image_url=market.image_url or event.image_url,
+                                tags=event.tags,
+                                series_ticker=market.series_ticker or event.series_ticker,
+                                volume=market.volume,
                             )
                             seen_keys[source].add(market.source_id)
                             await _upsert_event_to_pg(session, child_event, parent_db_id)
@@ -141,15 +162,19 @@ async def _discover_new_events_async() -> dict:
 
                 await session.commit()
 
-            except Exception as exc:
-                await logger.aerror(
-                    "Failed to discover events", source=source, error=str(exc)
-                )
-                await session.rollback()
-            finally:
-                await client.close()
+            # Store in Redis AFTER Postgres commit so explore endpoint
+            # never exposes events that don't exist in the DB yet
+            await cache.set_all_events(source, all_events)
 
-        # Mark events no longer returned by APIs as expired
+        except Exception as exc:
+            await logger.aerror(
+                "Failed to discover events", source=source, error=str(exc)
+            )
+        finally:
+            await client.close()
+
+    # Mark events no longer returned by APIs as expired
+    async with async_session() as session:
         for source, active_ids in seen_keys.items():
             if not active_ids:
                 continue
@@ -180,4 +205,11 @@ async def _discover_new_events_async() -> dict:
 @celery.task(name="app.tasks.discovery.discover_new_events")
 def discover_new_events() -> dict:
     """Celery task to discover new events from all prediction market platforms."""
-    return asyncio.run(_discover_new_events_async())
+    from app.database import engine
+    asyncio.run(engine.dispose())
+    result = asyncio.run(_discover_new_events_async())
+    # Chain: run risk scoring after new events are discovered
+    from app.tasks.risk_scoring import run_risk_scoring
+
+    run_risk_scoring.delay()
+    return result

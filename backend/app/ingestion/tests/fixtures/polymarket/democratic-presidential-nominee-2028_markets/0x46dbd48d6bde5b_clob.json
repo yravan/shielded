@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T18:36:02Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x46dbd48d6bde5b81edb480e0f676a2cdda6c6b592c4d86a9367c7ad5a9870195",
+  "question_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c781471a",
+  "question": "Will Liz Cheney win the 2028 Democratic presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-liz-cheney-win-the-2028-democratic-presidential-nomination-551",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814700",
+  "neg_risk_request_id": "0x93c1c437285632805b933bb3c5840754f0f3edb1c00a7e9764d27605db40352d",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/Liz_Cheney.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/Liz_Cheney.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "41340056280794024415573839406074658402877379128871144681466050648033201160259",
+      "outcome": "Yes",
+      "price": 0.0095,
+      "winner": false
+    },
+    {
+      "token_id": "63802361760137863513735993346883582181207639895442036953936089060482564982249",
+      "outcome": "No",
+      "price": 0.9905,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

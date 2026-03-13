@@ -1,0 +1,52 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-17T12:14:46Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x7f22fff06f0357be1c5641ffb7a7d7214858973da12866f573bee01dd36f351b",
+  "question_id": "0x8a612f242b38880f3d5c93334b03ed6c86a76a9c9848896babd928cc29100404",
+  "question": "Will the Minnesota Timberwolves win the NBA Western Conference Finals?",
+  "description": "This market will resolve to \u201cYes\u201d if the Minnesota Timberwolves win the 2025\u20132026 NBA Western Conference Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2025\u201326 NBA Western Conference Finals based on the rules of the NBA.\n\nIf the 2025-26 NBA Western Conference Finals winner is not announced by June 30, 2026, this market will resolve to \u201cOther\u201d.\n\nThe resolution source for this market will be information from the NBA.",
+  "market_slug": "will-the-minnesota-timberwolves-win-the-nba-western-conference-finals",
+  "end_date_iso": "2026-06-16T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x8a612f242b38880f3d5c93334b03ed6c86a76a9c9848896babd928cc29100400",
+  "neg_risk_request_id": "0x46104753908a61fe44265c820cf6822d0407250f7da2b56bfde3c09cc11237dd",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nba-eastern-conference-champion-442-CYZ7QASk2C2B.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/nba-eastern-conference-champion-442-CYZ7QASk2C2B.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "80564199933198063686735983682931201091805047291421501140508185910743468318376",
+      "outcome": "Yes",
+      "price": 0.0375,
+      "winner": false
+    },
+    {
+      "token_id": "49028495687486892054365092594166410364434486278679913735039487330259821983425",
+      "outcome": "No",
+      "price": 0.9625,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "NBA",
+    "Hide From New"
+  ]
+}

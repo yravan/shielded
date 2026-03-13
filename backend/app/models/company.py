@@ -1,8 +1,8 @@
 import uuid
 from datetime import datetime
 
-from sqlalchemy import DateTime, ForeignKey, Numeric, String
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import DateTime, ForeignKey, Integer, Numeric, String
+from sqlalchemy.dialects.postgresql import JSON, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
@@ -20,6 +20,8 @@ class Company(Base):
     annual_revenue: Mapped[float] = mapped_column(Numeric(15, 2), default=0)
     operating_expense: Mapped[float] = mapped_column(Numeric(15, 2), default=0)
     capital_expense: Mapped[float] = mapped_column(Numeric(15, 2), default=0)
+    risk_profile: Mapped[dict] = mapped_column(JSON, default=dict, server_default="{}")
+    risk_score: Mapped[int | None] = mapped_column(Integer, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=datetime.utcnow
     )

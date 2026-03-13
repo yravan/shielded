@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-09T20:40:39Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x3ae773d76d652f80ed69c1478ca2349249ea0d2182bca1d6ed66deb23c36c3b7",
+  "question_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd906",
+  "question": "Will Derik Queen win the 2025\u201326 NBA Rookie of the Year award?",
+  "description": "This is a market to predict which player will win the 2025\u201326 NBA Rookie of the Year award.\n\nThis market will resolve to \"Yes\" if the listed player is officially named the 2025\u201326 NBA Rookie of the Year. Otherwise, it will resolve to \"No\".\n\nIf the award is not announced by December 31, 2026, this market will resolve to \"Other\".\n\nThe primary resolution source will be official information from the NBA (https://www.nba.com).",
+  "market_slug": "will-derik-queen-win-the-202526-nba-rookie-of-the-year-award",
+  "end_date_iso": "2026-05-18T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd900",
+  "neg_risk_request_id": "0x3d0bf14b34ca40297693b25f5a1f16ab272487461884c163f59b4b13508ba23b",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-derik-queen-win-the-202526-nba-rookie-of-the-year-award-0QurIgd8JqJT.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-derik-queen-win-the-202526-nba-rookie-of-the-year-award-0QurIgd8JqJT.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "26912002779361263344185042482535671437863483037670402174853945182308093594089",
+      "outcome": "Yes",
+      "price": 0.0005,
+      "winner": false
+    },
+    {
+      "token_id": "18803551889114519791160949221652266043013010049439075625730946427281869122656",
+      "outcome": "No",
+      "price": 0.9995,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "NBA",
+    "Hide From New"
+  ]
+}

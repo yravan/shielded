@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-06-23T16:00:29Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x52847ca1413b76a5570b97c0c432e38dbe61b0140f9d45e912604591b08f6fca",
+  "question_id": "0x7faa974ff857682d64433d5c4dfba46ff51415a68cbd5bd1994248df2d561219",
+  "question": "Will the Montreal Canadiens win the 2026 NHL Stanley Cup?",
+  "description": "This market will resolve to \u201cYes\u201d if the Montreal Canadiens win the 2026 NHL Stanley Cup. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2026 NHL Stanley Cup based off the rules of the NHL.\n\nThe resolution source for this market will be information from the NHL.\n",
+  "market_slug": "will-the-montreal-canadiens-win-the-2026-nhl-stanley-cup",
+  "end_date_iso": "2026-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x7faa974ff857682d64433d5c4dfba46ff51415a68cbd5bd1994248df2d561200",
+  "neg_risk_request_id": "0x186c80eb06aa7ef027849abbb1c91fe9153c8b7f9676105416043bad14fd0927",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/stanley-cup-champion-2026-05M0VRODAaEb.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/stanley-cup-champion-2026-05M0VRODAaEb.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "114248353339288476395516704859280406139740194553592209059241667781908210476009",
+      "outcome": "Yes",
+      "price": 0.031,
+      "winner": false
+    },
+    {
+      "token_id": "85705323099460694144578384076010167420188174879039498210125410497783582291911",
+      "outcome": "No",
+      "price": 0.969,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "NHL",
+    "Hockey",
+    "Stanley Cup"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-05-28T22:14:34Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x226c6d5a8de377a56641a498191c5e1f3792b81618841afb8879a5d817f13771",
+  "question_id": "0xba454ec321c012258c08792cb314b9f9f8c8ad4ac56a78c995c6f8c42b64b67b",
+  "question": "Will Russia invade a NATO country in 2025?",
+  "description": "This market will resolve to \"Yes\" if Russia commences a military offensive intended to establish control over any portion of any NATO country between May 28 and December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, land de facto controlled by NATO member states or Russia as of May 28, 2025, will be considered the sovereign territory of those countries.\n\nHybrid or \u201cgrey zone\u201d operations conducted by unmarked personnel will qualify if they are confirmed to be Russian operatives and are intended to establish de facto control over territory, as occurred in Crimea (2014) or Donbas (2014\u20132022).\n\nThe resolution source for this market will be a consensus of credible sources.",
+  "market_slug": "will-russia-invade-a-nato-country-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-russia-invade-a-nato-country-in-2025-VY0jfZfvLhyJ.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-russia-invade-a-nato-country-in-2025-VY0jfZfvLhyJ.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "2942567299640587090091139148545794488615196042290090815333947905974415750919",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "112714625848806997860636208910706390701734645675692256752104712853008653142537",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Ukraine",
+    "Poland",
+    "Geopolitics",
+    "World"
+  ]
+}

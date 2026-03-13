@@ -1,0 +1,54 @@
+{
+  "enable_order_book": false,
+  "active": false,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-17T12:14:16Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x35d93e2bee3519ca04d20f450999d1d50ca7ae852b76d8f5c70851d27a320a1b",
+  "question_id": "0x51a3b9f29275310adfa309e776ed7a398ac0e5f05d02a3f42fd1e5fe6043e01f",
+  "question": "Will Player J win the 2025\u20132026 NBA MVP?",
+  "description": "This market will resolve to \"Yes\" if Player J is awarded the 2025\u201326 regular season NBA Most Valuable Player (MVP) Award. Otherwise, this market will resolve to \"No\".\n\nIf the listed player is not announced as a finalist for the 2025\u201326 NBA MVP award, this market will immediately resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the NBA. However, a consensus of credible reporting may also be used.",
+  "market_slug": "will-player-j-win-the-20252026-nba-mvp",
+  "end_date_iso": "2026-06-10T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x51a3b9f29275310adfa309e776ed7a398ac0e5f05d02a3f42fd1e5fe6043e000",
+  "neg_risk_request_id": "0x967dca4f7a0bc575e71c09f30a984b4a15335d7e574abd7193fe011b19488425",
+  "icon": "",
+  "image": "",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "mvp",
+    "NBA",
+    "Hide From New"
+  ]
+}

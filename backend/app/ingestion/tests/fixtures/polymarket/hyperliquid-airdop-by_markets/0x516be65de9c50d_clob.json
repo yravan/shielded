@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-06-19T19:16:38Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x516be65de9c50d392d6aebb803fb53bb1cb6be52077fa4e85966bd28ce6cd614",
+  "question_id": "0x5dd900d5a353dc1988e48685e5997943c33640a218929a7134e3f29de7e5d8c2",
+  "question": "Will Hyperliquid perform an airdrop by September 30?",
+  "description": "This market will resolve to \"Yes\" if Hyperliquid performs a second airdrop by September 30, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from Hyperliquid, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-hyperliquid-perform-an-airdrop-by-september-30",
+  "end_date_iso": "2025-10-01T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/hyperliquid-up-or-down-on-may-22-Fyo58T8HF0AC.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/hyperliquid-up-or-down-on-may-22-Fyo58T8HF0AC.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "75704040039609247044213692205990266886826720634508599682125569372489959050772",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "39799167620150866010690421839420386922479099285889541690512321815686120951846",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "Featured",
+    "Pre-Market"
+  ]
+}

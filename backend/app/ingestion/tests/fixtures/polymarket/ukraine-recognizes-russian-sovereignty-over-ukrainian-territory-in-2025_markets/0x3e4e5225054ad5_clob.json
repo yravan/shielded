@@ -1,0 +1,65 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2026-02-03T15:27:22Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x3e4e5225054ad5168e0b249164f643453ba97a8947f84d7aacb4c768275d48e9",
+  "question_id": "0x6f6e52fb5399e62dfe71ed948ec48559623f053ae9d18b14892441d555a3be3e",
+  "question": "Ukraine recognizes Russian sovereignty over its territory by December 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if a deal in which Ukraine agrees to formally recognize Russian sovereignty over any UN-recognized Ukrainian territory is reached between the Russian Federation and Ukraine by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe deal must be a publicly announced mutual agreement. \n\nIf such an agreement is officially reached before the resolution date, this market will resolve to \"Yes\", regardless of if/when the agreement goes into effect.\n\nAn agreement by Ukraine formally recognizing Russian sovereignty over any UN-recognized Ukrainian territory for any amount of time will count.\n\nAn agreement by Ukraine formally recognizing Russian sovereignty over any UN-recognized Ukrainian territory as a precondition of a more comprehensive peace process or deal will qualify, even if the agreement is not finalized or part of a formalized peace deal. The September 8, 1995, \u201cAgreed Basic Principles\u201d between Bosnia and Yugoslavia, which recognized the borders and sovereignty of Bosnia and Herzegovina, and was later formalized through the Dayton Peace Agreement, is an example of a qualifying agreement.\n\nAn official unilateral pledge by Ukraine formally recognizing Russian sovereignty over any UN-recognized Ukrainian territory will qualify for a \u201cYes\u201d resolution even if not part of an agreement with Russia.\n\nThe April 19, 2013, Brussels Agreement between Serbia and Kosovo, in which Serbia recognized Kosovo\u2019s de facto administration but did not formally grant de jure recognition, would not be considered a qualifying agreement under this market, as this market requires formal recognition of sovereignty rather than acknowledgment of administrative control.\n\nThe primary resolution source for this market will be an official announcement by Ukraine and/or the Russian Federation, however, an overwhelming consensus of credible reporting confirming an agreement has been reached will also qualify.\n",
+  "market_slug": "ukraine-recognizes-russian-sovereignty-over-its-territory-by-december-31-2026",
+  "end_date_iso": "2026-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-recognizes-russian-sovereignty-over-ukrainian-territory-in-2025-aArQODeHnr5E.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-recognizes-russian-sovereignty-over-ukrainian-territory-in-2025-aArQODeHnr5E.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 3
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "111407906413483830198481741547621131014289190946534570245645667771579973364067",
+      "outcome": "Yes",
+      "price": 0.145,
+      "winner": false
+    },
+    {
+      "token_id": "112468620935063687606410022378078855998390735429551163191251582889945981781902",
+      "outcome": "No",
+      "price": 0.855,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Ukraine",
+    "Trump",
+    "putin",
+    "zelensky",
+    "Geopolitics",
+    "Trump Presidency",
+    "Foreign Policy",
+    "World",
+    "Trump-Putin",
+    "Trump-Zelenskyy"
+  ]
+}

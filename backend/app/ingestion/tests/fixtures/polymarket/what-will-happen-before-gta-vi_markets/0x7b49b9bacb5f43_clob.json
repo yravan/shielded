@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-05-02T15:47:47Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x7b49b9bacb5f435bc10f3b100ff59e2fdd346f7f92a9001881bc9825a0af0f11",
+  "question_id": "0x68ac8b4c60870980ae87c3a1da8730f46755c5e66c715032fc6c90b53f2ec4ec",
+  "question": "Will China invades Taiwan before GTA VI?",
+  "description": "This market will resolve to \"Yes\" if China commences a military offensive intended to establish control over any portion of the Republic of China (Taiwan) before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an official release. If the release is only for certain consoles (e.g. Xbox Series X/S) it will count.\n\nThe resolution source for the release of GTA VI is official information from Rockstar Games or its parent company, Take-Two Interactive.\n\nAn announcement of Trump's resignation/removal, or a scheduled departure from office due to the outcome of an election will not alone qualify.\n\nTerritory under the administration of the Republic of China including any inhabited islands will qualify, however uninhabited islands will not qualify.\n\nThe resolution source for China invading Taiwan will be will be official confirmation by China, Taiwan, the United Nations, or any permanent member of the UN Security Council, however a consensus of credible reporting will also be use\n",
+  "market_slug": "will-china-invades-taiwan-before-gta-vi-716",
+  "end_date_iso": "2026-07-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 2
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "21695138873211375451055566770107682325494206727818897067665810321709249824909",
+      "outcome": "Yes",
+      "price": 0.515,
+      "winner": false
+    },
+    {
+      "token_id": "17516427576383382756368467656206258206490015951115433065318503962238754362428",
+      "outcome": "No",
+      "price": 0.485,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Culture",
+    "All",
+    "GTA VI"
+  ]
+}

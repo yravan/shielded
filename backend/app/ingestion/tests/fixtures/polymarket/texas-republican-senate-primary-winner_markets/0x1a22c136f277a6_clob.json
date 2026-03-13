@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-10T21:30:04Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x1a22c136f277a62d27c22521a1ec1363d2edb5c657f129e509e77958dc1846d2",
+  "question_id": "0x0aa99409c83ee67e3d0413ded30606dffb81bdb76c1c68779d0eddf034d0c303",
+  "question": "Will Beth Van Duyne win the 2026 Texas Republican Primary?",
+  "description": "This market will resolve according to the winner of the Republican Primary for United States Senator from Texas. \n\nIf no 2026 Texas Republican Senate Primary takes place, this market will resolve to \"Other\".\n\nThe resolution source for this market will be the first announcement of the results from the Texas Republican party, however an overwhelming consensus of credible reporting may suffice.\n",
+  "market_slug": "will-beth-van-duyne-win-the-2026-republican-primary",
+  "end_date_iso": "2026-05-26T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x0aa99409c83ee67e3d0413ded30606dffb81bdb76c1c68779d0eddf034d0c300",
+  "neg_risk_request_id": "0x777b5257ebcfe183c02b8ae5e9cc292862a2467049d383f8550ec939d2a5021f",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-beth-van-duyne-win-the-2026-republican-primary-R8lmPdFhtwf4.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-beth-van-duyne-win-the-2026-republican-primary-R8lmPdFhtwf4.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "21186780488327911840011813665635909989130966340151208407558076091167956134393",
+      "outcome": "Yes",
+      "price": 0.0005,
+      "winner": false
+    },
+    {
+      "token_id": "77116825697988046462797118744062320242186651085415319815298138122528923099354",
+      "outcome": "No",
+      "price": 0.9995,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "primary elections",
+    "Republican Primary",
+    "US Election",
+    "Senate Primary",
+    "Parent For Derivative",
+    "Texas Senate",
+    "Texas Primary",
+    "March 3 Primaries"
+  ]
+}

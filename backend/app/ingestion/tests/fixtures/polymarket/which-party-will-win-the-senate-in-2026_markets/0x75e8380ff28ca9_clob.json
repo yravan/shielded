@@ -1,0 +1,58 @@
+{
+  "enable_order_book": false,
+  "active": false,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:48:38Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x75e8380ff28ca9f077a37235d149f782bd859060e4c9e5c4d43742633e9dfcf2",
+  "question_id": "0x22725f09e6a3f61882a1fd2ab4d044dc609767099b539b47053d9d71b5ae6a02",
+  "question": "Will Party A control the Senate after the 2026 Midterm elections?",
+  "description": "This market will resolve according to the party that controls the Senate following the 2026 U.S. Senate elections scheduled for November 3, 2026.\n\nSenate control is defined as having more than half of the voting Senate members, or half of the voting Senate members and the Vice Presidency.\n\nIf the outcome of this election is ambiguous given the above rules, this market will remain open until the Majority Leader of the US Senate is selected following the 2026 US general election, at which point it will resolve to the party the majority leader is affiliated with at the time of their election to that position. If the elected majority leader does not caucus with any listed party this market will resolve \u201cOther\u201d.\n\nDetermination of which party controls the Senate after the 2026 US Senate elections will be based on a consensus of credible reporting, or if there is ambiguity, final federal and/or state election authority certification or other final official determination of the 2026 election results.",
+  "market_slug": "will-party-a-control-the-senate-after-the-2026-midterm-elections-137",
+  "end_date_iso": "2026-11-03T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x22725f09e6a3f61882a1fd2ab4d044dc609767099b539b47053d9d71b5ae6a00",
+  "neg_risk_request_id": "0xdd3571c432a7b9c2bd7a5dec0d9258ef8d5ed6d93027937da8bbf08ce5dac64b",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/which-party-will-win-the-senate-in-2026-oftF_Q4PSsj0.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/which-party-will-win-the-senate-in-2026-oftF_Q4PSsj0.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "US Election",
+    "Global Elections",
+    "Senate",
+    "World Elections",
+    "Midterms",
+    "Earn 4%",
+    "Parent For Derivative"
+  ]
+}

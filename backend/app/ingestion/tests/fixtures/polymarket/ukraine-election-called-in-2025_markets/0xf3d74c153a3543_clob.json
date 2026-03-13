@@ -1,0 +1,56 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-02-14T19:27:16Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xf3d74c153a35436ff82a5f78200104975c5841140ace763f2954adb340cca511",
+  "question_id": "0xa094043bf8108d863998270c7f412507cd34679fa71dfb0bdd8e064ce1a92eb6",
+  "question": "Ukraine election called in 2025?",
+  "description": "This market will resolve to \"Yes\" if the next Ukrainian presidential election is scheduled in 2025. Otherwise, this market will resolve to \"No\".\n\nThis market is about whether a date for the next Ukrainian election is announced between February 14 and December 31, 2025, 11:59 PM ET. Whether the election is supposed to take place in 2025 or later will have no effect on the resolution to this market.\n\nThe primary resolution source for this market is official information from the Government of Ukraine however a consensus of credible reporting may also be used.\n",
+  "market_slug": "ukraine-election-called-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-election-scheduled-in-2025-a5A5LV93aoXr.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-election-scheduled-in-2025-a5A5LV93aoXr.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "22255463452594162709449800579658835371746668793825841462318307382376621533755",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "57160884655103428512814247631012981773015723019889832549493437551469480061242",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Ukraine",
+    "Global Elections",
+    "Geopolitics",
+    "Foreign Policy",
+    "World",
+    "Trump-Zelenskyy"
+  ]
+}

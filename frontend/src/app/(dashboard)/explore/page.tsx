@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Skeleton } from "@/components/ui/skeleton";
 import { ProbabilityBadge } from "@/components/shared/probability-badge";
-import { MiniSparkline } from "@/components/charts/mini-sparkline";
 import {
   Select,
   SelectContent,
@@ -15,7 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useExploreEvents, useTrackEvent, useEventHistory } from "@/hooks/use-events";
+import { useExploreEvents, useTrackEvent } from "@/hooks/use-events";
 import { Search, Plus, Check, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -31,10 +31,27 @@ const categories: Array<{ value: string; label: string }> = [
   { value: "economic", label: "Economic" },
 ];
 
+const regions: Array<{ value: string; label: string }> = [
+  { value: "all", label: "All Regions" },
+  { value: "Global", label: "Global" },
+  { value: "North America", label: "North America" },
+  { value: "Europe", label: "Europe" },
+  { value: "Asia-Pacific", label: "Asia-Pacific" },
+  { value: "Middle East", label: "Middle East" },
+  { value: "Latin America", label: "Latin America" },
+  { value: "Africa", label: "Africa" },
+];
+
 const sortOptions = [
   { value: "updated", label: "Recently Updated" },
   { value: "probability", label: "Highest Probability" },
   { value: "created", label: "Newest" },
+];
+
+const sources: Array<{ value: string; label: string }> = [
+  { value: "all", label: "All Sources" },
+  { value: "polymarket", label: "Polymarket" },
+  { value: "kalshi", label: "Kalshi" },
 ];
 
 function ExploreEventCard({
@@ -94,13 +111,34 @@ function ExploreEventCard({
   );
 }
 
-function ChildMarketRow({ child }: { child: GeopoliticalEvent }) {
-  const { data: history, isLoading } = useEventHistory(child.id);
+function stripParentPrefix(childTitle: string, parentTitle: string): string {
+  // Find longest common prefix and show only the differentiating suffix
+  const lower = childTitle.toLowerCase();
+  const parentLower = parentTitle.toLowerCase();
+  // Check word-level overlap
+  const parentWords = parentLower.split(/\s+/);
+  let matchLen = 0;
+  for (let i = 0; i < parentWords.length; i++) {
+    const prefix = parentWords.slice(0, i + 1).join(" ");
+    if (lower.startsWith(prefix)) {
+      matchLen = prefix.length;
+    } else {
+      break;
+    }
+  }
+  if (matchLen > 10) {
+    const suffix = childTitle.slice(matchLen).replace(/^[\s:—–-]+/, "").trim();
+    if (suffix.length > 0) return suffix;
+  }
+  return childTitle;
+}
+
+function ChildMarketRow({ child, parentTitle }: { child: GeopoliticalEvent; parentTitle: string }) {
+  const displayTitle = stripParentPrefix(child.title, parentTitle);
 
   return (
-    <div className="flex items-center gap-2 py-1.5">
-      <span className="text-xs truncate flex-1">{child.title}</span>
-      <MiniSparkline data={history ?? []} loading={isLoading} width={50} height={20} />
+    <div className="flex items-center gap-1.5 py-1">
+      <span className="text-xs truncate flex-1">{displayTitle}</span>
       <ProbabilityBadge probability={child.currentProbability} className="text-[11px] px-1.5 py-0" />
     </div>
   );
@@ -118,10 +156,21 @@ function ParentEventCard({
   const children = event.children ?? [];
   const topChildren = children.slice(0, 3);
   const remainingCount = children.length - topChildren.length;
+  const allTracked = children.length > 0 && children.every((c) => c.isTracked);
+
+  const handleTrackAll = () => {
+    for (const child of children) {
+      if (!allTracked && !child.isTracked) {
+        onToggleTrack(child.id, true);
+      } else if (allTracked) {
+        onToggleTrack(child.id, false);
+      }
+    }
+  };
 
   return (
-    <Card className="flex flex-col col-span-1 sm:col-span-2">
-      <CardContent className="flex flex-1 flex-col gap-2 pt-4">
+    <Card className="flex flex-col">
+      <CardContent className="flex flex-1 flex-col gap-1.5 pt-4">
         <div className="flex items-start justify-between gap-2">
           <Link href={`/events/${event.id}`} className="hover:underline">
             <h3 className="font-semibold text-sm leading-tight line-clamp-2">{event.title}</h3>
@@ -141,9 +190,9 @@ function ParentEventCard({
           <span className="text-[10px] text-muted-foreground ml-auto">{event.source}</span>
         </div>
 
-        <div className="border-t border-border pt-2 space-y-0.5">
+        <div className="border-t border-border pt-1.5">
           {topChildren.map((child) => (
-            <ChildMarketRow key={child.id} child={child} />
+            <ChildMarketRow key={child.id} child={child} parentTitle={event.title} />
           ))}
         </div>
 
@@ -160,21 +209,64 @@ function ParentEventCard({
             View all <ChevronRight className="h-3 w-3" />
           </Link>
         </div>
+
+        <Button
+          variant={allTracked ? "outline" : "default"}
+          size="sm"
+          className="w-full"
+          disabled={isToggling || children.length === 0}
+          onClick={handleTrackAll}
+        >
+          {allTracked ? (
+            <>
+              <Check className="h-3.5 w-3.5 mr-1.5" />
+              Tracked
+            </>
+          ) : (
+            <>
+              <Plus className="h-3.5 w-3.5 mr-1.5" />
+              Track All
+            </>
+          )}
+        </Button>
       </CardContent>
     </Card>
   );
 }
 
 export default function ExplorePage() {
-  const [search, setSearch] = useState("");
-  const [debouncedSearch, setDebouncedSearch] = useState("");
-  const [category, setCategory] = useState("all");
-  const [sort, setSort] = useState("updated");
-  const [page, setPage] = useState(1);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const category = searchParams.get("category") || "all";
+  const region = searchParams.get("region") || "all";
+  const source = searchParams.get("source") || "all";
+  const sort = searchParams.get("sort") || "updated";
+  const page = parseInt(searchParams.get("page") || "1", 10);
+  const urlSearch = searchParams.get("q") || "";
+
+  const [search, setSearch] = useState(urlSearch);
+  const [debouncedSearch, setDebouncedSearch] = useState(urlSearch);
+
+  const updateParams = useCallback((updates: Record<string, string>) => {
+    const params = new URLSearchParams(searchParams.toString());
+    for (const [key, value] of Object.entries(updates)) {
+      if (!value || value === "all" || (key === "sort" && value === "updated") || (key === "page" && value === "1")) {
+        params.delete(key);
+      } else {
+        params.set(key, value);
+      }
+    }
+    const qs = params.toString();
+    router.push(qs ? `${pathname}?${qs}` : pathname);
+  }, [searchParams, router, pathname]);
 
   const { data, isLoading } = useExploreEvents({
     search: debouncedSearch || undefined,
     category: category !== "all" ? category : undefined,
+    region: region !== "all" ? region : undefined,
+    source: source !== "all" ? source : undefined,
     sort,
     page,
     pageSize: 24,
@@ -185,9 +277,11 @@ export default function ExplorePage() {
   // Simple debounce on search
   const handleSearchChange = (value: string) => {
     setSearch(value);
-    setPage(1);
     // Debounce 400ms
-    const timeout = setTimeout(() => setDebouncedSearch(value), 400);
+    const timeout = setTimeout(() => {
+      setDebouncedSearch(value);
+      updateParams({ q: value, page: "1" });
+    }, 400);
     return () => clearTimeout(timeout);
   };
 
@@ -207,7 +301,7 @@ export default function ExplorePage() {
                 ? "border-foreground text-foreground"
                 : "border-transparent text-muted-foreground hover:text-foreground"
             )}
-            onClick={() => { setCategory(cat.value); setPage(1); }}
+            onClick={() => updateParams({ category: cat.value, page: "1" })}
           >
             {cat.label}
           </button>
@@ -222,7 +316,31 @@ export default function ExplorePage() {
               className="pl-9 w-48 h-9"
             />
           </div>
-          <Select value={sort} onValueChange={(v) => setSort(v ?? "updated")}>
+          <Select value={region} onValueChange={(v) => updateParams({ region: v ?? "all", page: "1" })}>
+            <SelectTrigger className="w-36 h-9">
+              <SelectValue placeholder="Region" />
+            </SelectTrigger>
+            <SelectContent>
+              {regions.map((r) => (
+                <SelectItem key={r.value} value={r.value}>
+                  {r.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={source} onValueChange={(v) => updateParams({ source: v ?? "all", page: "1" })}>
+            <SelectTrigger className="w-32 h-9">
+              <SelectValue placeholder="Source" />
+            </SelectTrigger>
+            <SelectContent>
+              {sources.map((s) => (
+                <SelectItem key={s.value} value={s.value}>
+                  {s.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          <Select value={sort} onValueChange={(v) => updateParams({ sort: v ?? "updated" })}>
             <SelectTrigger className="w-44 h-9">
               <SelectValue placeholder="Sort by" />
             </SelectTrigger>
@@ -280,7 +398,7 @@ export default function ExplorePage() {
             variant="outline"
             size="sm"
             disabled={page <= 1}
-            onClick={() => setPage((p) => p - 1)}
+            onClick={() => updateParams({ page: String(page - 1) })}
           >
             Previous
           </Button>
@@ -291,7 +409,7 @@ export default function ExplorePage() {
             variant="outline"
             size="sm"
             disabled={page >= data.pages}
-            onClick={() => setPage((p) => p + 1)}
+            onClick={() => updateParams({ page: String(page + 1) })}
           >
             Next
           </Button>

@@ -6,7 +6,9 @@ import { Badge } from "@/components/ui/badge";
 
 import { CurrencyDisplay } from "@/components/shared/currency-display";
 import { CompanyExposureTable } from "@/components/companies/company-exposure-table";
+import { RiskScoreBadge } from "@/components/risk/risk-score-badge";
 import { useCompany, useCompanyExposures } from "@/hooks/use-companies";
+import { useCompanyRisk } from "@/hooks/use-risk";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export default function CompanyDetailPage({
@@ -17,6 +19,7 @@ export default function CompanyDetailPage({
   const { companyId } = use(params);
   const { data: company, isLoading: loadingCompany } = useCompany(companyId);
   const { data: exposures, isLoading: loadingExposures } = useCompanyExposures(companyId);
+  const { data: riskData } = useCompanyRisk(companyId);
 
   if (loadingCompany) {
     return (
@@ -39,9 +42,10 @@ export default function CompanyDetailPage({
           {company.ticker}
         </Badge>
         <span className="text-sm text-muted-foreground">{company.sector} sector</span>
+        {riskData && <RiskScoreBadge score={riskData.riskScore} />}
       </div>
 
-      <div className="grid gap-5 sm:grid-cols-3">
+      <div className="grid gap-5 sm:grid-cols-4">
         <Card>
           <CardContent className="pt-6">
             <p className="text-xs text-muted-foreground">Market Cap</p>
@@ -58,6 +62,17 @@ export default function CompanyDetailPage({
           <CardContent className="pt-6">
             <p className="text-xs text-muted-foreground">Active Exposures</p>
             <p className="text-xl font-semibold font-mono">{company.exposureCount}</p>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <p className="text-xs text-muted-foreground">Risk Score</p>
+            <RiskScoreBadge score={riskData?.riskScore ?? null} size="lg" />
+            {riskData && riskData.eventCount > 0 && (
+              <p className="text-xs text-muted-foreground mt-1">
+                {riskData.eventCount} matched event{riskData.eventCount !== 1 ? "s" : ""}
+              </p>
+            )}
           </CardContent>
         </Card>
       </div>

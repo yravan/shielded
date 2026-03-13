@@ -30,8 +30,16 @@ def _serialize_event(event: NormalizedEvent) -> str:
 
 def _deserialize_event(raw: str) -> NormalizedEvent:
     d = json.loads(raw)
-    markets = [NormalizedMarket(**m) for m in d.pop("markets", [])]
-    return NormalizedEvent(**d, markets=markets)
+    markets_data = d.pop("markets", [])
+    # Filter unknown keys for backward compatibility with old cached data
+    market_fields = {f.name for f in NormalizedMarket.__dataclass_fields__.values()}
+    event_fields = {f.name for f in NormalizedEvent.__dataclass_fields__.values()}
+    markets = [
+        NormalizedMarket(**{k: v for k, v in m.items() if k in market_fields})
+        for m in markets_data
+    ]
+    filtered = {k: v for k, v in d.items() if k in event_fields}
+    return NormalizedEvent(**filtered, markets=markets)
 
 
 def _serialize_points(points: list[PricePoint]) -> str:
@@ -76,17 +84,17 @@ class EventCache:
 
     # --- Price history ---
 
-    async def get_history(self, source: str, source_id: str) -> list[PricePoint] | None:
-        raw = await self.r.get(f"history:{source}:{source_id}")
+    async def get_history(self, source: str, source_id: str, hours: int = 720) -> list[PricePoint] | None:
+        raw = await self.r.get(f"history:{source}:{source_id}:{hours}")
         if raw is None:
             return None
         return _deserialize_points(raw)
 
     async def set_history(
-        self, source: str, source_id: str, points: list[PricePoint]
+        self, source: str, source_id: str, points: list[PricePoint], hours: int = 720
     ) -> None:
         await self.r.set(
-            f"history:{source}:{source_id}", _serialize_points(points), ex=TTL_HISTORY
+            f"history:{source}:{source_id}:{hours}", _serialize_points(points), ex=TTL_HISTORY
         )
 
     # --- Explore results (paginated) ---

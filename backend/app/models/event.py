@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime
 
 from sqlalchemy import Boolean, DateTime, Float, ForeignKey, String, Text, UniqueConstraint
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.dialects.postgresql import ARRAY, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
@@ -45,13 +45,19 @@ class Event(Base):
     )
     is_parent: Mapped[bool] = mapped_column(Boolean, default=False)
     market_ticker: Mapped[str | None] = mapped_column(String(200), nullable=True)
+    is_quantitative: Mapped[bool] = mapped_column(Boolean, default=False)
+    expected_value: Mapped[float | None] = mapped_column(Float, nullable=True)
+    image_url: Mapped[str | None] = mapped_column(Text, nullable=True)
+    tags: Mapped[list[str] | None] = mapped_column(ARRAY(String), nullable=True, default=list)
+    series_ticker: Mapped[str | None] = mapped_column(String(100), nullable=True)
+    volume: Mapped[float | None] = mapped_column(Float, nullable=True)
 
     parent = relationship(
-        "Event", remote_side="Event.id", back_populates="children"
+        "Event", remote_side="Event.id", back_populates="children", lazy="noload"
     )
-    children = relationship("Event", back_populates="parent", lazy="selectin")
-    exposures = relationship("Exposure", back_populates="event", lazy="selectin")
-    hedge_analyses = relationship("HedgeAnalysis", back_populates="event", lazy="selectin")
+    children = relationship("Event", back_populates="parent", lazy="noload")
+    exposures = relationship("Exposure", back_populates="event", lazy="noload")
+    hedge_analyses = relationship("HedgeAnalysis", back_populates="event", lazy="noload")
 
     __table_args__ = (
         UniqueConstraint("source", "source_id", name="uq_event_source_source_id"),

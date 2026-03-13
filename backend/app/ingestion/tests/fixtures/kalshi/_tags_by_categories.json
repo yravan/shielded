@@ -1,0 +1,107 @@
+{
+  "tags_by_categories": {
+    "Climate and Weather": [
+      "Daily temperature",
+      "Snow and rain",
+      "Climate change",
+      "Natural disasters",
+      "Hurricanes"
+    ],
+    "Companies": [
+      "IPOs",
+      "Product launches",
+      "KPIs",
+      "Elon Musk",
+      "CEOs",
+      "Layoffs"
+    ],
+    "Crypto": [
+      "BTC",
+      "15 min",
+      "Hourly",
+      "ETH",
+      "SOL",
+      "DOGE",
+      "Pre-Market",
+      "XRP"
+    ],
+    "Economics": [
+      "Growth",
+      "Fed",
+      "Oil and energy",
+      "Inflation",
+      "Housing",
+      "Employment",
+      "Jobs & Economy",
+      "Bankruptcy & Defaults",
+      "GDP",
+      "Global Central Banks"
+    ],
+    "Elections": null,
+    "Entertainment": [
+      "Music",
+      "Movies",
+      "Awards",
+      "Television",
+      "Music charts",
+      "Video games",
+      "Grammys",
+      "Rotten Tomatoes"
+    ],
+    "Financials": [
+      "S&P",
+      "Nasdaq",
+      "Daily",
+      "Metals",
+      "Treasuries",
+      "WTI",
+      "EUR/USD",
+      "USD/JPY"
+    ],
+    "Mentions": [
+      "Sports",
+      "Politicians",
+      "Earnings",
+      "Entertainment"
+    ],
+    "Politics": [
+      "US Elections",
+      "Primaries",
+      "Trump",
+      "Foreign Elections",
+      "House",
+      "International",
+      "Congress",
+      "SCOTUS & courts",
+      "Local",
+      "Recurring",
+      "Iran"
+    ],
+    "Science and Technology": [
+      "AI",
+      "Energy",
+      "Space"
+    ],
+    "Social": null,
+    "Sports": [
+      "Soccer",
+      "Basketball",
+      "Baseball",
+      "Football",
+      "Hockey",
+      "Golf",
+      "Motorsport",
+      "Tennis",
+      "Esports",
+      "Boxing",
+      "MMA",
+      "Rugby",
+      "Cricket",
+      "Lacrosse",
+      "Chess",
+      "Aussie Rules",
+      "Darts"
+    ],
+    "World": null
+  }
+}

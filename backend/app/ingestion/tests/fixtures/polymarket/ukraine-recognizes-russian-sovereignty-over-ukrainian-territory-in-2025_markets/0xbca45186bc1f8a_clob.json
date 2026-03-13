@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-09-23T23:15:05Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xbca45186bc1f8ad2912f79f22c6e37c0946f6619bbfbd0f97ad93d9b525a6293",
+  "question_id": "0x263f1b3477c2089da3d02330254f591e278d17ae34dcc7a97d34d9168ee40e93",
+  "question": "Ukraine recognizes Russian sovereignty over its territory by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if a deal in which Ukraine agrees to formally recognize Russian sovereignty over any UN-recognized Ukrainian territory is reached between the Russian Federation and Ukraine by June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe deal must be a publicly announced mutual agreement. \n\nIf such an agreement is officially reached before the resolution date, this market will resolve to \"Yes\", regardless of if/when the agreement goes into effect.\n\nAn agreement by Ukraine formally recognizing Russian sovereignty over any UN-recognized Ukrainian territory for any amount of time will count.\n\nAn agreement by Ukraine formally recognizing Russian sovereignty over any UN-recognized Ukrainian territory as a precondition of a more comprehensive peace process or deal will qualify, even if the agreement is not finalized or part of a formalized peace deal. The September 8, 1995, \u201cAgreed Basic Principles\u201d between Bosnia and Yugoslavia, which recognized the borders and sovereignty of Bosnia and Herzegovina, and was later formalized through the Dayton Peace Agreement, is an example of a qualifying agreement.\n\nAn official unilateral pledge by Ukraine formally recognizing Russian sovereignty over any UN-recognized Ukrainian territory will qualify for a \u201cYes\u201d resolution even if not part of an agreement with Russia.\n\nThe April 19, 2013, Brussels Agreement between Serbia and Kosovo, in which Serbia recognized Kosovo\u2019s de facto administration but did not formally grant de jure recognition, would not be considered a qualifying agreement under this market, as this market requires formal recognition of sovereignty rather than acknowledgment of administrative control.\n\nThe primary resolution source for this market will be an official announcement by Ukraine and/or the Russian Federation, however, an overwhelming consensus of credible reporting confirming an agreement has been reached will also qualify.\n",
+  "market_slug": "ukraine-recognizes-russian-sovereignty-over-its-territory-by-june-30-2026",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-recognizes-russian-sovereignty-over-ukrainian-territory-in-2025-aArQODeHnr5E.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/ukraine-recognizes-russian-sovereignty-over-ukrainian-territory-in-2025-aArQODeHnr5E.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "3990636992955197269726492696316350470613735002003547307529304314694325536205",
+      "outcome": "Yes",
+      "price": 0.054,
+      "winner": false
+    },
+    {
+      "token_id": "96546182602923845565665333214247145480942442058633439074100378407858539142465",
+      "outcome": "No",
+      "price": 0.946,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Ukraine",
+    "Trump",
+    "putin",
+    "zelensky",
+    "Geopolitics",
+    "Trump Presidency",
+    "Foreign Policy",
+    "World",
+    "Trump-Putin",
+    "Trump-Zelenskyy"
+  ]
+}

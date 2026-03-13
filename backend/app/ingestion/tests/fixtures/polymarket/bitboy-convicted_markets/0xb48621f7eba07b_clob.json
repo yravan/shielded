@@ -1,0 +1,54 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-03-26T16:48:22Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xb48621f7eba07b0a3eeabc6afb09ae42490239903997b9d412b0f69aeb040c8b",
+  "question_id": "0x3bb85f5d1a96c576a57502626785d97ea78982592a1775764cefd236e930fd02",
+  "question": "BitBoy convicted?",
+  "description": "BitBoy was recently arrested due to a warrant issued for threatening communications he sent to a Judge. You can read more about that here: https://www.binance.com/en/square/post/22059661159362\n\nThis market will resolve to \"Yes\" if BitBoy (Ben Armstrong) is convicted of any charges related to the emails he sent to Judge Kimberly Childs, by March 31, 2026 ET. Otherwise, this market will resolve to \"No\".\n\nConvictions must be for criminal charges.\n\nIf the case is completely dropped for whatever reason, due to a plea agreement without an admission of guilt, a dismissal, or any other situation occurs in which no judgement is rendered or will be rendered by the court, this market will resolve to \"No\".\n\nOnce an individual is convicted it qualifies for an immediate \"Yes\" resolution, regardless of later appeals, etc. This market will resolve based on the first conviction in a qualifying case.\n\nThe primary resolution source will be official court records, however a consensus of credible reporting will also be used.",
+  "market_slug": "bitboy-convicted",
+  "end_date_iso": "2026-03-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bitboy-convicted-rf3L-7QvpBJh.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/bitboy-convicted-rf3L-7QvpBJh.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "75467129615908319583031474642658885479135630431889036121812713428992454630178",
+      "outcome": "Yes",
+      "price": 0.163,
+      "winner": false
+    },
+    {
+      "token_id": "3842963720267267286970642336860752782302644680156535061700039388405652129691",
+      "outcome": "No",
+      "price": 0.837,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "bitboy",
+    "Culture",
+    "Courts",
+    "Other"
+  ]
+}

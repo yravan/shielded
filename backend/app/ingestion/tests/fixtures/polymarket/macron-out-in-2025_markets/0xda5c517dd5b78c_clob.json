@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-09-14T21:21:14Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xda5c517dd5b78c80dec8ceb08ca4f466317633487827d7290332b4851cc4a4fa",
+  "question_id": "0xadaa1a42dd3cfc0037b06a4cee903c3937092015864dde0a60c1133800c21b94",
+  "question": "Macron out by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if Emmanuel Macron ceases to be President of France for any length of time between September 14, 2025, and June 30, 2026, 11:59 PM ET (inclusive). Otherwise, this market will resolve to \"No\".\n\nIf Macron departs from office before the expiry date, the market should resolve immediately.\n\nThe primary resolution source for this market will be information from the government of France, however a consensus of credible reporting will also be used.",
+  "market_slug": "macron-out-by-june-30-2026-273",
+  "end_date_iso": "2026-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/macron-out-in-2025-834-KqEqAsR_3Rtg.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/macron-out-in-2025-834-KqEqAsR_3Rtg.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 2
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "16201530957950630406397949502319734794139620443510795733205872225099141120819",
+      "outcome": "Yes",
+      "price": 0.0375,
+      "winner": false
+    },
+    {
+      "token_id": "22488814055465212843401871684243737932656687199587127613893702721105723939237",
+      "outcome": "No",
+      "price": 0.9625,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "France",
+    "resign",
+    "2025 Predictions",
+    "Macron",
+    "World"
+  ]
+}

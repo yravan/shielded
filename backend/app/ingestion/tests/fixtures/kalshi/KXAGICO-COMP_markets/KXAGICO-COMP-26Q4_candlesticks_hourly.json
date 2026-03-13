@@ -1,0 +1,25 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773392400,
+      "open_interest_fp": "37.00",
+      "price": {
+        "previous_dollars": "0.1600"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.1600",
+        "high_dollars": "0.1600",
+        "low_dollars": "0.1600",
+        "open_dollars": "0.1600"
+      },
+      "yes_bid": {
+        "close_dollars": "0.1100",
+        "high_dollars": "0.1100",
+        "low_dollars": "0.0400",
+        "open_dollars": "0.1100"
+      }
+    }
+  ],
+  "ticker": "KXAGICO-COMP-26Q4"
+}

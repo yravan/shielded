@@ -11,10 +11,16 @@ class Settings(BaseSettings):
     KALSHI_API_URL: str = "https://api.elections.kalshi.com/trade-api/v2"
     KALSHI_API_KEY: str = ""
     KALSHI_KEY_ID: str = ""
+    KALSHI_PERIOD_INTERVAL: int = 60
     METACULUS_API_URL: str = "https://www.metaculus.com/api2"
     METACULUS_API_KEY: str = ""
     POLL_INTERVAL_SECONDS: int = 300
-    ENABLE_LIVE_POLLING: bool = False
+    ENABLE_LIVE_POLLING: bool = True
+    CACHE_TTL_ALL_EVENTS: int = 7200  # 2h
+    CACHE_TTL_SINGLE_EVENT: int = 900  # 15min
+    CACHE_TTL_HISTORY: int = 300  # 5min
+    CACHE_TTL_EXPLORE: int = 120  # 2min
+    CACHE_TTL_TOKEN_MAP: int = 86400  # 24h
     CLERK_SECRET_KEY: str = ""
     CLERK_PUBLISHABLE_KEY: str = ""
     CLERK_JWT_ISSUER: str = ""

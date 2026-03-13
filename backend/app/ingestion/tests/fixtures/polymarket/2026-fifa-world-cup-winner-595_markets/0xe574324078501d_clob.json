@@ -1,0 +1,54 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-07-02T22:26:43Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xe574324078501de57aa22beaaeafe461518a6556f0f97764bbbbd78d3a8e8048",
+  "question_id": "0xb5c32a9acd39848acad4913ac4cd49c5de2afcc9d23a8a7ba2419375fab8740e",
+  "question": "Will Peru win the 2026 FIFA World Cup?",
+  "description": "This market will resolve according to the national team that wins the 2026 FIFA World Cup.\n\nIf at any point it becomes impossible for this team to win the FIFA World Cup based on the rules of FIFA (e.g., they are eliminated in the knockout stage), this market will resolve immediately to \u201cNo\u201d.\n\nIf the 2026 FIFA World Cup is permanently canceled or has not been completed by October 13, 2026, 11:59 PM this market will resolve to \u201cOther\u201d.\n\nThe primary resolution source will be official information from FIFA, however, a consensus of credible reporting may also be used.",
+  "market_slug": "will-peru-win-the-2026-fifa-world-cup-981",
+  "end_date_iso": "2026-07-20T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xb5c32a9acd39848acad4913ac4cd49c5de2afcc9d23a8a7ba2419375fab87400",
+  "neg_risk_request_id": "0xc0ffbee9034fb4e837f718f9345f5c34f347722ff141ac128068d0815c6ef3fc",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-peru-win-the-2026-fifa-world-cup-981-BmY9cK7b3vkl.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-peru-win-the-2026-fifa-world-cup-981-BmY9cK7b3vkl.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "101676169054030206233833764842719082618757802536849310267210048314274509219904",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "24779401655194262916366909997283581099962308068346907236063007044208850471860",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Soccer",
+    "Hide From New",
+    "FIFA World Cup",
+    "2026 FIFA World Cup"
+  ]
+}

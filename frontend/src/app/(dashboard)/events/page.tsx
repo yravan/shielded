@@ -5,6 +5,7 @@ import Link from "next/link";
 
 import { EventCard } from "@/components/events/event-card";
 import { EventCardSkeleton } from "@/components/events/event-card-skeleton";
+import { EventSuggestions } from "@/components/events/event-suggestions";
 import { Button } from "@/components/ui/button";
 import { useEvents } from "@/hooks/use-events";
 import {
@@ -54,6 +55,8 @@ export default function EventsPage() {
           </Button>
         </Link>
       </div>
+
+      <EventSuggestions />
 
       <div className="flex gap-3">
         <Select value={category} onValueChange={handleCategoryChange}>

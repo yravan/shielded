@@ -1,0 +1,55 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-07-07T04:00:50Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x19848149723bbd00545b98f45aa239864d8afd2194fec522af4dd2cb222f9766",
+  "question_id": "0xb33562b43a7fb9bc0621bb509adbf1629e1ab5268c0381f420843f3ec6139a01",
+  "question": "Will Russia capture Kostyantynivka by October 31?",
+  "description": "This market will resolve to \u201cYes\u201d if, according to the ISW map, Russia captures the Kostyantynivka railroad station located on Pravoberezhna vulytsia by October 31, 2025 at 11:59 PM ET.\n\nThe railroad station will be considered captured if any part of the train station icon is shaded red on the ISW map (https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375) by the resolution date. If the area is not shaded red by October 31, 2025, 11:59 PM ET, the market will resolve to \u201cNo\u201d.\n\nIf Russia comes into control of this territory as a result of a negotiated settlement, this will qualify for a 'Yes' resolution, regardless of if it is shaded red in the ISW map. An announcement of a negotiated settlement which gives Russia de jure control will not qualify. Actual control must be established.\n\nOnce Russia captures the railroad station, any subsequent loss of control will not be considered towards the resolution of this market.\n\nTrain Station Location: https://polymarket-upload.s3.us-east-2.amazonaws.com/Kostyantynivka3.jpg\n\nTrain Station Location in Kostyantynivka: https://polymarket-upload.s3.us-east-2.amazonaws.com/Kostyantynivka2.jpg\n\nKostyantynivka Location: https://polymarket-upload.s3.us-east-2.amazonaws.com/Kostyantynivka1.jpg\n\nLocation on Google maps: https://maps.app.goo.gl/hZ6ch5jVRvkNFY317\n\nThe primary resolution source for this market will be the ISW Ukraine map. If the ISW map is rendered unavailable, information from DeepStateMap (https://deepstatemap.live/) may be used. If information from both the ISW and DeepStateMap are rendered permanently unavailable, a consensus of credible reporting may be used.\n\nNote: Any temporary glitches or errors in the map which will not be considered.",
+  "market_slug": "will-russia-capture-kostyantynivka-by-october-31-788",
+  "end_date_iso": "2025-10-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "0x39A73aAeed8871C1D36016eAc519Aa625726e59F",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-russia-capture-kostyantynivka-by-38lHU3PVeM7C.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-russia-capture-kostyantynivka-by-38lHU3PVeM7C.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "57509386515638203409676353122070128915263312270689905975542272900147217912507",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "56204317272716953593028494650753841280461771658055690484625859869098941695564",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Ukraine",
+    "Geopolitics",
+    "World",
+    "Russia Capture",
+    "Ukraine Map"
+  ]
+}

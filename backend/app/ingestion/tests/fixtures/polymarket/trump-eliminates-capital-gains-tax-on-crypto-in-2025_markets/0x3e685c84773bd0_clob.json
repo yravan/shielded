@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-12-30T21:42:17Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x3e685c84773bd018fff4219185b904b2ef194671320f47648121d07d2ae2cc17",
+  "question_id": "0x872bc572bdcc177bcb2acf724b802f3925b28a2691f9454e8e6ea6cd6429426f",
+  "question": "Trump eliminates capital gains tax on crypto before 2027?",
+  "description": "This market will resolve to \"Yes\" if Donald Trump signs a bill into law or performs any executive action changing US tax law to eliminate capital gains tax on any cryptocurrency assets by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nSuch a bill must apply to US taxpaying persons in general; if a law applies only to specific companies or institutions, it will not qualify toward a \"Yes\" resolution to this market.\n\nIf capital gains is eliminated only for specific types or classes of crypto assets (e.g., only Bitcoin or Ethereum, only American issued cryptocurrencies, or only NFTs), it will still count toward a \"Yes\" resolution for this market.\n\nIf the bill is signed into law, or executive action is instituted before the resolution date, it will suffice to resolve this market to \"Yes\" regardless of when it takes effect.\n\nThe primary resolution source for this market will be official information from the US federal government, however a consensus of credible reporting will also be used.",
+  "market_slug": "trump-eliminates-capital-gains-tax-on-crypto-before-2027",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/trump-eliminates-capital-gains-tax-on-crypto-in-2025-_d4c7AqsRTXO.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/trump-eliminates-capital-gains-tax-on-crypto-in-2025-_d4c7AqsRTXO.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "38577956202894813911522423295759441226459985692799781876715891336671282746369",
+      "outcome": "Yes",
+      "price": 0.043,
+      "winner": false
+    },
+    {
+      "token_id": "31239779091556707685216681559343622450417987997527657281659332570836878668226",
+      "outcome": "No",
+      "price": 0.957,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Crypto",
+    "Trump",
+    "Taxes",
+    "Trump Presidency",
+    "Other"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2026-01-25T15:59:32Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x27e48fdbd8a3f94e034f541400e3fd74a0acf3cae8d2f78204827f338e2daff4",
+  "question_id": "0xd9735581f9be48489306bfcf4a0acc17b3bd24f0cf2431ec0199ce68f3eceec3",
+  "question": "Will MegaETH perform an airdrop by March 15?",
+  "description": "This market will resolve to \"Yes\" if MegaETH launches a token and performs an airdrop by 11:59 PM ET on the date specified in the title. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from MegaETH, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-megaeth-perform-an-airdrop-by-march-15",
+  "end_date_iso": "2026-03-01T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/megaeth-market-cap-fdv-one-day-after-launch-KzYK3qwuIK8t.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "88385975945283107938812443401494887183163153513687489840646297217592327730825",
+      "outcome": "Yes",
+      "price": 0.0015,
+      "winner": false
+    },
+    {
+      "token_id": "11504552645412821302027934562647647125970909212740672015759249391961313661366",
+      "outcome": "No",
+      "price": 0.9985,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "MegaETH",
+    "Pre-Market"
+  ]
+}

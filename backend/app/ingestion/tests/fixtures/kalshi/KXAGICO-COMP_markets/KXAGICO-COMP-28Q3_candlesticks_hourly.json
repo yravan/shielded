@@ -1,0 +1,25 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773392400,
+      "open_interest_fp": "10.00",
+      "price": {
+        "previous_dollars": "0.3200"
+      },
+      "volume_fp": "0.00",
+      "yes_ask": {
+        "close_dollars": "0.4300",
+        "high_dollars": "0.7700",
+        "low_dollars": "0.4300",
+        "open_dollars": "0.4300"
+      },
+      "yes_bid": {
+        "close_dollars": "0.3300",
+        "high_dollars": "0.3300",
+        "low_dollars": "0.1600",
+        "open_dollars": "0.3300"
+      }
+    }
+  ],
+  "ticker": "KXAGICO-COMP-28Q3"
+}

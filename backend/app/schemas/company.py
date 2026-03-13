@@ -12,6 +12,8 @@ class CompanyOut(BaseModel):
     annual_revenue: float
     operating_expense: float
     capital_expense: float
+    risk_profile: dict = {}
+    risk_score: int | None = None
     created_at: datetime
 
     model_config = ConfigDict(from_attributes=True)
@@ -27,6 +29,9 @@ class ExposureOut(BaseModel):
     revenue_impact_pct: float
     opex_impact_pct: float
     capex_impact_pct: float
+    status: str = "suggested"
+    relevance_score: int | None = None
+    matched_themes: list[str] | None = None
     notes: str | None = None
     event_title: str | None = None
     event_category: str | None = None

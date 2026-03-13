@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-06T22:29:45Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d",
+  "question_id": "0xbf59355e8ace912df7a031dc358fcd8b2fd69127a629d4661e99839d6ee12c46",
+  "question": "Putin out as President of Russia by end of 2026?",
+  "description": "This market will resolve to \"Yes\" if Russia's president, Vladimir Putin, is removed from power for any length of time between July 6, 2025, and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nPresident Vladimir Putin will be considered to be removed from power if he resigns, is detained, or otherwise loses his position or is prevented from fulfilling his duties as President of Russia within this market's timeframe.\n\nThe primary resolution source for this market will be a consensus of credible reporting.",
+  "market_slug": "putin-out-before-2027",
+  "end_date_iso": "2026-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "0x95bc3b1bd9E0a76faD6F8B177187A32360A78b32",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/putin-out-as-president-of-russia-in-2025-nWuurkC8qfbi.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/putin-out-as-president-of-russia-in-2025-nWuurkC8qfbi.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 1
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "350977769852917329387037893294763093471844346281449484439085576212613048126",
+      "outcome": "Yes",
+      "price": 0.115,
+      "winner": false
+    },
+    {
+      "token_id": "87073899845581463485186346288398658568334162612963837182986759797304993556208",
+      "outcome": "No",
+      "price": 0.885,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "russia",
+    "Ukraine",
+    "putin",
+    "Geopolitics",
+    "World",
+    "Earn 4%"
+  ]
+}

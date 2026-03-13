@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-09T20:40:29Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x2096cd3bedb878cbfb5d30308968616a1dfd80e17b278ca6bdc72f9dde4776a7",
+  "question_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd900",
+  "question": "Will Cooper Flagg win the 2025\u201326 NBA Rookie of the Year award?",
+  "description": "This is a market to predict which player will win the 2025\u201326 NBA Rookie of the Year award.\n\nThis market will resolve to \"Yes\" if the listed player is officially named the 2025\u201326 NBA Rookie of the Year. Otherwise, it will resolve to \"No\".\n\nIf the award is not announced by December 31, 2026, this market will resolve to \"Other\".\n\nThe primary resolution source will be official information from the NBA (https://www.nba.com).",
+  "market_slug": "will-cooper-flagg-win-the-202526-nba-rookie-of-the-year-award",
+  "end_date_iso": "2026-05-18T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd900",
+  "neg_risk_request_id": "0x6e32a137857557551c051cc72124ef285aeac260fdbdd67a1600b195d146d9bf",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-cooper-flagg-win-the-202526-nba-rookie-of-the-year-award-pEb9fkNAE8D1.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-cooper-flagg-win-the-202526-nba-rookie-of-the-year-award-pEb9fkNAE8D1.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "85111524713956582520646495718683425629132278867496750899986579388014440159452",
+      "outcome": "Yes",
+      "price": 0.295,
+      "winner": false
+    },
+    {
+      "token_id": "99082939052415021453173345011771098101265085810064049648892229244658592394032",
+      "outcome": "No",
+      "price": 0.705,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "NBA",
+    "Hide From New"
+  ]
+}

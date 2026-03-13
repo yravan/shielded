@@ -1,0 +1,56 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T18:36:10Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x8dbf6b51f302fd401065706245c144e93fe209abce183199433d4484b3ed8aff",
+  "question_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814722",
+  "question": "Will Dwayne 'The Rock' Johnson win the 2028 Democratic presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Democratic Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Democratic Party sources.\n\nAny replacement of the democratic nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-dwayne-the-rock-johnson-win-the-2028-democratic-presidential-nomination",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x2c3d7e0eee6f058be3006baabf0d54a07da254ba47fe6e3e095e7990c7814700",
+  "neg_risk_request_id": "0x6550ae63dd732eea64ad4d9b2755abc59b599ee9ecf49da54fd4a6205e944a7c",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/the+rock.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/the+rock.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "40963724357262746498642320898188195118391211877976821531149510360187173789737",
+      "outcome": "Yes",
+      "price": 0.0135,
+      "winner": false
+    },
+    {
+      "token_id": "14959910401705469574520698331840889689202579612030624016640567510369602599866",
+      "outcome": "No",
+      "price": 0.9865,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

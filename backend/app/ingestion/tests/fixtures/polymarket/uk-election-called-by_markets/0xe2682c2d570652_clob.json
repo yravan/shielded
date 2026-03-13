@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-01-06T13:21:52Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xe2682c2d5706520d27adf5f395ba828265b7f592af186f630d1882f3f88801e2",
+  "question_id": "0x3ed3606847192b76a6db74b48e43ad9874b8bdb2c06c4193d55f440a78ba8b2e",
+  "question": "Will the next UK election be called by June 30?",
+  "description": "This market will resolve to \"Yes\" if the date of the next UK general election is declared by June 30, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor this market to resolve to \"Yes\" it is only necessary that the election date be declared, not that the election actually occur within the market timeframe.\n\nThe primary resolution source for this market will be official information from the government of the United Kingdom, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-the-next-uk-election-be-called-by-june-30",
+  "end_date_iso": "2025-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/uk-election-called-by-YBeFE9xxrUNy.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/uk-election-called-by-YBeFE9xxrUNy.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "71814393255767059896885192320205110950970857723857002926607409598043220968518",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "12829516190095699015724020226971790365553069623531701813243912652159051546595",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "uk",
+    "England",
+    "pedophile",
+    "Starmer"
+  ]
+}

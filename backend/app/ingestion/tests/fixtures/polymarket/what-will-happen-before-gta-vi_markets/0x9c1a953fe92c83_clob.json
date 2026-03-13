@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-05-02T15:47:37Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x9c1a953fe92c8357f1b646ba25d983aa83e90c525992db14fb726fa895cb5763",
+  "question_id": "0x74dcd73f29877722e217723e10f2e8f9a888976f7cfc796234b75a3d3214d1c8",
+  "question": "Russia-Ukraine Ceasefire before GTA VI?",
+  "description": "This market will resolve to \"Yes\" if  if there is an official ceasefire agreement, defined as a publicly announced and mutually agreed halt in military engagement, between Russia and Ukraine before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an official release. If the release is only for certain consoles (e.g. Xbox Series X/S) it will count.\n\nThe resolution source for the release of GTA VI is official information from Rockstar Games or its parent company, Take-Two Interactive.\n\nOnly ceasefires which constitute a general pause in the conflict will qualify. Ceasefires which only apply to energy infrastructure, the Black Sea, or other similar agreements will not qualify.\n\nAny form of informal agreement will not be considered an official ceasefire. Humanitarian pauses will not count toward the resolution of this market.\n\nThe resolution for a ceasefire will be based on official announcements from both Russia and Ukraine; however, a wide consensus of credible media reporting stating an official ceasefire agreement between Russia and Ukraine has been reached will suffice.\n",
+  "market_slug": "russia-ukraine-ceasefire-before-gta-vi-554",
+  "end_date_iso": "2026-07-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 1
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "8501497159083948713316135768103773293754490207922884688769443031624417212426",
+      "outcome": "Yes",
+      "price": 0.605,
+      "winner": false
+    },
+    {
+      "token_id": "2527312495175492857904889758552137141356236738032676480522356889996545113869",
+      "outcome": "No",
+      "price": 0.395,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Culture",
+    "All",
+    "GTA VI"
+  ]
+}

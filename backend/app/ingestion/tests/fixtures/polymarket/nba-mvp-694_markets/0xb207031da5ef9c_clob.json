@@ -1,0 +1,54 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-17T12:13:42Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xb207031da5ef9cbded418e6b5b3c5eee24a3a7b22c6ec10053cbaaa67d793796",
+  "question_id": "0x51a3b9f29275310adfa309e776ed7a398ac0e5f05d02a3f42fd1e5fe6043e002",
+  "question": "Will Luka Doncic win the 2025\u20132026 NBA MVP?",
+  "description": "This market will resolve to \"Yes\" if Luka Doncic is awarded the 2025\u201326 regular season NBA Most Valuable Player (MVP) Award. Otherwise, this market will resolve to \"No\".\n\nIf the listed player is not announced as a finalist for the 2025\u201326 NBA MVP award, this market will immediately resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the NBA. However, a consensus of credible reporting may also be used.",
+  "market_slug": "will-luka-doncic-win-the-20252026-nba-mvp",
+  "end_date_iso": "2026-06-10T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x51a3b9f29275310adfa309e776ed7a398ac0e5f05d02a3f42fd1e5fe6043e000",
+  "neg_risk_request_id": "0x74b9d805ff02f43d647dd35d1ed709393109d823309911ef8178bd0ee0e8bda8",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-luka-doncic-win-the-20252026-nba-mvp-DgKrMP9fK_5M.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-luka-doncic-win-the-20252026-nba-mvp-DgKrMP9fK_5M.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "89110596788673536475065853727140488937259064164063660201050220270400840228269",
+      "outcome": "Yes",
+      "price": 0.0105,
+      "winner": false
+    },
+    {
+      "token_id": "101506943049053276934626391886226570064171431948041761918666910024462041911155",
+      "outcome": "No",
+      "price": 0.9895,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "mvp",
+    "NBA",
+    "Hide From New"
+  ]
+}

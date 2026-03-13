@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, use } from "react";
+import { useState, useMemo, use } from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -10,10 +10,13 @@ import { ProbabilityBadge } from "@/components/shared/probability-badge";
 import { TrendIndicator } from "@/components/shared/trend-indicator";
 import { ProbabilityChart } from "@/components/charts/probability-chart";
 import { MultiProbabilityChart } from "@/components/charts/multi-probability-chart";
+
 import { ChartTimeSelector } from "@/components/charts/chart-time-selector";
 import { EventImpacts } from "@/components/events/event-impacts";
 import { ImpliedFinancials } from "@/components/events/implied-financials";
 import { FinancialImpacts } from "@/components/events/financial-impacts";
+import { EventImpactCards } from "@/components/events/event-impact-cards";
+import { HedgeInstrumentsSection } from "@/components/events/hedge-instruments";
 import {
   useEvent,
   useEventHistory,
@@ -24,26 +27,69 @@ import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDate } from "@/lib/format";
 import { ExternalLink, Check, Plus, ChevronRight } from "lucide-react";
-import type { TimeRange, ProbabilityPoint, GeopoliticalEvent } from "@/types";
+import { cn } from "@/lib/utils";
+import { RiskScoreBadge } from "@/components/risk/risk-score-badge";
+import { useMatchedCompanies } from "@/hooks/use-risk";
+import type { TimeRange, GeopoliticalEvent, MatchedCompany } from "@/types";
 
-function filterByTimeRange(data: ProbabilityPoint[], range: TimeRange): ProbabilityPoint[] {
-  const now = new Date();
-  let cutoff: Date;
-  switch (range) {
-    case "1W":
-      cutoff = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-      break;
-    case "1M":
-      cutoff = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-      break;
-    case "YTD":
-      cutoff = new Date(now.getFullYear(), 0, 1);
-      break;
-    case "1Y":
-      cutoff = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
-      break;
-  }
-  return data.filter((p) => new Date(p.date) >= cutoff);
+const HOURS_MAP: Record<TimeRange, number> = {
+  "1W": 168,
+  "1M": 720,
+  "YTD": Math.ceil((Date.now() - new Date(new Date().getFullYear(), 0, 1).getTime()) / 3_600_000),
+  "1Y": 8760,
+};
+
+// ---------- Matched Companies section ----------
+
+function MatchedCompaniesSection({ eventId }: { eventId: string }) {
+  const { data: matched, isLoading } = useMatchedCompanies(eventId);
+
+  if (isLoading) return <Skeleton className="h-24 w-full" />;
+  if (!matched || matched.length === 0) return null;
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="text-base">
+          Companies Affected ({matched.length})
+        </CardTitle>
+        <p className="text-xs text-muted-foreground">
+          Companies matched by risk engine based on exposure profiles
+        </p>
+      </CardHeader>
+      <CardContent>
+        <div className="divide-y divide-border">
+          {matched.map((company: MatchedCompany) => (
+            <Link
+              key={company.companyId}
+              href={`/companies/${company.companyId}`}
+              className="flex items-center gap-3 py-2.5 first:pt-0 last:pb-0 hover:bg-muted/50 -mx-2 px-2 rounded"
+            >
+              <div className="flex-1 min-w-0">
+                <span className="text-sm font-medium">
+                  {company.name}
+                  {company.ticker && (
+                    <span className="ml-1 text-muted-foreground font-mono text-xs">
+                      ({company.ticker})
+                    </span>
+                  )}
+                </span>
+                <div className="flex gap-1 mt-0.5">
+                  {company.matchedThemes.slice(0, 3).map((theme) => (
+                    <Badge key={theme} variant="secondary" className="text-[10px] px-1 py-0">
+                      {theme.replace(/_/g, " ")}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+              <RiskScoreBadge score={company.relevanceScore} size="sm" showLabel={false} />
+              <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" />
+            </Link>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
 }
 
 // ---------- Metadata bar (shared) ----------
@@ -52,11 +98,24 @@ function EventMetadata({ event }: { event: GeopoliticalEvent }) {
   return (
     <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
       <Badge variant="outline">{event.category}</Badge>
+      {event.tags && event.tags.length > 0 && (
+        event.tags.slice(0, 4).map((tag) => (
+          <Badge key={tag} variant="secondary" className="text-xs">
+            {tag}
+          </Badge>
+        ))
+      )}
       <span>{event.region}</span>
       <Separator orientation="vertical" className="h-4" />
       <span>Source: {event.source}</span>
       <Separator orientation="vertical" className="h-4" />
       <span>Resolves: {event.resolutionDate ? formatDate(event.resolutionDate) : "TBD"}</span>
+      {event.volume != null && event.volume > 0 && (
+        <>
+          <Separator orientation="vertical" className="h-4" />
+          <span>Vol: ${(event.volume / 1_000_000).toFixed(1)}M</span>
+        </>
+      )}
       {event.sourceUrl && (
         <>
           <Separator orientation="vertical" className="h-4" />
@@ -74,27 +133,39 @@ function EventMetadata({ event }: { event: GeopoliticalEvent }) {
   );
 }
 
-// ---------- Parent event detail view ----------
+// ---------- Parent event detail view (unified layout) ----------
+
+const LINE_COLORS = [
+  "#3b82f6", "#ef4444", "#10b981", "#f59e0b", "#8b5cf6",
+  "#ec4899", "#06b6d4", "#f97316", "#6366f1", "#14b8a6",
+];
 
 function ParentEventDetail({ event }: { event: GeopoliticalEvent }) {
   const [timeRange, setTimeRange] = useState<TimeRange>("1M");
-  const { data: childrenHistory, isLoading: historyLoading } = useParentEventHistory(event.id);
+  const [selectedChildId, setSelectedChildId] = useState<string | null>(null);
+  const hours = HOURS_MAP[timeRange];
+  const { data: childrenHistory, isLoading: historyLoading } = useParentEventHistory(event.id, hours);
   const trackMutation = useTrackEvent();
   const children = event.children ?? [];
 
-  // Build market lines for the multi-chart
-  const marketLines = children.slice(0, 5).map((child) => ({
-    id: child.id,
-    title: child.title,
-    probability: child.currentProbability,
-    history: childrenHistory?.[child.id]?.history
-      ? filterByTimeRange(childrenHistory[child.id].history, timeRange)
-      : [],
-  }));
+  // Build market lines for multi-line chart (top 10)
+  const marketLines = useMemo(() => {
+    return children.slice(0, 10).map((child) => ({
+      id: child.id,
+      title: child.title,
+      probability: child.currentProbability,
+      history: childrenHistory?.[child.id]?.history ?? [],
+    }));
+  }, [children, childrenHistory]);
+
+  const selectedChild = children.find((c) => c.id === selectedChildId);
+  const selectedHistory = selectedChildId ? (childrenHistory?.[selectedChildId]?.history ?? []) : [];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
+      {/* Title + metadata */}
       <div>
+
         <div className="space-y-1">
           <h1 className="text-xl font-semibold">{event.title}</h1>
           <p className="text-sm text-muted-foreground">{event.description}</p>
@@ -103,9 +174,10 @@ function ParentEventDetail({ event }: { event: GeopoliticalEvent }) {
 
       <EventMetadata event={event} />
 
+      {/* Hero multi-line chart — full width, like binary event pages */}
       <Card>
         <CardHeader className="flex flex-row items-center justify-between pb-2">
-          <CardTitle className="text-base">Market Probabilities</CardTitle>
+          <CardTitle className="text-base">Probability History</CardTitle>
           <ChartTimeSelector value={timeRange} onChange={setTimeRange} />
         </CardHeader>
         <CardContent>
@@ -117,58 +189,84 @@ function ParentEventDetail({ event }: { event: GeopoliticalEvent }) {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">
-            Markets ({children.length})
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="divide-y divide-border">
-            {children.map((child) => (
-              <div
-                key={child.id}
-                className="flex items-center gap-3 py-3 first:pt-0 last:pb-0"
-              >
-                <Link
-                  href={`/events/${child.id}`}
-                  className="text-sm font-medium hover:underline flex-1 truncate"
-                >
-                  {child.title}
-                </Link>
-                <ProbabilityBadge probability={child.currentProbability} />
-                <Button
-                  size="sm"
-                  variant={child.isTracked ? "outline" : "default"}
-                  className="shrink-0"
-                  disabled={trackMutation.isPending}
-                  onClick={() =>
-                    trackMutation.mutate({
-                      eventId: child.id,
-                      track: !child.isTracked,
-                    })
-                  }
-                >
-                  {child.isTracked ? (
-                    <>
-                      <Check className="h-3.5 w-3.5 mr-1" />
-                      Tracked
-                    </>
-                  ) : (
-                    <>
-                      <Plus className="h-3.5 w-3.5 mr-1" />
-                      Track
-                    </>
-                  )}
-                </Button>
-                <Link href={`/events/${child.id}`}>
-                  <ChevronRight className="h-4 w-4 text-muted-foreground" />
-                </Link>
+      {/* Markets list (left 1/4) + selected market chart (right 3/4) */}
+      <div className="flex flex-col md:flex-row gap-4">
+        <Card className="md:w-1/4 shrink-0">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-base">
+              Markets ({children.length})
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="px-2">
+            <div className="space-y-0.5">
+              {children.map((child, index) => {
+                const isSelected = selectedChildId === child.id;
+                const color = LINE_COLORS[index % LINE_COLORS.length];
+                return (
+                  <div
+                    key={child.id}
+                    className={cn(
+                      "flex items-center gap-2 px-2 py-2 rounded cursor-pointer transition-colors",
+                      isSelected ? "bg-muted" : "hover:bg-muted/50"
+                    )}
+                    onClick={() => setSelectedChildId(isSelected ? null : child.id)}
+                  >
+                    <span
+                      className="w-2 h-2 rounded-full shrink-0"
+                      style={{ backgroundColor: index < 10 ? color : "var(--color-muted-foreground)" }}
+                    />
+                    <span className="text-xs flex-1 truncate">{child.title}</span>
+                    <ProbabilityBadge probability={child.currentProbability} className="text-[11px] px-1.5 py-0" />
+                    <Button
+                      size="sm"
+                      variant={child.isTracked ? "outline" : "ghost"}
+                      className="shrink-0 h-6 w-6 p-0"
+                      disabled={trackMutation.isPending}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        trackMutation.mutate({
+                          eventId: child.id,
+                          track: !child.isTracked,
+                        });
+                      }}
+                    >
+                      {child.isTracked ? (
+                        <Check className="h-3 w-3" />
+                      ) : (
+                        <Plus className="h-3 w-3" />
+                      )}
+                    </Button>
+                  </div>
+                );
+              })}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="flex-1 min-w-0">
+          <CardContent className="pt-6">
+            {selectedChild ? (
+              <>
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-sm font-medium truncate">{selectedChild.title}</h3>
+                  <ProbabilityBadge probability={selectedChild.currentProbability} />
+                </div>
+                {historyLoading ? (
+                  <Skeleton className="h-[300px] w-full" />
+                ) : (
+                  <ProbabilityChart data={selectedHistory} height={300} />
+                )}
+              </>
+            ) : (
+              <div className="flex items-center justify-center h-[300px] text-sm text-muted-foreground">
+                Select a market to view its individual chart
               </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+            )}
+          </CardContent>
+        </Card>
+      </div>
+
+      <MatchedCompaniesSection eventId={event.id} />
     </div>
   );
 }
@@ -176,12 +274,11 @@ function ParentEventDetail({ event }: { event: GeopoliticalEvent }) {
 // ---------- Child event detail view ----------
 
 function ChildEventDetail({ event }: { event: GeopoliticalEvent }) {
-  const { data: history } = useEventHistory(event.id);
   const [timeRange, setTimeRange] = useState<TimeRange>("1M");
+  const hours = HOURS_MAP[timeRange];
+  const { data: history } = useEventHistory(event.id, hours);
   const trackMutation = useTrackEvent();
 
-  const filteredHistory = filterByTimeRange(history ?? [], timeRange);
-  // Siblings are stored in event.children when viewing a child
   const siblings = event.children ?? [];
 
   return (
@@ -241,29 +338,31 @@ function ChildEventDetail({ event }: { event: GeopoliticalEvent }) {
           <ChartTimeSelector value={timeRange} onChange={setTimeRange} />
         </CardHeader>
         <CardContent>
-          <ProbabilityChart data={filteredHistory} height={350} />
+          <ProbabilityChart data={history ?? []} height={350} />
         </CardContent>
       </Card>
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Sector Impacts</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <EventImpacts impacts={event.impacts} />
-          </CardContent>
-        </Card>
+      {(event.impacts.length > 0 || event.impliedFinancials.length > 0) && (
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Sector Impacts</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <EventImpacts impacts={event.impacts} />
+            </CardContent>
+          </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Implied Financial Moves</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ImpliedFinancials financials={event.impliedFinancials} />
-          </CardContent>
-        </Card>
-      </div>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Implied Financial Moves</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ImpliedFinancials financials={event.impliedFinancials} />
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
       {event.financialImpacts && event.financialImpacts.length > 0 && (
         <Card>
@@ -278,6 +377,12 @@ function ChildEventDetail({ event }: { event: GeopoliticalEvent }) {
           </CardContent>
         </Card>
       )}
+
+      <EventImpactCards eventId={event.id} />
+
+      <HedgeInstrumentsSection eventId={event.id} />
+
+      <MatchedCompaniesSection eventId={event.id} />
 
       {siblings.length > 0 && (
         <Card>
@@ -308,11 +413,10 @@ function ChildEventDetail({ event }: { event: GeopoliticalEvent }) {
 // ---------- Flat event detail view (existing behavior) ----------
 
 function FlatEventDetail({ event }: { event: GeopoliticalEvent }) {
-  const { data: history } = useEventHistory(event.id);
   const [timeRange, setTimeRange] = useState<TimeRange>("1M");
+  const hours = HOURS_MAP[timeRange];
+  const { data: history } = useEventHistory(event.id, hours);
   const trackMutation = useTrackEvent();
-
-  const filteredHistory = filterByTimeRange(history ?? [], timeRange);
 
   return (
     <div className="space-y-8">
@@ -363,29 +467,31 @@ function FlatEventDetail({ event }: { event: GeopoliticalEvent }) {
           <ChartTimeSelector value={timeRange} onChange={setTimeRange} />
         </CardHeader>
         <CardContent>
-          <ProbabilityChart data={filteredHistory} height={350} />
+          <ProbabilityChart data={history ?? []} height={350} />
         </CardContent>
       </Card>
 
-      <div className="grid gap-6 lg:grid-cols-2">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Sector Impacts</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <EventImpacts impacts={event.impacts} />
-          </CardContent>
-        </Card>
+      {(event.impacts.length > 0 || event.impliedFinancials.length > 0) && (
+        <div className="grid gap-6 lg:grid-cols-2">
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Sector Impacts</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <EventImpacts impacts={event.impacts} />
+            </CardContent>
+          </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-base">Implied Financial Moves</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ImpliedFinancials financials={event.impliedFinancials} />
-          </CardContent>
-        </Card>
-      </div>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-base">Implied Financial Moves</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ImpliedFinancials financials={event.impliedFinancials} />
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
       {event.financialImpacts && event.financialImpacts.length > 0 && (
         <Card>
@@ -400,6 +506,12 @@ function FlatEventDetail({ event }: { event: GeopoliticalEvent }) {
           </CardContent>
         </Card>
       )}
+
+      <EventImpactCards eventId={event.id} />
+
+      <HedgeInstrumentsSection eventId={event.id} />
+
+      <MatchedCompaniesSection eventId={event.id} />
     </div>
   );
 }

@@ -1,0 +1,55 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-06-02T22:14:37Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x5a81f9ef8bf06662ff9abf235fdab14e21b8742741691886adda3edb8504cbe4",
+  "question_id": "0x0739c76fbd4ca765515232a02b60f998d0f5db65df53079960928f9de9f9265e",
+  "question": "Israel and Syria normalize relations by December 31, 2025?",
+  "description": "This market will resolve to \"Yes\" if both Israel and Syria officially announce the establishment of diplomatic relations by December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from Israel and the Syria, however a consensus of credible reporting may also be used.",
+  "market_slug": "israel-and-syria-normalize-relations-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/israel-and-syria-normalize-relations-in-2025-cTktGZLyjnB_.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/israel-and-syria-normalize-relations-in-2025-cTktGZLyjnB_.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "52406051095629057044443198229709581520388618740057147331933368380205787552282",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "33346757903963450818139659536079774528461699398760278389307487545796932221549",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Syria",
+    "Middle East",
+    "Israel",
+    "Geopolitics",
+    "World",
+    "Trump x al-Sharaa"
+  ]
+}

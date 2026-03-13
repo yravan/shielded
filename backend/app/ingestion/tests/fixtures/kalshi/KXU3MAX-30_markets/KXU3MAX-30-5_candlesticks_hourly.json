@@ -1,0 +1,30 @@
+{
+  "candlesticks": [
+    {
+      "end_period_ts": 1773349200,
+      "open_interest_fp": "108.00",
+      "price": {
+        "close_dollars": "0.9000",
+        "high_dollars": "0.9000",
+        "low_dollars": "0.9000",
+        "mean_dollars": "0.9000",
+        "open_dollars": "0.9000",
+        "previous_dollars": "0.8800"
+      },
+      "volume_fp": "5.00",
+      "yes_ask": {
+        "close_dollars": "0.9000",
+        "high_dollars": "0.9300",
+        "low_dollars": "0.9000",
+        "open_dollars": "0.9300"
+      },
+      "yes_bid": {
+        "close_dollars": "0.8800",
+        "high_dollars": "0.9000",
+        "low_dollars": "0.8800",
+        "open_dollars": "0.9000"
+      }
+    }
+  ],
+  "ticker": "KXU3MAX-30-5"
+}

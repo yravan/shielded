@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-06-09T12:21:40Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x25e4ee44272bf7f0d3fd87b273f33bf06b3294f5e65949de029c753534946f8f",
+  "question_id": "0xeddddd7a641035c6024282c8f410415fef753e0d6000842d69f7ea7334f5782e",
+  "question": "Will Croatia qualify for the 2026 FIFA World Cup?",
+  "description": "This is a market on which teams will qualify for the 2026 FIFA World Cup.\n\nIf at any point it becomes impossible for this team to qualify for the FIFA World Cup based on the rules of FIFA (e.g. they cannot reach the required number of points to advance from its group or qualify for playoffs), this market will resolve immediately to \u201cNo\u201d.\n\nIf the 2026 FIFA World Cup is permanently canceled or the qualifying stage has not been completed by September 30, 2026, 11:59 PM this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be FIFA.  (https://www.fifa.com/en/tournaments/mens/worldcup).",
+  "market_slug": "will-croatia-qualify-for-the-2026-fifa-world-cup",
+  "end_date_iso": "2026-04-12T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/2026-fifa-world-cup-which-countries-qualify-_JWD7xspmdXY.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/2026-fifa-world-cup-which-countries-qualify-_JWD7xspmdXY.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "44612156176042926672463504628525901367710913704158567823979452457687259793560",
+      "outcome": "Yes",
+      "price": 1,
+      "winner": true
+    },
+    {
+      "token_id": "178807139362571934436226891404522415073777658382264693134645845542220531849",
+      "outcome": "No",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "world cup",
+    "Soccer",
+    "FIFA World Cup"
+  ]
+}

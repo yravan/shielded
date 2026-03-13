@@ -1,0 +1,54 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-01-30T21:28:00Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x689a77ca28cf59efae262fd37d07aa787194d52b13bbe009a223de15bf5c62af",
+  "question_id": "0x21a57e5bd440a2fa423cdaeffd795ec4dc3a6a7ed297f9fc630f59fcbabfd1fd",
+  "question": "China x India military clash by December 31?",
+  "description": "This market will resolve to \"Yes\" if there is a military encounter between the military forces of China (People's Republic of China) and India between January 29, and December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA \"military encounter\" is defined as any incident involving the use of force such as missile strikes, artillery fire, exchange of gunfire, or other forms of direct military engagement between Chinese and Indian military forces. Hand-to-hand combat with the use of melee weapons between military personnel, will qualify. For example the 2020 Galwan Valley clash and the 2022 Yangtse clash would both count.\n\nNon-violent actions, such as warning shots, artillery fire into uninhabited areas, or missile launches that land in territorial waters or pass through airspace, will not qualify for a \"Yes\" resolution. Intentional ship ramming that results in significant damage to (e.g., a hole in the hull) or the sinking of a military ship by another will count toward a \"Yes\" resolution, however minor damage (scrapes, dents) will not.\n\nNote: the China Coast Guard (CCG) is part of the military, however the Indian Coast Guard (ICG) is not.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+  "market_slug": "china-x-india-military-clash-by-december-31",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": "2025-09-10T02:17:00Z",
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/china-x-india-military-clash-by-december-31-eggJM4CWN6Un.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/china-x-india-military-clash-by-december-31-eggJM4CWN6Un.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "62499647704758013801224496519154801919449219197687180369505612744147504118777",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "89667254973027475163940771416019167537897714895546880163448338769528535684137",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "China",
+    "India",
+    "Geopolitics",
+    "World"
+  ]
+}

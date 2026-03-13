@@ -49,7 +49,7 @@ export function ProbabilityChart({ data, height = 300 }: ProbabilityChartProps) 
           minTickGap={40}
         />
         <YAxis
-          domain={[0, 1]}
+          domain={["auto", "auto"]}
           axisLine={false}
           tickLine={false}
           tick={{ fontSize: 11, fill: "var(--color-muted-foreground)" }}

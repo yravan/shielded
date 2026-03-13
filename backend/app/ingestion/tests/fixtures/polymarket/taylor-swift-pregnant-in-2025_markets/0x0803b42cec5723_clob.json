@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-12-28T23:03:15Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x0803b42cec5723f301f77f3ea818fcb393eb58b9694096cab2d4f8b81b4a2bdf",
+  "question_id": "0x8ff85dfc06c9fb612b7626d6e1d28b17f3903265b9c2bd6ae03791fd608cf6ce",
+  "question": "Taylor Swift pregnant before 2027?",
+  "description": "This market will resolve to \"Yes\" if Taylor Swift announces that she is pregnant between December 28, 2025, and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nOnly credible announcements will qualify. Pregnancy announcements that are not credible, for example jokes, will not suffice.    \n\nThe resolution source will be statements from Taylor Swift or her representatives; however, a definitive consensus of credible media reporting may be considered.",
+  "market_slug": "taylor-swift-pregnant-before-2027",
+  "end_date_iso": "2026-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/taylor-swift-pregnant-in-2025-5cpC3Ir4u5Pd.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/taylor-swift-pregnant-in-2025-5cpC3Ir4u5Pd.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "44827572479353518081244438746113968420401867280288091969239280589388541478697",
+      "outcome": "Yes",
+      "price": 0.34,
+      "winner": false
+    },
+    {
+      "token_id": "98165997526504155072211489624964995141099749875757338865080345428663813769275",
+      "outcome": "No",
+      "price": 0.66,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Music",
+    "Celebrities",
+    "Taylor Swift",
+    "Culture"
+  ]
+}

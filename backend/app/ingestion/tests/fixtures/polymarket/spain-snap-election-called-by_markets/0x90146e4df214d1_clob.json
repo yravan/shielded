@@ -1,0 +1,54 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-05-28T18:37:38Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x90146e4df214d10dc20b7f60ff0ce966bfa09546978a4a4059d06f3cd6ddf577",
+  "question_id": "0xcdb4dcef247a51f3d1853304a7a11c2b42dffc51ba1056c56d4f49a685ce7fb0",
+  "question": "Spain snap election called in 2025?",
+  "description": "This market will resolve to \"Yes\" if the next Spanish general election is scheduled between May 28 and December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThis market is about whether a date for the next Spanish election is announced within the stated timeframe. The date the election is scheduled to take place on will have no effect on the resolution to this market.\n\nThe primary resolution source for this market is official information from the Government of Spain however a consensus of credible reporting may also be used.",
+  "market_slug": "spain-snap-election-called-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/spain-snap-election-called-in-2025-YPLnfYBaLnXB.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/spain-snap-election-called-in-2025-YPLnfYBaLnXB.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 200,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "6902174611736159145776657108337759402988986526678504248271295670198397738390",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "10360574034610259365825582633190111659383248210003248977260045000073129477814",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "world affairs",
+    "Global Elections",
+    "World"
+  ]
+}

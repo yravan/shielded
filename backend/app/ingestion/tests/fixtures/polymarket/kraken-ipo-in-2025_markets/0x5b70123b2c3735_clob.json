@@ -1,0 +1,57 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2024-12-31T19:03:56Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x5b70123b2c37355840b38bc60752919dae7ca5fe11d5e5184aa69be01b9db458",
+  "question_id": "0x90c45939ee51f61d0c19d912e982aedc20a881ac43fda288f9141b33dbfac481",
+  "question": "Kraken IPO in 2025?",
+  "description": "This market will resolve to \"Yes\" if Kraken (US-based cryptocurrency exchange) completes an Initial Public Offering (IPO) by December 31, 2025, 11:59 PM ET, as confirmed by official company announcements or credible news sources. The IPO refers to the first sale of stock by Kraken to the public on any recognized stock exchange.\n\nIf Kraken merges with another entity, is acquired, or ceases to exist before the market resolves, the market will also resolve to \"No\".\n\nThis market will resolve early if Kraken completes an IPO by December 31, 2025, 11:59 PM ET.\n\nThe resolution source for this market is a consensus of credible reporting.",
+  "market_slug": "kraken-ipo-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-kraken-ipo-in-2024--_GT-GzKWtUW.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-kraken-ipo-in-2024--_GT-GzKWtUW.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "106229668102716149832209250222340847662201251266419359322746795373714233470739",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "33007765079325382103458898680383691503895532108499178620460955049586020382226",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Business",
+    "Finance",
+    "IPOs",
+    "Tech",
+    "exchange",
+    "2025 Predictions",
+    "Featured"
+  ]
+}

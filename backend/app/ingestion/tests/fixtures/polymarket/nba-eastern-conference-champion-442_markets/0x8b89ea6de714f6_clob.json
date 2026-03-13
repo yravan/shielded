@@ -1,0 +1,52 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-07-17T12:14:32Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x8b89ea6de714f69d3418f77614b1dd5f9204443d8bc8fca1cb3d4b5cb7d0a1f5",
+  "question_id": "0x741e7444003c5c4f453616d1528feef2d2ff044bc65247f4509500c22d6d1e08",
+  "question": "Will the Indiana Pacers win the NBA Eastern Conference Finals?",
+  "description": "This market will resolve to \u201cYes\u201d if the Indiana Pacers win the 2025\u20132026 NBA Eastern Conference Finals. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThis market will resolve to \u201cNo\u201d if it becomes impossible for this team to win the 2025\u201326 NBA Eastern Conference Finals based on the rules of the NBA.\n\nIf the 2025-26 NBA Eastern Conference Finals winner is not announced by June 30, 2026, this market will resolve to \u201cOther\u201d.\n\nThe resolution source for this market will be information from the NBA.",
+  "market_slug": "will-the-indiana-pacers-win-the-nba-eastern-conference-finals",
+  "end_date_iso": "2026-06-13T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x741e7444003c5c4f453616d1528feef2d2ff044bc65247f4509500c22d6d1e00",
+  "neg_risk_request_id": "0x0ff33f5c20f198724221ee43e04e82e153fa35476ee8ac0e0c54d49c729f16c2",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-indiana-pacers-win-the-nba-eastern-conference-finals-IZhhq7jj9OAG.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-indiana-pacers-win-the-nba-eastern-conference-finals-IZhhq7jj9OAG.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "91288830864405819371669895951357549933848133831456873504828139312461957559857",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "15952689881952595538604299570791504336373523211007351100313552761527006627492",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Sports",
+    "NBA",
+    "Hide From New"
+  ]
+}

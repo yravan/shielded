@@ -1,0 +1,58 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-07-09T18:08:53Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x5b6750dc0ed93ee1db9e614acce6750d09a62ac5f3acee1ef52069fd4547f42c",
+  "question_id": "0xf4f6b4c072bcacc6f24adb2d072c5da0cd1ff26ec3fa3fdfb69dd57dcbce3389",
+  "question": "Will Pump.fun perform an airdrop by July 18?",
+  "description": "This market will resolve to \"Yes\" if Pump.fun launches a token and performs an airdrop by July 18, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from Pump.fun, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-pumpfun-perform-an-airdrop-by-july-18-659",
+  "end_date_iso": "2025-07-18T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "0x15808DF09AebDb08d8bB05c9D495228705b37BAE",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/pumpfun-launch-a-token-by-RzTi7_aC42Qa.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/pumpfun-launch-a-token-by-RzTi7_aC42Qa.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 10
+      }
+    ],
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "65608197540292369730706565823104369647418484707426319698850083358894302812849",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "37218309103910000125660160462106635146821217784108993481792756430689309526086",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "Crypto Prices",
+    "Pre-Market"
+  ]
+}

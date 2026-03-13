@@ -1,0 +1,55 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-10-06T20:49:08Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xdc7ff8e7d1bf22e6b9f372b3122bf553ed7bfedebc500e76e61aab35d9ebdb8e",
+  "question_id": "0xf90654d417e4581fb73cf2a93e3a4381ec7b0afa06dc1db911cd3ffd015c1a15",
+  "question": "Macron out by October 31, 2025?",
+  "description": "This market will resolve to \"Yes\" if Emmanuel Macron ceases to be President of France for any length of time between October 6, and October 31, 2025, 11:59 PM ET (inclusive). Otherwise, this market will resolve to \"No\".\n\nIf Macron departs from office before the expiry date, the market should resolve immediately.\n\nThe primary resolution source for this market will be information from the government of France, however a consensus of credible reporting will also be used.",
+  "market_slug": "macron-out-by-october-31-2025",
+  "end_date_iso": "2025-10-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/macron+tight+lip.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/macron-out-by-october-31-2025-dbY7JWMjONlK.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "34035142221712364354899416126623416304962260767590062792033879920204802585564",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "63517326976374375632630658298716704665562106331315856506724933470892403292808",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "France",
+    "resign",
+    "2025 Predictions",
+    "Macron",
+    "World"
+  ]
+}

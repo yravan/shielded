@@ -18,6 +18,11 @@ class NormalizedMarket:
     close_ts: int | None = None
     outcome_label: str = ""  # "Above 10", "Claude", etc.
     outcome_value: float | None = None  # parsed numeric if quantitative, else None
+    clob_token_id: str | None = None  # Polymarket: parsed from clobTokenIds[0]
+    series_ticker: str | None = None  # Kalshi: from parent event's series_ticker
+    image_url: str | None = None  # Polymarket: market.image
+    is_closed: bool = False  # Polymarket: market.closed
+    group_item_title: str | None = None  # Polymarket: market.groupItemTitle
 
 
 @dataclass
@@ -38,13 +43,72 @@ class NormalizedEvent:
     markets: list[NormalizedMarket] = field(default_factory=list)
     expected_value: float | None = None  # computed for quantitative multi-markets
     is_quantitative: bool = False
+    tags: list[str] = field(default_factory=list)
+    series_ticker: str | None = None  # Kalshi: event.series_ticker
+    volume: float | None = None  # Both: event-level volume
 
 
 @dataclass
 class PricePoint:
     timestamp: int  # unix seconds
-    probability: float
+    probability: float  # p50/EV for quantitative parent events
     volume: float | None = None
+    p25: float | None = None  # 25th percentile (quantitative only)
+    p75: float | None = None  # 75th percentile (quantitative only)
+
+
+# Keywords that indicate an event is relevant to geopolitical risk.
+# Matched case-insensitively against title, description, and tags.
+_RELEVANT_KEYWORDS: set[str] = {
+    # geopolitical / conflict
+    "geopolitic", "war", "conflict", "military", "invasion", "nato",
+    "sanction", "cease", "nuclear", "weapon", "defense", "army", "navy",
+    "troops", "missile", "drone", "terror", "insurgent", "coup",
+    # trade / economic policy
+    "trade", "tariff", "export", "import", "embargo", "supply chain",
+    "quota", "dumping", "wto", "trade war", "customs", "protectionism",
+    # regulatory / policy
+    "regulat", "legislation", "congress", "parliament", "executive order",
+    "policy", "govern", "election", "vote", "president", "prime minister",
+    "chancellor", "senate", "supreme court", "law", "bill", "act",
+    "diplomacy", "diplomat", "treaty", "summit", "g7", "g20", "un ",
+    "united nations", "security council", "imf", "world bank",
+    # climate / energy
+    "climate", "carbon", "emission", "renewable", "fossil", "oil",
+    "gas", "opec", "energy", "drought", "flood", "hurricane",
+    "wildfire", "temperature", "paris agreement", "cop2",
+    # countries / regions (high geopolitical signal)
+    "china", "taiwan", "russia", "ukraine", "iran", "israel",
+    "north korea", "gaza", "palestine", "syria", "yemen",
+    "saudi", "venezuela", "cuba", "afghanistan",
+    # economics / markets with policy angle
+    "federal reserve", "fed rate", "interest rate", "inflation",
+    "recession", "gdp", "debt ceiling", "default", "central bank",
+    "currency", "forex", "treasury", "fiscal",
+}
+
+# Tags from Polymarket/Kalshi that indicate relevance
+_RELEVANT_TAGS: set[str] = {
+    "politics", "geopolitics", "world", "conflict", "war", "military",
+    "trade", "tariff", "climate", "weather", "economy", "finance",
+    "regulation", "government", "election", "diplomacy", "energy",
+    "sanctions", "defense",
+}
+
+
+def is_event_relevant(title: str, description: str, tags: list[str] | None = None) -> bool:
+    """Return True if the event is relevant to geopolitical risk monitoring."""
+    text = (title + " " + description).lower()
+    # Check keywords in text
+    for kw in _RELEVANT_KEYWORDS:
+        if kw in text:
+            return True
+    # Check tags
+    if tags:
+        for tag in tags:
+            if tag.lower() in _RELEVANT_TAGS:
+                return True
+    return False
 
 
 class CircuitBreakerOpen(Exception):
@@ -171,6 +235,6 @@ class BaseMarketClient(ABC):
         ...
 
     @abstractmethod
-    async def fetch_prices(self, source_id: str) -> list[PricePoint]:
+    async def fetch_prices(self, source_id: str, hours: int = 720) -> list[PricePoint]:
         """Fetch price/probability history for a specific event."""
         ...

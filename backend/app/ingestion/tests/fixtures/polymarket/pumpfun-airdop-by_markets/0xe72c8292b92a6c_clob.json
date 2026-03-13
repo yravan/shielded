@@ -1,0 +1,58 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-06-03T20:40:12Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xe72c8292b92a6cdf7579bde39ab606b7391973c235d0aea193249be945c5d444",
+  "question_id": "0xe1f4d4f48a499ba18c3021901dd96f85f23a755eadf67bcd82b3ce030e550fcb",
+  "question": "Will Pump.fun perform an airdrop by June 30?",
+  "description": "This market will resolve to \"Yes\" if Pump.fun launches a token and performs an airdrop by June 30, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from Pump.fun, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-pumpfun-perform-an-airdrop-by-june-30",
+  "end_date_iso": "2025-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/pumpfun-launch-a-token-by-RzTi7_aC42Qa.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/pumpfun-launch-a-token-by-RzTi7_aC42Qa.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 5
+      }
+    ],
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "114096480064841487203290093703117607690468018481845116323176914548002435186035",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "39935063821726037310606795265113282924890330321756982209233099836916359221750",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "Crypto Prices",
+    "Pre-Market"
+  ]
+}

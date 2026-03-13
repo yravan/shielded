@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-10-05T20:05:39Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0xfa88bedd0403281fac1b3c8b310755040aabed8ba12ded1b2e3205a3d05a4a28",
+  "question_id": "0x66e74f093af3df8654cfa63fecf9fb1313b1556c10a8a2e49aeca5ba9759a59a",
+  "question": "Will Hyperliquid perform an airdrop by December 31, 2026?",
+  "description": "This market will resolve to \"Yes\" if Hyperliquid performs a second airdrop by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market \"locked\" tokens or non-swappable tokens will not suffice to resolve this market to \"Yes\". Airdrops of NFTs will not qualify.\n\nThe primary resolution source for this market is on-chain information and official information from Hyperliquid, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-hyperliquid-perform-an-airdrop-by-december-31-2026",
+  "end_date_iso": null,
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/hyperliquid-up-or-down-on-may-22-Fyo58T8HF0AC.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/hyperliquid-up-or-down-on-may-22-Fyo58T8HF0AC.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "101513571766435454355723114188696307527864518980689079866102837918467349506537",
+      "outcome": "Yes",
+      "price": 0.235,
+      "winner": false
+    },
+    {
+      "token_id": "85487630954297906857427842745787851948079273488527800245673979479655643658539",
+      "outcome": "No",
+      "price": 0.765,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Crypto",
+    "Airdrops",
+    "Featured",
+    "Pre-Market"
+  ]
+}

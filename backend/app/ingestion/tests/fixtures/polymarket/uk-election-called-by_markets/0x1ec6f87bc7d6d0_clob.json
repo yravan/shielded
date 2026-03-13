@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-09-15T15:38:00Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x1ec6f87bc7d6d0976bbaee5883577bc51be4ba5ef7c0127ccd96e9d64136df40",
+  "question_id": "0xe5c84ea275e960e14217121394d29631a49d21754f85c39c6614f0e7e4bda1f4",
+  "question": "Will the next UK election be called by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if the date of the next UK general election is declared by June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor this market to resolve to \"Yes\" it is only necessary that the election date be declared, not that the election actually occur within the market timeframe.\n\nThe primary resolution source for this market will be official information from the government of the United Kingdom, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-the-next-uk-election-is-called-by-june-30-2026",
+  "end_date_iso": "2026-06-30T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/uk-election-called-by-YBeFE9xxrUNy.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/uk-election-called-by-YBeFE9xxrUNy.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "13894524895366006997415301184483786855853683638290113202814526270024185311964",
+      "outcome": "Yes",
+      "price": 0.068,
+      "winner": false
+    },
+    {
+      "token_id": "87815410592295241486154481880824603104260793862757681040997281046628187070656",
+      "outcome": "No",
+      "price": 0.932,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "uk",
+    "England",
+    "pedophile",
+    "Starmer"
+  ]
+}

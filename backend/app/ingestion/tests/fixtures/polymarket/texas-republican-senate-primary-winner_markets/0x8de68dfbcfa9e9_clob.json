@@ -1,0 +1,60 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-10T21:30:04Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x8de68dfbcfa9e9b6472bceec9aea2f252038cc12df9838b1f0016c02ec94b6d7",
+  "question_id": "0x0aa99409c83ee67e3d0413ded30606dffb81bdb76c1c68779d0eddf034d0c302",
+  "question": "Will Dawn Buckingham win the 2026 Texas Republican Primary?",
+  "description": "This market will resolve according to the winner of the Republican Primary for United States Senator from Texas. \n\nIf no 2026 Texas Republican Senate Primary takes place, this market will resolve to \"Other\".\n\nThe resolution source for this market will be the first announcement of the results from the Texas Republican party, however an overwhelming consensus of credible reporting may suffice.\n",
+  "market_slug": "will-dawn-buckingham-win-the-2026-republican-primary",
+  "end_date_iso": "2026-05-26T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x0aa99409c83ee67e3d0413ded30606dffb81bdb76c1c68779d0eddf034d0c300",
+  "neg_risk_request_id": "0x6259babd676a1c41c0b34d3888624d17a912df54d6ecd376096c5a60b4b26c6d",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-dawn-buckingham-win-the-2026-republican-primary-7ncxsBa7nFB3.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-dawn-buckingham-win-the-2026-republican-primary-7ncxsBa7nFB3.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "58401019401260699653952858670495528419982703529223145905183604798309827954819",
+      "outcome": "Yes",
+      "price": 0.0005,
+      "winner": false
+    },
+    {
+      "token_id": "74227827532432558314995600123116184283055338478614283009470901045114800632791",
+      "outcome": "No",
+      "price": 0.9995,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "primary elections",
+    "Republican Primary",
+    "US Election",
+    "Senate Primary",
+    "Parent For Derivative",
+    "Texas Senate",
+    "Texas Primary",
+    "March 3 Primaries"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-05-02T15:47:47Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x32b09f6390252b37d674501527e709016d55581b2c1e544bd4b8167f5f732f4c",
+  "question_id": "0x9e84e9020884d3e603df981dc049bed477b64acfc623a739a7c51fed8de6cc5c",
+  "question": "Will Jesus Christ return before GTA VI?",
+  "description": "This market will resolve to \"Yes\" if The Second Coming of Jesus Christ occurs before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an official release. If the release is only for certain consoles (e.g. Xbox Series X/S) it will count.\n\nThe resolution source for the release of GTA VI is official information from Rockstar Games or its parent company, Take-Two Interactive.\n\nThe resolution source for the return of Jesus will be a consensus of credible sources.",
+  "market_slug": "will-jesus-christ-return-before-gta-vi-665",
+  "end_date_iso": "2026-07-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 2
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "90435811253665578014957380826505992530054077692143838383981805324273750424057",
+      "outcome": "Yes",
+      "price": 0.485,
+      "winner": false
+    },
+    {
+      "token_id": "92388629082681805622801622703528982922543286352927708208755887536971583436902",
+      "outcome": "No",
+      "price": 0.515,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Culture",
+    "All",
+    "GTA VI"
+  ]
+}

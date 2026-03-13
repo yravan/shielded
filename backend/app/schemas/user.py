@@ -23,6 +23,7 @@ class CompanyInput(BaseModel):
     annual_revenue: float = 0
     operating_expense: float = 0
     capital_expense: float = 0
+    risk_profile: dict | None = None
 
 
 class CompanyLookupResponse(BaseModel):

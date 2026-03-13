@@ -2,6 +2,8 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
+from app.schemas.risk import HedgeInstrumentOut
+
 
 class PredictionMarketHedge(BaseModel):
     cost: float
@@ -27,3 +29,4 @@ class HedgeComparisonResponse(BaseModel):
     recommendation: str
     savings_percent: float
     notes: str | None = None
+    suggested_instruments: list[HedgeInstrumentOut] = []

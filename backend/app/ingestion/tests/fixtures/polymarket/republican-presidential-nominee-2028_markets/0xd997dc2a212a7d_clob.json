@@ -1,0 +1,61 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:41:50Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0xd997dc2a212a7d6673375a3b016db1fb214247142f8cde0cbf07f8e6d789877c",
+  "question_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea608",
+  "question": "Will Vivek Ramaswamy win the 2028 Republican presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Republican Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Republican Party sources.\n\nAny replacement of the Republican nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-vivek-ramaswamy-win-the-2028-republican-presidential-nomination",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea600",
+  "neg_risk_request_id": "0x32862405b709f03f07fbd40040e73f90962d1b6e7d7b953051be123948f95558",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-vivek-ramaswamy-win-the-2028-us-presidential-election-kAh6CRJ05Brk.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-vivek-ramaswamy-win-the-2028-us-presidential-election-kAh6CRJ05Brk.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "7847177314809025001842027337093046201021185723933452855314998541165696902642",
+      "outcome": "Yes",
+      "price": 0.0145,
+      "winner": false
+    },
+    {
+      "token_id": "61638209040977576407645319654548998972645370498978369829582391676362965890344",
+      "outcome": "No",
+      "price": 0.9855,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

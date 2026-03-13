@@ -1,0 +1,54 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-17T12:14:00Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x277a7364c4d2c69d1cbf073440f674efb215471e444b0f52e65a49c5d38e195c",
+  "question_id": "0x51a3b9f29275310adfa309e776ed7a398ac0e5f05d02a3f42fd1e5fe6043e012",
+  "question": "Will Ja Morant win the 2025\u20132026 NBA MVP?",
+  "description": "This market will resolve to \"Yes\" if Ja Morant is awarded the 2025\u201326 regular season NBA Most Valuable Player (MVP) Award. Otherwise, this market will resolve to \"No\".\n\nIf the listed player is not announced as a finalist for the 2025\u201326 NBA MVP award, this market will immediately resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the NBA. However, a consensus of credible reporting may also be used.",
+  "market_slug": "will-ja-morant-win-the-20252026-nba-mvp",
+  "end_date_iso": "2026-06-10T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x51a3b9f29275310adfa309e776ed7a398ac0e5f05d02a3f42fd1e5fe6043e000",
+  "neg_risk_request_id": "0x5d1fbbc2fa768f83c0955fd40dc6cfd9d7ed5bf04481bb93668e9606c1f92f82",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-ja-morant-win-the-20252026-nba-mvp-_pTywsbA8pLd.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-ja-morant-win-the-20252026-nba-mvp-_pTywsbA8pLd.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "43052638939805111253042708876810364217320058918650838730114107320970504078348",
+      "outcome": "Yes",
+      "price": 0.0005,
+      "winner": false
+    },
+    {
+      "token_id": "36826726069067234056175494565775503022721478093395304372916973271229509135349",
+      "outcome": "No",
+      "price": 0.9995,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "mvp",
+    "NBA",
+    "Hide From New"
+  ]
+}

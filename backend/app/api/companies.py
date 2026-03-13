@@ -10,6 +10,7 @@ from app.api.users import get_or_create_user
 from app.auth import get_current_user
 from app.models.company import Company
 from app.models.exposure import Exposure
+from app.risk_engine import get_default_risk_profile
 from app.schemas.company import CompanyExposureResponse, CompanyOut, ExposureOut
 from app.schemas.user import CompanyInput, CompanyLookupResponse
 
@@ -41,6 +42,8 @@ async def create_my_company(
     """Create a new company for the current user."""
     db_user = await get_or_create_user(db, user)
 
+    risk_profile = getattr(body, "risk_profile", None) or get_default_risk_profile(body.sector)
+
     company = Company(
         name=body.name,
         ticker=body.ticker,
@@ -48,6 +51,7 @@ async def create_my_company(
         annual_revenue=body.annual_revenue,
         operating_expense=body.operating_expense,
         capital_expense=body.capital_expense,
+        risk_profile=risk_profile,
         user_id=db_user.id,
     )
     db.add(company)
@@ -79,6 +83,8 @@ async def update_my_company(
     company.annual_revenue = body.annual_revenue
     company.operating_expense = body.operating_expense
     company.capital_expense = body.capital_expense
+    if hasattr(body, "risk_profile") and body.risk_profile is not None:
+        company.risk_profile = body.risk_profile
     await db.flush()
 
     return CompanyOut.model_validate(company)
@@ -145,6 +151,8 @@ async def save_my_company(
         await db.flush()
         return CompanyOut.model_validate(existing)
 
+    risk_profile = getattr(body, "risk_profile", None) or get_default_risk_profile(body.sector)
+
     company = Company(
         name=body.name,
         ticker=body.ticker,
@@ -152,6 +160,7 @@ async def save_my_company(
         annual_revenue=body.annual_revenue,
         operating_expense=body.operating_expense,
         capital_expense=body.capital_expense,
+        risk_profile=risk_profile,
         user_id=db_user.id,
     )
     db.add(company)
@@ -244,6 +253,9 @@ async def get_company_exposure(company_id: UUID, db: DbSession, redis_conn: Redi
                 revenue_impact_pct=exp.revenue_impact_pct,
                 opex_impact_pct=exp.opex_impact_pct,
                 capex_impact_pct=exp.capex_impact_pct,
+                status=exp.status,
+                relevance_score=exp.relevance_score,
+                matched_themes=exp.matched_themes,
                 notes=exp.notes,
                 event_title=event.title if event else None,
                 event_category=event.category if event else None,

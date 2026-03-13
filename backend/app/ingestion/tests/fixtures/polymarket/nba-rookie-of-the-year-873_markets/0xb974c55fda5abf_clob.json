@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": false,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-09T20:40:59Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0xb974c55fda5abf1ca2c07b55309612c501d223251482b56c05b5baeae9299c6e",
+  "question_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd91a",
+  "question": "Will Player M win the 2025\u201326 NBA Rookie of the Year award?",
+  "description": "This is a market to predict which player will win the 2025\u201326 NBA Rookie of the Year award.\n\nThis market will resolve to \"Yes\" if the listed player is officially named the 2025\u201326 NBA Rookie of the Year. Otherwise, it will resolve to \"No\".\n\nIf the award is not announced by December 31, 2026, this market will resolve to \"Other\".\n\nThe primary resolution source will be official information from the NBA (https://www.nba.com).",
+  "market_slug": "will-player-m-win-the-202526-nba-rookie-of-the-year-award-732-868-924-581",
+  "end_date_iso": "2026-05-18T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd900",
+  "neg_risk_request_id": "0xf8342d507c792602416afc851bc28e4c8990e4544f879a56c36244426e9775b1",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-player-m-win-the-202526-nba-rookie-of-the-year-award-732-868-924-581-HRqxT3I2hAET.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-player-m-win-the-202526-nba-rookie-of-the-year-award-732-868-924-581-HRqxT3I2hAET.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "NBA",
+    "Hide From New"
+  ]
+}

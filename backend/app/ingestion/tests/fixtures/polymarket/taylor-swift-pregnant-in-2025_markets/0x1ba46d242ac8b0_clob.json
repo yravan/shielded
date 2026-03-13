@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-12-28T23:07:15Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x1ba46d242ac8b0cd6abc243bdd76630bbb7fdbbd380c766ae569bc2cc42372b2",
+  "question_id": "0x83969f65860d88eae8254043e1a8d269334718db1545859adb06d619c9f3ac33",
+  "question": "Taylor Swift pregnant by March 31?",
+  "description": "This market will resolve to \"Yes\" if Taylor Swift announces that she is pregnant between December 28, 2025, and March 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nOnly credible announcements will qualify. Pregnancy announcements that are not credible, for example jokes, will not suffice.    \n\nThe resolution source will be statements from Taylor Swift or her representatives; however, a definitive consensus of credible media reporting may be considered.",
+  "market_slug": "taylor-swift-pregnant-by-march-31",
+  "end_date_iso": "2026-03-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/taylor-swift-pregnant-in-2025-5cpC3Ir4u5Pd.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/taylor-swift-pregnant-in-2025-5cpC3Ir4u5Pd.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "25278203744387812899124275390231185456556099568030662759416378508669843578064",
+      "outcome": "Yes",
+      "price": 0.009,
+      "winner": false
+    },
+    {
+      "token_id": "90569793661122047965833919029207576106438967399281290092305159739755001779370",
+      "outcome": "No",
+      "price": 0.991,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Music",
+    "Celebrities",
+    "Taylor Swift",
+    "Culture"
+  ]
+}

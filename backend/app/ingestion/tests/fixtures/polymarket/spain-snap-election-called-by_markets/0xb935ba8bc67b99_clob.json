@@ -1,0 +1,59 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-10-22T15:44:18Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0xb935ba8bc67b99825f2d7e4759d5d619f9c2beea0b799cc6f444d48c8cdf6149",
+  "question_id": "0x281e67a95c130130a06a7047bbb59aaaf24733887d36ddc5cf436ad7dc6c4d0e",
+  "question": "Spain snap election called by June 30, 2026?",
+  "description": "This market will resolve to \"Yes\" if the next Spanish general election is scheduled between October 21, 2025, and June 30, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThis market is about whether a date for the next Spanish election is announced within the stated timeframe. The date the election is scheduled to take place on will have no effect on the resolution to this market.\n\nThe primary resolution source for this market is official information from the Government of Spain however a consensus of credible reporting may also be used.",
+  "market_slug": "spain-snap-election-called-by-june-30-2026",
+  "end_date_iso": null,
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/spain-snap-election-called-in-2025-YPLnfYBaLnXB.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/spain-snap-election-called-in-2025-YPLnfYBaLnXB.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 5
+      }
+    ],
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "22727676348515372003751667928661129938953357934816532759741382381194930135311",
+      "outcome": "Yes",
+      "price": 0.195,
+      "winner": false
+    },
+    {
+      "token_id": "113257680533063586788985346494216055424581457988687762525815116425152066513696",
+      "outcome": "No",
+      "price": 0.805,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "world affairs",
+    "Global Elections",
+    "World"
+  ]
+}

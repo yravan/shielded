@@ -1,0 +1,63 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:48:38Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x86bfb53af7250a40928975c551d12c185b762fa4ce0b40c6a64a50c946d72587",
+  "question_id": "0x22725f09e6a3f61882a1fd2ab4d044dc609767099b539b47053d9d71b5ae6a01",
+  "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+  "description": "This market will resolve according to the party that controls the Senate following the 2026 U.S. Senate elections scheduled for November 3, 2026.\n\nSenate control is defined as having more than half of the voting Senate members, or half of the voting Senate members and the Vice Presidency.\n\nIf the outcome of this election is ambiguous given the above rules, this market will remain open until the Majority Leader of the US Senate is selected following the 2026 US general election, at which point it will resolve to the party the majority leader is affiliated with at the time of their election to that position. If the elected majority leader does not caucus with any listed party this market will resolve \u201cOther\u201d.\n\nDetermination of which party controls the Senate after the 2026 US Senate elections will be based on a consensus of credible reporting, or if there is ambiguity, final federal and/or state election authority certification or other final official determination of the 2026 election results.",
+  "market_slug": "will-the-republican-party-control-the-senate-after-the-2026-midterm-elections",
+  "end_date_iso": "2026-11-03T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x22725f09e6a3f61882a1fd2ab4d044dc609767099b539b47053d9d71b5ae6a00",
+  "neg_risk_request_id": "0x369db74ebf1c7e4760e3d734d0f6d32a75fc5c5e8b54e594f8b2501c136b8335",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections-JSsqogfn0U0u.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-the-republican-party-control-the-senate-after-the-2026-midterm-elections-JSsqogfn0U0u.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 70
+      }
+    ],
+    "min_size": 200,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "51939490109676186832507970701169130490548061087912630009168726706475001411420",
+      "outcome": "Yes",
+      "price": 0.525,
+      "winner": false
+    },
+    {
+      "token_id": "108587038225191871355030577171066853142535232042155117887981453750193713427381",
+      "outcome": "No",
+      "price": 0.475,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "US Election",
+    "Global Elections",
+    "Senate",
+    "World Elections",
+    "Midterms",
+    "Earn 4%",
+    "Parent For Derivative"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "enable_order_book": false,
+  "active": false,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-11T19:43:04Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x9f9249118de57e5229fcc2eb40365e67980e200d30f909b50e7c81910f0636e3",
+  "question_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea652",
+  "question": "Will Person BH win the 2028 Republican presidential nomination?",
+  "description": "This market will resolve to \u201cYes\u201d if the named individual wins and accepts the 2028 nomination of the Republican Party for U.S. president. Otherwise, this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be a consensus of official Republican Party sources.\n\nAny replacement of the Republican nominee before election day will not change the resolution of the market.",
+  "market_slug": "will-person-bh-win-the-2028-republican-presidential-nomination-544",
+  "end_date_iso": "2028-11-07T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0xc7d902c4f18f9cc2c6e959c7a6b3556c53ebdb60820836ba9e2890374cfea600",
+  "neg_risk_request_id": "0x7af280ece22ac3da1e836660a7fe91e1996e38ae9a92de6b6cd302be2dc13860",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/goplogo1.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/goplogo1.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "US Election",
+    "Global Elections",
+    "World Elections",
+    "Earn 4%"
+  ]
+}

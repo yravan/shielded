@@ -1,0 +1,56 @@
+{
+  "market": {
+    "can_close_early": true,
+    "close_time": "2040-01-01T04:59:00Z",
+    "created_time": "2025-08-06T21:00:49.355191Z",
+    "custom_strike": {
+      "Company": "Deel"
+    },
+    "early_close_condition": "This market will close and expire early if the event occurs.",
+    "event_ticker": "KXDEELRIP-40",
+    "expected_expiration_time": "2040-01-01T15:00:00Z",
+    "expiration_time": "2040-01-08T15:00:00Z",
+    "expiration_value": "",
+    "fractional_trading_enabled": false,
+    "last_price_dollars": "0.7300",
+    "latest_expiration_time": "2040-01-08T15:00:00Z",
+    "liquidity_dollars": "0.0000",
+    "market_type": "binary",
+    "no_ask_dollars": "0.2700",
+    "no_bid_dollars": "0.2000",
+    "no_sub_title": "Deel",
+    "notional_value_dollars": "1.0000",
+    "open_interest_fp": "1819.00",
+    "open_time": "2025-08-06T21:10:00Z",
+    "previous_price_dollars": "0.7300",
+    "previous_yes_ask_dollars": "0.8000",
+    "previous_yes_bid_dollars": "0.7500",
+    "price_level_structure": "linear_cent",
+    "price_ranges": [
+      {
+        "end": "1.0000",
+        "start": "0.0000",
+        "step": "0.0100"
+      }
+    ],
+    "response_price_units": "usd_cent",
+    "result": "",
+    "rules_primary": "If Deel confirms an IPO first, before Jan 1, 2040, then the market resolves to Yes.",
+    "rules_secondary": "",
+    "settlement_timer_seconds": 1800,
+    "status": "active",
+    "strike_type": "custom",
+    "subtitle": "",
+    "tick_size": 1,
+    "ticker": "KXDEELRIP-40-DEEL",
+    "title": "Will Deel or Rippling IPO first?",
+    "updated_time": "2026-02-19T08:48:16.628714Z",
+    "volume_24h_fp": "51.00",
+    "volume_fp": "2765.00",
+    "yes_ask_dollars": "0.8000",
+    "yes_ask_size_fp": "505.00",
+    "yes_bid_dollars": "0.7300",
+    "yes_bid_size_fp": "500.00",
+    "yes_sub_title": "Deel"
+  }
+}

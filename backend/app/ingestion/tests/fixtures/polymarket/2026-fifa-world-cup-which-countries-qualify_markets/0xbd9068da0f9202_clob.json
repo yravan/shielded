@@ -1,0 +1,58 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-06-09T12:21:20Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0xbd9068da0f92022747bdad7a7d522c2f8bec81f0eb61c233eb94b301b3b4c62b",
+  "question_id": "0x2a6d34c4bd3fa382811d21145433b6d9a5a072e78b8a96ee54cf7d4824a47563",
+  "question": "Will Poland qualify for the 2026 FIFA World Cup?",
+  "description": "This is a market on which teams will qualify for the 2026 FIFA World Cup.\n\nIf at any point it becomes impossible for this team to qualify for the FIFA World Cup based on the rules of FIFA (e.g. they cannot reach the required number of points to advance from its group or qualify for playoffs), this market will resolve immediately to \u201cNo\u201d.\n\nIf the 2026 FIFA World Cup is permanently canceled or the qualifying stage has not been completed by September 30, 2026, 11:59 PM this market will resolve to \u201cNo\u201d.\n\nThe resolution source for this market will be FIFA.  (https://www.fifa.com/en/tournaments/mens/worldcup).",
+  "market_slug": "will-poland-qualify-for-the-2026-fifa-world-cup",
+  "end_date_iso": "2026-04-12T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/2026-fifa-world-cup-which-countries-qualify-_JWD7xspmdXY.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/2026-fifa-world-cup-which-countries-qualify-_JWD7xspmdXY.png",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 0.001
+      }
+    ],
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "107726477169398763643300346937218981578070170096670253959564188912978677384086",
+      "outcome": "Yes",
+      "price": 0.385,
+      "winner": false
+    },
+    {
+      "token_id": "80511008047143651192857715625240574605223081773209557920997784819412822146093",
+      "outcome": "No",
+      "price": 0.615,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "world cup",
+    "Soccer",
+    "FIFA World Cup"
+  ]
+}

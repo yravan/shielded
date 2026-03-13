@@ -1,8 +1,8 @@
 import uuid
 from datetime import datetime
 
-from sqlalchemy import DateTime, Float, ForeignKey, String, Text, UniqueConstraint
-from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy import DateTime, Float, ForeignKey, Integer, String, Text, UniqueConstraint
+from sqlalchemy.dialects.postgresql import JSON, UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.database import Base
@@ -30,6 +30,11 @@ class Exposure(Base):
     revenue_impact_pct: Mapped[float] = mapped_column(Float, default=0.0)
     opex_impact_pct: Mapped[float] = mapped_column(Float, default=0.0)
     capex_impact_pct: Mapped[float] = mapped_column(Float, default=0.0)
+    status: Mapped[str] = mapped_column(
+        String(20), default="suggested"
+    )  # suggested, confirmed, dismissed
+    relevance_score: Mapped[int | None] = mapped_column(Integer, nullable=True)
+    matched_themes: Mapped[list | None] = mapped_column(JSON, nullable=True)
     notes: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), default=datetime.utcnow

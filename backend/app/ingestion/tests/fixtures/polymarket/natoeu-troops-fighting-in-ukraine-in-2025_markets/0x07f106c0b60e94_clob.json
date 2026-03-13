@@ -1,0 +1,58 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-01-31T23:38:55Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x07f106c0b60e94d96a63954f0536811c1a0b054b958f26bb749689b620b72f50",
+  "question_id": "0xf2750f2f14842fd14ba29c420ccc8620a9701d6becc940ec6045b1ede9fe1797",
+  "question": "NATO/EU troops fighting in Ukraine in 2025?",
+  "description": "This market will resolve to \"Yes\" if active military personnel officially affiliated with any NATO or EU country enter Ukraine for combat-related military purposes directly pertaining to the ongoing conflict with Russia by December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor military personnel to qualify toward a \"Yes\" resolution, they must be 1) officially acknowledged as active military by the NATO or EU entity or member state they are affiliated with; 2) be publicly acknowledged by NATO or an EU-affiliated entity to have entered Ukraine for a combat-related military purpose directly pertaining to the ongoing conflict with Russia.\n\nFor military personnel to qualify toward a \"Yes\" resolution they need be active duty and acknowledged as described above. Participation in a combat role is necessary for this market to resolve to \"Yes\" (e.g. military personnel providing training or intelligence support would not qualify toward a \"Yes\" resolution, however drone pilots or infantry directly attacking Russian troops, or soldiers targeting and downing missiles from Ukrainian soil would qualify toward a \"Yes\" resolution).\n\nThe primary resolution source for this market will be official information from NATO, the EU, or member states of either entity, however a consensus of credible reporting will also be used.",
+  "market_slug": "natoeu-troops-fighting-in-ukraine-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/natoeu-troops-fighting-in-ukraine-in-2025-ed2fIguRcJLj.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/natoeu-troops-fighting-in-ukraine-in-2025-ed2fIguRcJLj.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "103909253011351322759892776638669457027523901655815490042130382730360706229706",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "40643730425995007653653846322257326466291751148478865541862332040512398068473",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "russia",
+    "Ukraine",
+    "nato",
+    "eu",
+    "Geopolitics",
+    "World",
+    "Trump-Zelenskyy",
+    "Security Guarantee"
+  ]
+}

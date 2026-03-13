@@ -1,0 +1,58 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-01-06T13:21:38Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x6c3493304224c9c89a846a14c67a0510deb1cc5aa69159973f06940d5c6a4fa9",
+  "question_id": "0x50d25400328945ea8ba2427927b0e5c7b91feaf12346730cdda3fb9e44bf6be5",
+  "question": "Will the next UK election be called by March 31?",
+  "description": "This market will resolve to \"Yes\" if the date of the next UK general election is declared by March 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor this market to resolve to \"Yes\" it is only necessary that the election date be declared, not that the election actually occur within the market timeframe.\n\nThe primary resolution source for this market will be official information from the government of the United Kingdom, however a consensus of credible reporting will also be used.",
+  "market_slug": "will-the-next-uk-election-be-called-by-march-31",
+  "end_date_iso": "2025-03-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/uk-election-called-by-YBeFE9xxrUNy.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/uk-election-called-by-YBeFE9xxrUNy.jpg",
+  "rewards": {
+    "rates": [
+      {
+        "asset_address": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+        "rewards_daily_rate": 10
+      }
+    ],
+    "min_size": 50,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "88690814996233770591898470716166328103466067940966473105605164201940329453282",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "8742751018229234832921857767309518554098936800170398659707180534144915847218",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "uk",
+    "England",
+    "pedophile",
+    "Starmer"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-05-02T15:47:45Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x50ddb9cd80d5c271664a2ebb7fcaed1d0a148d82c8e8d314d830f75a944c3dcc",
+  "question_id": "0x6ec4702f0a5bb188f0dd498647641f2aa13a871953a7f15fa3413939ad68144c",
+  "question": "New Playboi Carti Album before GTA VI?",
+  "description": "This market will resolve to \"Yes\" if Playboi Carti officially releases a new album before Grand Theft Auto VI is officially released in the US. Otherwise, this market will resolve to \"No\".\n\nIf neither occurs by July 31, 2026, 11:59 PM ET, this market will resolve to 50-50.\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an official release. If the release is only for certain consoles (e.g. Xbox Series X/S) it will count.\n\nThe resolution source for the release of GTA VI is official information from Rockstar Games or its parent company, Take-Two Interactive.\n\nOfficially released means that a newly released album is officially available for download or streaming (not including live events) by the resolution date.\n\nRe-releases, deluxe editions, compilations, or greatest hits albums will not count, unless they contain at least 50% tracks that have never been officially released in any format prior to the album's release.\n\nThe resolution source for the album release will be any official streaming or download site, e.g. Apple Music or Spotify.",
+  "market_slug": "new-playboi-carti-album-before-gta-vi-421",
+  "end_date_iso": "2026-07-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/what-will-happen-before-gta-vi-7hpNkEzQEqUE.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "88275040060084773376557187972215267513049848642895776801789297917961077894224",
+      "outcome": "Yes",
+      "price": 0.585,
+      "winner": false
+    },
+    {
+      "token_id": "94376205816022955542979635542279932967359915765455578534002478996104754801969",
+      "outcome": "No",
+      "price": 0.415,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Culture",
+    "All",
+    "GTA VI"
+  ]
+}

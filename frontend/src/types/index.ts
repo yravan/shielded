@@ -58,7 +58,12 @@ export interface GeopoliticalEvent {
   parentEventId?: string | null;
   parentTitle?: string | null;
   isParent?: boolean;
+  isQuantitative?: boolean;
+  expectedValue?: number | null;
   children?: GeopoliticalEvent[];
+  imageUrl?: string | null;
+  tags?: string[];
+  volume?: number | null;
 }
 
 export interface Company {
@@ -79,6 +84,8 @@ export interface UserCompany {
   annualRevenue: number;
   operatingExpense: number;
   capitalExpense: number;
+  riskProfile: Record<string, number>;
+  riskScore: number | null;
   createdAt: string;
 }
 
@@ -101,6 +108,8 @@ export interface CompanyLookup {
   capitalExpense: number | null;
 }
 
+export type ExposureStatus = "suggested" | "confirmed" | "dismissed";
+
 export interface CompanyExposure {
   id: string;
   eventId: string;
@@ -111,6 +120,82 @@ export interface CompanyExposure {
   revenueAtRisk: number;
   revenueAtRiskPercent: number;
   hedgeRecommendation: HedgeRecommendation;
+  status: ExposureStatus;
+  relevanceScore: number | null;
+  matchedThemes: string[] | null;
+}
+
+export interface MatchedEvent {
+  eventId: string;
+  eventTitle: string;
+  eventCategory: string;
+  currentProbability: number;
+  relevanceScore: number;
+  matchedThemes: string[];
+  explanation: string;
+}
+
+export interface CompanyRiskScore {
+  companyId: string;
+  riskScore: number;
+  avgScore: number;
+  peakScore: number;
+  eventCount: number;
+  matchedEvents: MatchedEvent[];
+}
+
+export interface MatchedCompany {
+  companyId: string;
+  name: string;
+  ticker: string | null;
+  sector: string;
+  relevanceScore: number;
+  matchedThemes: string[];
+  explanation: string;
+}
+
+export interface PortfolioRiskSummary {
+  totalCompanies: number;
+  avgRiskScore: number;
+  highestRisk: MatchedCompany | null;
+  topExposures: MatchedEvent[];
+}
+
+export interface SuggestedEvent {
+  id: string;
+  title: string;
+  description: string;
+  category: EventCategory;
+  region: string;
+  source: string;
+  sourceUrl: string;
+  currentProbability: number;
+  resolutionDate: string | null;
+  status: EventStatus;
+  relevanceScore: number;
+  matchedCompanyName: string;
+  matchedCompanyId: string;
+  matchedThemes: string[];
+  imageUrl: string | null;
+  tags: string[];
+}
+
+export interface EventImpactDaily {
+  eventId: string;
+  eventTitle: string;
+  eventCategory: string;
+  currentProbability: number;
+  revenueImpactPerDay: number;
+  opexImpactPerDay: number;
+  capexImpactPerDay: number;
+  totalImpactPerDay: number;
+}
+
+export interface HedgeInstrument {
+  ticker: string;
+  instrumentType: string;
+  direction: string;
+  rationale: string;
 }
 
 export interface HedgeComparison {

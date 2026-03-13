@@ -1,0 +1,53 @@
+{
+  "enable_order_book": true,
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-09T20:40:41Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x590f66d94c8b88900d59fba5a6f95525530988960be15b003114cbb14a0c5fce",
+  "question_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd908",
+  "question": "Will Cedric Coward win the 2025\u201326 NBA Rookie of the Year award?",
+  "description": "This is a market to predict which player will win the 2025\u201326 NBA Rookie of the Year award.\n\nThis market will resolve to \"Yes\" if the listed player is officially named the 2025\u201326 NBA Rookie of the Year. Otherwise, it will resolve to \"No\".\n\nIf the award is not announced by December 31, 2026, this market will resolve to \"Other\".\n\nThe primary resolution source will be official information from the NBA (https://www.nba.com).",
+  "market_slug": "will-cedric-coward-win-the-202526-nba-rookie-of-the-year-award",
+  "end_date_iso": "2026-05-18T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x656b1825ba3881dc657facee7db4a0fe6dbb4e3af1244029151da9da49bcd900",
+  "neg_risk_request_id": "0xa0e0095e15fafce2ed7f245fff8534c44478dee5f83560c7ea3aa4a262b09e2d",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-cedric-coward-win-the-202526-nba-rookie-of-the-year-award-vMeVYwiR-7Vy.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-cedric-coward-win-the-202526-nba-rookie-of-the-year-award-vMeVYwiR-7Vy.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 20,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "38437247237857232658062618501946374918382808408039961452505906306842445097774",
+      "outcome": "Yes",
+      "price": 0.0015,
+      "winner": false
+    },
+    {
+      "token_id": "46888998123800649021711040034397985424488658079737530468593091128579018644106",
+      "outcome": "No",
+      "price": 0.9985,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Sports",
+    "Awards",
+    "NBA",
+    "Hide From New"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "enable_order_book": false,
+  "active": true,
+  "closed": true,
+  "archived": false,
+  "accepting_orders": false,
+  "accepting_order_timestamp": "2025-02-13T23:06:22Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.001,
+  "condition_id": "0x1b74c3efe140a09049e0eb6b6a2112e00fa4d199cdc718c1a58af1abf6d9e49d",
+  "question_id": "0xe17af43610e690850cc6f18b9bde9604986f70c900d7b5a23eb1fae434c3bbf1",
+  "question": "Will any country leave NATO in 2025?",
+  "description": "This market will resolve to \"Yes\" if any member state formally withdraws from NATO or provides an official notice of denunciation to NATO by December 31, 2025, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA notice of denunciation refers to the submission of a notice of withdrawal as per Article 13 of the North Atlantic Treaty.\n\nA country's exit from NATO\u2019s integrated military command structure will not be sufficient to resolve this market to \"Yes\". That country must either withdraw or submit a notice of denunciation to trigger a \"Yes\" resolution.\n\nThe resolution source will be official information from the relevant government and NATO, however a consensus of credible reporting may also be used.",
+  "market_slug": "will-any-country-leave-nato-in-2025",
+  "end_date_iso": "2025-12-31T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": false,
+  "neg_risk_market_id": "",
+  "neg_risk_request_id": "",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-any-country-leave-nato-in-2025-d6BB5x1Nv0DA.jpg",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/will-any-country-leave-nato-in-2025-d6BB5x1Nv0DA.jpg",
+  "rewards": {
+    "rates": null,
+    "min_size": 100,
+    "max_spread": 3.5
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "46975241878566226675389813084558441099978633579735672808077735156890286559886",
+      "outcome": "Yes",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "4274339277583331170231436480507835882687434608350779078862983050349942696879",
+      "outcome": "No",
+      "price": 1,
+      "winner": true
+    }
+  ],
+  "tags": [
+    "Politics",
+    "nato",
+    "Geopolitics",
+    "World"
+  ]
+}

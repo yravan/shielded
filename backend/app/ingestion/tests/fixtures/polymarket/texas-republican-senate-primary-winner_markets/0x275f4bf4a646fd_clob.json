@@ -1,0 +1,60 @@
+{
+  "enable_order_book": false,
+  "active": false,
+  "closed": false,
+  "archived": false,
+  "accepting_orders": true,
+  "accepting_order_timestamp": "2025-07-10T21:30:14Z",
+  "minimum_order_size": 5,
+  "minimum_tick_size": 0.01,
+  "condition_id": "0x275f4bf4a646fd9be9d0c01985f251d1429bb8dcebc52b344842a786552397fa",
+  "question_id": "0x0aa99409c83ee67e3d0413ded30606dffb81bdb76c1c68779d0eddf034d0c30d",
+  "question": "Will Person J win the 2026 Republican Primary?",
+  "description": "This market will resolve according to the winner of the Republican Primary for United States Senator from Texas. \n\nIf no 2026 Texas Republican Senate Primary takes place, this market will resolve to \"Other\".\n\nThe resolution source for this market will be the first announcement of the results from the Texas Republican party, however an overwhelming consensus of credible reporting may suffice.\n",
+  "market_slug": "will-person-j-win-the-2026-republican-primary",
+  "end_date_iso": "2026-05-26T00:00:00Z",
+  "game_start_time": null,
+  "seconds_delay": 0,
+  "fpmm": "",
+  "maker_base_fee": 0,
+  "taker_base_fee": 0,
+  "notifications_enabled": true,
+  "neg_risk": true,
+  "neg_risk_market_id": "0x0aa99409c83ee67e3d0413ded30606dffb81bdb76c1c68779d0eddf034d0c300",
+  "neg_risk_request_id": "0x3ece7397e22343ba8517d599d05bdd6cdefa79e7bb5fd999d3d6f0ad42d403fc",
+  "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/texas-republican-senate-primary-winner-6q89nMqX3kp5.png",
+  "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/texas-republican-senate-primary-winner-6q89nMqX3kp5.png",
+  "rewards": {
+    "rates": null,
+    "min_size": 0,
+    "max_spread": 0
+  },
+  "is_50_50_outcome": false,
+  "tokens": [
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    },
+    {
+      "token_id": "",
+      "outcome": "",
+      "price": 0,
+      "winner": false
+    }
+  ],
+  "tags": [
+    "Politics",
+    "Elections",
+    "Primaries",
+    "primary elections",
+    "Republican Primary",
+    "US Election",
+    "Senate Primary",
+    "Parent For Derivative",
+    "Texas Senate",
+    "Texas Primary",
+    "March 3 Primaries"
+  ]
+}
