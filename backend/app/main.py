@@ -14,8 +14,11 @@ logger = structlog.get_logger()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await logger.ainfo("Starting Shielded API")
-    from app.tasks.discovery import discover_new_events
-    discover_new_events.delay()
+    try:
+        from app.tasks.discovery import discover_new_events
+        discover_new_events.delay()
+    except Exception as e:
+        await logger.awarning("Failed to dispatch startup discovery task", error=str(e))
     yield
     await logger.ainfo("Shutting down Shielded API")
 
