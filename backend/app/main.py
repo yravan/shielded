@@ -14,11 +14,25 @@ logger = structlog.get_logger()
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     await logger.ainfo("Starting Shielded API")
+
+    # Run database migrations
+    try:
+        from alembic import command
+        from alembic.config import Config
+
+        alembic_cfg = Config("alembic.ini")
+        command.upgrade(alembic_cfg, "head")
+        await logger.ainfo("Database migrations completed")
+    except Exception as e:
+        await logger.aerror("Failed to run database migrations", error=str(e))
+
+    # Dispatch initial discovery task
     try:
         from app.tasks.discovery import discover_new_events
         discover_new_events.delay()
     except Exception as e:
         await logger.awarning("Failed to dispatch startup discovery task", error=str(e))
+
     yield
     await logger.ainfo("Shutting down Shielded API")
 
