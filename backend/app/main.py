@@ -48,6 +48,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         settings.FRONTEND_URL,
+        "https://www.shielded.win",
+        "https://shielded.win",
         "http://localhost:3000",
         "http://127.0.0.1:3000",
         "http://127.0.2.2:3000",
