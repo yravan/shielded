@@ -12,6 +12,8 @@ function mapApiCompany(raw: any): UserCompany {
     annualRevenue: raw.annual_revenue ?? 0,
     operatingExpense: raw.operating_expense ?? 0,
     capitalExpense: raw.capital_expense ?? 0,
+    riskProfile: raw.risk_profile ?? {},
+    riskScore: raw.risk_score ?? null,
     createdAt: raw.created_at,
   };
 }
