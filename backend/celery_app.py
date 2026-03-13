@@ -1,8 +1,19 @@
+import os
+import logging
+
 from celery import Celery
 from celery.schedules import crontab
 from celery.signals import worker_ready
 
 from app.config import settings
+
+_log = logging.getLogger(__name__)
+_log.info(
+    "Celery startup: broker=%s REDIS_URL=%s RAILWAY_ENV=%s",
+    settings.CELERY_BROKER_URL,
+    settings.REDIS_URL.split("@")[-1] if "@" in settings.REDIS_URL else settings.REDIS_URL,
+    os.environ.get("RAILWAY_ENVIRONMENT", "<unset>"),
+)
 
 celery = Celery(
     "shielded",
