@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmMono.variable} antialiased`}
       >
-        <ClerkProvider>
+        <ClerkProvider signInForceRedirectUrl="/onboarding" signUpForceRedirectUrl="/onboarding">
           <Providers>{children}</Providers>
         </ClerkProvider>
       </body>
